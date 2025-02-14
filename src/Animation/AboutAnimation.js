@@ -7,35 +7,9 @@ const AboutAnimation = () => {
     const tl = gsap.timeline();
     const tl1  = gsap.timeline();
     tl.to(".img-frame-1", {
-      x: 100,
-      y: 50,
-      rotate: "-10deg",
-      scrollTrigger: {
-        scrub: 3,
-        scroller: "body",
-        trigger: ".hero-section",
-        start: "20% ",
-        end: "100% ",
-        // markers: true
-      }
-    })
-    tl.to(".img-frame-2", {
-      x: 50,
-      y: 20,
-      rotate: "-10deg",
-      scrollTrigger: {
-        scrub: 3,
-        scroller: "body",
-        trigger: ".hero-section",
-        start: "20% ",
-        end: "100% ",
-        // markers: true
-      }
-    })
-    tl.to(".img-frame-3", {
       x: 10,
       y: 10,
-      rotate: "-0deg",
+
       scrollTrigger: {
         scrub: 3,
         scroller: "body",

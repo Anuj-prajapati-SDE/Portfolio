@@ -169,16 +169,9 @@ l-31 -66 -4 36 c-3 37 27 226 52 319 8 30 17 76 21 102 6 40 4 48 -13 57 -37
         <div className='img-frame-1 img-frame'>
           <img src={img1} alt="" />
         </div>
-        <div className='img-frame-2 img-frame'>
-
-          <img src={img3} alt="" />
-        </div>
-        <div className='img-frame-3 img-frame'>
-          <img src={img2} alt="" />
-        </div>
-      </div>
+    </div>
     </section>
   )
-}
+} 
 
 export default About

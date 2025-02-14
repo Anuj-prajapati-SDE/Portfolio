@@ -20,11 +20,11 @@ function Testimonials() {
             <img src={Customer_img_1} alt="" />
          </div>
          <div className='Testimonials-person-name'>
-              <h1>Jon doe</h1>
+              <h1>Ravi Kumar</h1>
          </div>
          <div className='Testimonials-person-response'>
              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, libero consequatur veritatis debitis dolores excepturi laudantium explicabo et nemo, voluptatem odit ad tempora corporis. Neque tempore expedita architecto officia doloremque?
+             "Working with Anuj Prajapati was a game-changer for our business. He developed a sleek, user-friendly website that has significantly improved our online presence. Anuj's expertise in MERN-stack development and his creative approach to design have made a huge difference. We highly recommend his services to anyone looking for top-notch web development."
              </p>
          </div>
        </div>
@@ -34,11 +34,11 @@ function Testimonials() {
             <img src={Customer_img_2} alt="" />
          </div>
          <div className='Testimonials-person-name'>
-              <h1>Jon doe</h1>
+              <h1>Amit Verma</h1>
          </div>
          <div className='Testimonials-person-response'>
              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, libero consequatur veritatis debitis dolores excepturi laudantium explicabo et nemo, voluptatem odit ad tempora corporis. Neque tempore expedita architecto officia doloremque?
+             I had the pleasure of collaborating with Anuj Prajapati on a complex web application project. His technical skills and problem-solving abilities are outstanding. Anuj's ability to understand our requirements and translate them into a functional and visually appealing application was impressive. I highly recommend him for any web development project.
              </p>
          </div>
        </div>
@@ -48,11 +48,11 @@ function Testimonials() {
             <img src={Customer_img_3} alt="" />
          </div>
          <div className='Testimonials-person-name'>
-              <h1>Jon doe</h1>
+              <h1>Sachin gupta</h1>
          </div>
          <div className='Testimonials-person-response'>
              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, libero consequatur veritatis debitis dolores excepturi laudantium explicabo et nemo, voluptatem odit ad tempora corporis. Neque tempore expedita architecto officia doloremque?
+             "Anuj Prajapati's dedication and passion for web development are evident in his work. He created a stunning portfolio website for me that perfectly showcases my skills and projects. Anuj's creativity and technical expertise have exceeded my expectations. I am grateful for his hard work and highly recommend him to anyone in need of a talented web developer."
              </p>
          </div>
        </div>
