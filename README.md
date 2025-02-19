@@ -1,4 +1,4 @@
-# Portfolio - [Your Name]
+# Portfolio - Anuj Prajapati
 
 Welcome to my professional portfolio! This repository contains the source code and assets for my personal portfolio website, where I showcase my skills, projects, and professional journey.  
 
