@@ -1,29 +1,30 @@
 .About-Explain-section{
     position: relative;
-      margin-top: 5%;
+      margin-top: 7%;
     width: 100%; 
 overflow: hidden;
+padding: 0px 20px; 
     height: 90vh;
     /* background-color: aquamarine; */
 }
 .About-Explain-section video{
     position: absolute;
     margin-top: 15px;
-    width: 100%;
+    width: 100%; 
     z-index: -1;
     object-fit: cover;
     height: 100%;
 }
 .About-Explain-section .About-Explain{
     width: 100%;
-  background-color: black;
+  border-radius: 5px;
     display: flex;
     /* display: none; */
     overflow-y: hidden;
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
-    height: 34.2%;
+    height: 32%;
     border-bottom: 2px solid var(--theme-text-color);
 }
 

@@ -1,15 +1,14 @@
 import React from 'react'
 import img1 from '../../assets/pic-1.jpg'
-import img2 from '../../assets/pic-2.jpg'
-import img3 from '../../assets/pic-3.jpg'
 import './About.css'
 
 import AboutAnimation from '../../Animation/AboutAnimation'
+import { Link } from 'react-scroll'
 function About() {
   AboutAnimation()
-  return (
+  return ( 
     <section id='about' className='About-section'>
-      <div className="left_section">
+      <div className="left_section"> 
         <h1>Hii<span>👋,</span></h1>
         <p>
           I am Anuj Prajapati,<br/>

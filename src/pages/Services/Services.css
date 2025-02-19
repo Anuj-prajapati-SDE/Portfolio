@@ -44,16 +44,18 @@
     flex-direction: column;
     padding: 0px 40px;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: 20px;
+     outline: 0.2px solid white;
     height: 95%;
 background: rgba(97, 97, 97, 0.12);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(6.8px);
+backdrop-filter: blur(5px);
 /* border: 1px solid var(--theme-text-color); */
 }
 .Services-about .Services-about-text-container h1{
 color: var(--text-color);
 font-size: 2.1rem;
+
 }
 .Services-about .Services-about-text-container p{
 color: var(--text-2-color);
@@ -83,10 +85,11 @@ margin-top: 25px;
    align-items: center;
    text-align: center;
     height: 180px;
+    outline: 0.5px solid white;
     border-radius: 15px;
-    background: rgba(97, 97, 97, 0.12);
+    background: rgba(97, 97, 97, 0.077);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.8px);
+    backdrop-filter: blur(4.8px);
     /* border: 1px solid var(--theme-text-color); */
 }
 .Services-about .Services-experience-boxes .experience-box h2{
@@ -109,10 +112,11 @@ margin-top: 25px;
 }
 .Services-about-2 .service-responsive-screenshot{
     margin-top: 30px;
-    border-radius: 30px;
+    border-radius: 20px;
     opacity: 1;
     width: 40%;
     scale: 1;
+ outline: 0.5px solid white;
 height: 90%;
 background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -131,9 +135,10 @@ object-fit: cover;
 }
 .Services-about-2 .service-code-screenshot{
     width: 40%;
-    border-radius: 30px;
+    border-radius: 20px;
     margin-top: 30px;
 height: 90%;
+outline: 0.5px solid white;
 background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
@@ -153,10 +158,11 @@ object-fit: cover;
     width: 90%;
     margin-left: 5%;
     /* margin-top: 20px; */
-    border-radius: 30px;
+    border-radius: 20px;
     padding: 10px;
     text-align: center;
     height:23%;
+    outline: 0.5px solid white;
     margin-bottom: 40%;
     background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -175,13 +181,14 @@ object-fit: cover;
     height:80%;
     gap: 10px;
     padding: 10px;
+    transition: 0,;
      color: var(--text-color);
     /* background-color: blue; */
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon{
     width: 15%;
     height:45%;
-    opacity: 1;
+    opacity: 0;
     scale: 1;
     padding-top: 10px;
     border-radius: 10px;
@@ -189,6 +196,7 @@ object-fit: cover;
     font-size: 1.1rem;
      color: var(--text-color);
      cursor: pointer;
+     transition: 0.3s ease-in-out;
      background: rgba(132, 132, 132, 0.12);
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(6.8px);

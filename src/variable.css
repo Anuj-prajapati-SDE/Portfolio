@@ -6,3 +6,8 @@
     --theme-text-color : #08afff;
      --text-color:rgb(243, 243, 243);
 }
+.background-shadow{
+background: rgba(97, 97, 97, 0.12);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+}

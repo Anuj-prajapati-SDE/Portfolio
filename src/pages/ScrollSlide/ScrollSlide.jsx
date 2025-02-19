@@ -17,7 +17,7 @@ MarqueeAnimation()
       gsap.to(sectionRef.current, {
         duration: 1,
         ease: "sine",
-        background: `radial-gradient(circle at ${x}% ${y}%, rgba(8, 177, 255, 0.242) 0%, rgb(9, 8, 8) 34%)`,
+        background: `radial-gradient(circle at ${x}% ${y}%, rgba(8, 177, 255, 0.242) 0%, rgba(9, 8, 8, 0) 35%)`,
       });
     };
 
@@ -36,7 +36,7 @@ MarqueeAnimation()
     transition:  '0.5s ease-in-out', 
     justifyContent: 'center',
     alignItems: 'center',
-    background: 'radial-gradient(circle, rgba(8, 177, 255, 0.242) 0%, rgb(9, 8, 8) 34%)',
+    background: 'radial-gradient(circle, rgba(8, 177, 255, 0.242) 0%, rgba(9, 8, 8, 0) 35%)',
   }; 
   MarqueeAnimation() 
   return (

@@ -16,11 +16,11 @@ function Services() {
                 <section className='Services-about'>
                     <div className='Services-about-text-container'>
                      <h1>Blending Creativity with Functionality</h1>
-                    <p>I am a passionate and dedicated freelance designer and developer, specializing in creating unique and effective design solutions. With extensive experience in web, apps, and branding, as well as UX/UI design and MernStack development, I have collaborated with companies of all types, both nationally and internationally, ensuring efficiency and flexibility in every project.</p>
+                    <p>I am a passionate and dedicated Mern Stack developer, specializing in creating unique and effective design solutions. With extensive experience in web, apps, and branding, as well as effective UX/UI design, I have collaborated with companies of all types, both nationally and internationally, ensuring efficiency and flexibility in every project.</p>
                     </div>
                     <div className='Services-experience-boxes'>
                         <div className="experience-box">
-                            <h2>0+</h2>
+                            <h2>1+</h2>
                             <p> Year of <br/>Experience</p>
                         </div>
                         <div className="experience-box">
@@ -28,21 +28,21 @@ function Services() {
                         <p> Successfull <br/>Project</p>
                         </div>
                         <div className="experience-box">
-                        <h2>100%</h2>
+                         <h2>100%</h2>
                         <p>Secure code</p>
                         </div>
                         <div className="experience-box">
                         <h2>100%</h2>
                         <p>Professinal &<br/>Quality Code</p>
                         </div>
-                    </div>
+                    </div> 
                 </section>
                 <section className='Services-about-2'>
                        <div className='service-responsive-screenshot'>
                            <h2>Responsive Web</h2>
                            <img src={Res_screenShot} alt="" />
                        </div>
-                       <div className='service-code-screenshot'>
+                       <div className='service-code-screenshot'> 
                        <h2>Simple and Efficient Code</h2>
                        <img src={code_screenShot} alt="" />
                        </div>
@@ -93,8 +93,7 @@ function Services() {
                             <div className="heading-icon">
                                 <span></span>
                                 <h2>Lenis & Locomotive</h2>
-                            </div>
-                            
+                            </div> 
                         </div>
                        </div>
             </section>

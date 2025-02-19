@@ -10,7 +10,7 @@ const AboutExplainAnimation = () => {
     tl.add("same-time-pin"); 
     const  AboutExplainPin= gsap.context(() => {
       tl.to(
-        ".About-Explain-section .About-Explain:nth-child(2)",
+        ".About-Explain-section .About-Explain:nth-child(1)",
         { 
             position: "relative",     
            duration: 1,
@@ -22,11 +22,12 @@ const AboutExplainAnimation = () => {
             scrub: 2,
             end: "bottom 20%",
             pin: true,
+          //  markers:true
           }
         }
       )
       tl.to(
-        ".About-Explain-section .About-Explain:nth-child(3)",
+        ".About-Explain-section .About-Explain:nth-child(2)",
         { 
             position: "relative",     
           opacity:0,
@@ -36,12 +37,13 @@ const AboutExplainAnimation = () => {
             start: "top 11%",
             scrub: 2,
             end: "bottom 20%",
+            // markers:true
           }
         }
       )
 
       tl.to(
-        ".About-Explain-section .About-Explain:nth-child(4)",
+        ".About-Explain-section .About-Explain:nth-child(3)",
         { 
             position: "relative",     
            duration: 1,
@@ -51,21 +53,6 @@ const AboutExplainAnimation = () => {
             scroller: "body",
             start: "top 11%",
             scrub: 2,
-          
-            end: "bottom 20%",
-          }
-        }
-      )
-      tl.to(
-        ".About-Explain-section video",
-        { 
-          scale :0.8,
-          scrollTrigger: {
-            trigger: ".About-Explain-section",
-            scroller: "body",
-            start: "2% 11%",
-            scrub: 2,
-            // markers:true,
             end: "bottom 20%",
           }
         }

@@ -63,8 +63,9 @@ const  ExperienceAnimation = () => {
           }
         }
       )      
-        
            
+        
+       
      tl0.to(".project-year .year-container .year-1", {
        opacity:0,
        y:-50,

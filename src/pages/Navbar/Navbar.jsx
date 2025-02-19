@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Navbar() {
+function Navbar() { 
   const [navClick, setNavClick] = useState(false);
   const menuRef = useRef(null);
   const navLinksRef = useRef([]);
@@ -19,7 +19,7 @@ function Navbar() {
     falsetl.add("same-time-out")
     if (navClick) {
       truetl.to(menuRef.current, { 
-        duration: 1,
+        duration: 0.6,
         height: "86.6vh",
         opacity:1,
          ease: 'power3.inOut'
@@ -39,7 +39,8 @@ function Navbar() {
          scrub:2,
        })
       
-    } else {
+    }
+     else {
       falsetl.to(".hambargar-clicked-section .menu-btn", {
         opacity:0,
         transform:'translateY(-200px)',
@@ -52,10 +53,10 @@ function Navbar() {
         opacity:0,
         stagger:0.2,
         transform:'translateX(-200px)',
-        scrub:2,
+        scrub:1,
        })
       falsetl.to(menuRef.current, {
-        duration: 1,
+        duration: 0.5,
         height: "0vh",
         opacity:0,
          ease: 'power3.inOut'
@@ -111,14 +112,9 @@ function Navbar() {
               {section.charAt(0).toUpperCase() + section.slice(1)}
               <p></p>
             </ScrollLink>
-          ))}
+          ))} 
         </div>
         <div className="terms_condition">
-          <h3>SUPPORT :</h3>
-          <div className="condition">
-            <h4>TERMS & CONDITIONS</h4>
-            <h4>PRIVACY POLICIES</h4>
-          </div>
           <div className="developer_name">
             <h4>Developed By: <span>Anuj Prajapati</span></h4>
           </div>

@@ -7,8 +7,8 @@ const AboutAnimation = () => {
     const tl = gsap.timeline();
     const tl1  = gsap.timeline();
     tl.to(".img-frame-1", {
-      x: 10,
-      y: 10,
+      x: 20,
+      y: 30,
 
       scrollTrigger: {
         scrub: 3,
@@ -16,7 +16,6 @@ const AboutAnimation = () => {
         trigger: ".hero-section",
         start: "20% ",
         end: "100% ",
-        // markers: true
       }
     })
     tl1.to("svg .svg-elem-26, svg .svg-elem-25, svg .svg-elem-24, svg .svg-elem-23,  svg .svg-elem-22,  svg .svg-elem-21,  svg .svg-elem-20,  svg .svg-elem-19,  svg .svg-elem-18, svg .svg-elem-17, svg .svg-elem-16, svg .svg-elem-15, svg .svg-elem-14, svg .svg-elem-13, svg .svg-elem-12, svg .svg-elem-11, svg .svg-elem-10, svg .svg-elem-9, svg .svg-elem-8, svg .svg-elem-7, svg .svg-elem-6, svg .svg-elem-5, svg .svg-elem-4, svg .svg-elem-3, svg .svg-elem-2, svg .svg-elem-1", {

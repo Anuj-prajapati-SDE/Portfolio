@@ -15,7 +15,7 @@ function Home() {
              Doing Work</p>
             <p>My local Time {`${currentHours}:${currentSec} `}
             GMT (+5:30)</p>
-          </div> 
+          </div>  
         </div> 
         <div className="bottom-heading">  
          <h2>Stack</h2>

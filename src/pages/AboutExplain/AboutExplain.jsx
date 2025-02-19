@@ -1,27 +1,25 @@
 import React from 'react'
 import "./AboutExplain.css"
 import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
-import VideoExplain from '../../assets/AboutExplain.webm'
 function AboutExplain() {
   AboutExplainAnimation()
   return (
     <section className='About-Explain-section'>
-       <video autoplay="true" loop="true" muted src={VideoExplain}>
-      </video>
-      <div className='About-Explain'>
+         {/* <p>some quote write here</p> */}
+      <div className='About-Explain background-shadow'>
      
         <div className="title-left">
           <h1><span>W</span>ebsite</h1>
-        </div>
-        <div className="title-explaination">
+        </div> 
+        <div className="title-explaination"> 
           <p>
             Focused on creating visually stunning interfaces and exceptional user experiences. Every click is crafted for user-friendly, efficient, and meaningful products.
           </p>
           <span>...</span>
     
+      </div>  
       </div>
-      </div>
-      <div className='About-Explain '>
+      <div className='About-Explain background-shadow'>
         <div className="title-explaination">
           <p>
           I excel in Mern-stack development, crafting responsive and intuitive user interfaces with React.js, seamlessly integrated with robust back-end systems for high-performing web applications.
@@ -32,7 +30,7 @@ function AboutExplain() {
           <h1><span>S</span>kill</h1>
         </div>
       </div>
-      <div className='About-Explain'>
+      <div className='About-Explain background-shadow'>
         <div className="title-left">
           <h1><span>E</span>xperience</h1>
         </div>

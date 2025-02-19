@@ -23,8 +23,8 @@ const MouseFollower = () => {
 
   const circleStyle = {
     position: 'fixed',
-    width: '20px',
-    height: '20px',
+    width: '10px',
+    height: '10px',
     zIndex:9999,
     backgroundColor: '#08afff',
     borderRadius: '50%',

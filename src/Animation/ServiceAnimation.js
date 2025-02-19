@@ -19,7 +19,7 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "10% 80%",
+            start: "20% 80%",
             end: "50% 100%",
             // markers: true
           }}
@@ -34,10 +34,19 @@ const ServiceAnimation = ()=>{
             // markers: true
           }}
         );
+        const tl3 = gsap.timeline({
+          scrollTrigger: {
+            scrub: 1,
+            trigger: ".Services-content-section",
+            start: "60% 50%",
+            end: "90% 70%",
+            // markers: true
+          }
+        });
         tl.from(".Services-section h1", {
          opacity:0,
           y:200,
-         overflow:"hidden",
+          overflow:"hidden",
           stagger:0.5
 
           })
@@ -54,23 +63,16 @@ const ServiceAnimation = ()=>{
           tl2.from(".service-responsive-screenshot, .service-code-screenshot", {
           opacity:0,
           y:200,
-          duration:2 ,
+          duration:2,
           scale:0,
           })
-          gsap.from(".heading-icon", {
-          stagger:0.9,
-          duration:3,
-          y:100,
-        //   ease:"bounce",
-          opacity:0,
-          scale:0,
-          scrollTrigger:{
-            scrub: 3,
-            trigger: ".Services-content-section",
-            start: "60% 50%",
-            end: "100% 70%",
-            // markers:true
-        }})
+          tl3.from(".heading-icon", {
+            stagger: 0.9,  // Adds delay between each animation
+            duration: 1,   // Each animation lasts 1 second
+            opacity:1,
+            y: 100,        // Moves up from 100px
+            scale: 0       // Starts from scale 0
+          });
        
     })} 
 export default ServiceAnimation;
