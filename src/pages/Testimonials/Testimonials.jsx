@@ -6,7 +6,7 @@ import Customer_img_3 from "../../assets/customer-img-3.jpeg"
 import TestinominalAnimation from '../../Animation/testinominal.js'
 function Testimonials() {
    TestinominalAnimation()
-  return (
+  return ( 
     <>   
     <section id='testimonials' className='Testimonials-section'>
         <h1>WHAT</h1> 

@@ -9,8 +9,8 @@ const ContactAnimation = () => {
                 scrub: 2,
                 scroller: "body", 
                 trigger: ".contact-section",
-                start: "70%",
-                end: "100%",
+                start: "90% 10%",
+                end: "120% 30%",
             //    markers:true
               }
         });
@@ -18,7 +18,14 @@ const ContactAnimation = () => {
             y:400,
             opacity:0,
             duration:1
-        })             
+        }) 
+        tl.from(".contact-link", {
+            y:100,
+            opacity:0,
+            stagger:0.3,
+
+        }
+        )            
            
     })
 }

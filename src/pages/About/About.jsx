@@ -1,16 +1,14 @@
 import React from 'react'
 import img1 from '../../assets/pic-1.jpg'
 import './About.css'
-
 import AboutAnimation from '../../Animation/AboutAnimation'
-import { Link } from 'react-scroll'
 function About() {
   AboutAnimation()
   return ( 
     <section id='about' className='About-section'>
       <div className="left_section"> 
         <h1>Hii<span>👋,</span></h1>
-        <p>
+        <p> 
           I am Anuj Prajapati,<br/>
           I create,<br/>
           <span>unconventional</span> Yet<br/>

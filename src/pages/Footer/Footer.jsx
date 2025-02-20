@@ -49,9 +49,12 @@ export default function Footer() {
                                 <p>© 2024-2025 ANUJ PRAJAPATI. All rights reserved.</p>
                             </div>
                             <div className="bottom_right">
-                                <i className="ri-instagram-line" />
-                                <i className="ri-linkedin-box-fill" />
-                                <i className="ri-github-fill" />
+                                     <Link to={"https://www.instagram.com/anuj_prajapati_.123/"} target='_blank'>  <i className="ri-instagram-line" /></Link>
+                                     <Link to={"https://www.linkedin.com/in/anuj-prajapati-1775552a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"} target='_blank'>  <i className="ri-linkedin-box-fill" /></Link>
+                                     <Link to={"https://github.com/Anuj-prajapati-SDE"} target='_blank'> <i className="ri-github-fill" /></Link>
+                              
+          
+                               
                             </div>
                         </div>
                     </div>

@@ -18,11 +18,11 @@ function Home() {
           </div>  
         </div> 
         <div className="bottom-heading">  
-         <h2>Stack</h2>
+         <h2>Stack</h2> 
           <h1>Developer</h1>
         </div>
       </section>
-
+ 
     </>
   ) 
 }

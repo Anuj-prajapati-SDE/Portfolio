@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Navbar.css';
 import { gsap } from 'gsap';
-import DownloadCV from "../../assets/pic-1.jpg"
+import DownloadCV from "../../assets/Anuj-prajapati-Resume.pdf"
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
@@ -17,7 +17,7 @@ function Navbar() {
     let truetl = gsap.timeline();
     let falsetl = gsap.timeline();
     falsetl.add("same-time-out")
-    if (navClick) {
+    if (navClick) { 
       truetl.to(menuRef.current, { 
         duration: 0.6,
         height: "86.6vh",
@@ -76,18 +76,16 @@ function Navbar() {
           <h1>Anuj Prajapati</h1>
         </div>
         <div className="right-navbar">
-          <div className='dark-light-mode-icon'>
-            <i className=""></i>
+          <div className='cv-btn' >
+          <a href={DownloadCV} download>Download CV</a>
           </div>
           <div className='hambargar-icon'>
-            {navClick ? "" :
-            
-               <Link to={""} onClick={handleNavClick}>MENU</Link>
-              
+            {navClick ? "" :      
+               <Link to={""} onClick={handleNavClick}>Menu</Link>    
               }
           </div>
         </div>
-      </header>
+      </header> 
       <div ref={menuRef} className={`hambargar-clicked-section ${navClick ? 'open' : ''}`}>
         <div className="menu-btn">
           <div className="open-btn" onClick={handleNavClick}>

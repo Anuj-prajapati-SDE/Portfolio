@@ -9,7 +9,7 @@ import ContactAnimation from '../../Animation/ContactAnimation'
 function Contact() {
   ContactAnimation();
   const form = useRef();
-  const sendEmail = (e) => {
+  const sendEmail = (e) => { 
     e.preventDefault();
     emailjs
       .sendForm("service_o1k9cqc", "template_6geg9m3", form.current, "iGSMj9WgWrnMn2H18")

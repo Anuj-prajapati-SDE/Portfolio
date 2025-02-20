@@ -7,13 +7,7 @@
 html, body{
   width: 100%;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-    overflow: hidden;
-  /* height: 100%; */
-  /* overflow: hidden; */
-  /* cursor: none; */
    color: white;
-  /* background-color: black; */
-  /* background-color: var(--back-ground-color); */
 }
 body::-webkit-scrollbar{
   display: none;

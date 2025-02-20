@@ -16,11 +16,11 @@ function App() {
                <Route path='/' element={<Protfolio_container />} />
                <Route path='/all-projects' element={<AllProjects />} />
           </Routes>
-        </Router>
+        </Router> 
           
       </SmoothScrolling>
     </>
   )
-}
-
+} 
+ 
 export default App

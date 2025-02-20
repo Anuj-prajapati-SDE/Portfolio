@@ -7,8 +7,8 @@ const AboutAnimation = () => {
     const tl = gsap.timeline();
     const tl1  = gsap.timeline();
     tl.to(".img-frame-1", {
-      x: 20,
-      y: 30,
+      x: 30,
+      y: 50,
 
       scrollTrigger: {
         scrub: 3,
