@@ -8,10 +8,10 @@ function Services() {
     return (
         <>
             <section id='services' className='Services-section'>
-                <h1>WHAT</h1>
+                <h1>WHAT</h1> 
                 <h1>SERVICES I</h1> 
                 <h1>PROVIDE</h1>  
-            </section>
+            </section> 
             <section className='Services-content-section'>
                 <section className='Services-about'>
                     <div className='Services-about-text-container'>

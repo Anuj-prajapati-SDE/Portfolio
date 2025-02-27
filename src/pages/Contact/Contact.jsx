@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import emailjs from "@emailjs/browser";
 import { Link } from 'react-router-dom'
-import Contact_gif from '../../assets/contact.gif'
+import Contact_video from '../../assets/contact-video.mp4'
 import ContactAnimation from '../../Animation/ContactAnimation'
 function Contact() {
   ContactAnimation();
@@ -84,7 +84,10 @@ function Contact() {
           </form>
         </div>
         <div className="right-contact-form">
-          <img src={Contact_gif} alt="" />
+        <video src={Contact_video} autoPlay loop muted playsInline>
+  Your browser does not support the video tag.
+</video>
+{/* <img src={Contact_video} alt="" /> */}
         </div>
       </div>
     </section>

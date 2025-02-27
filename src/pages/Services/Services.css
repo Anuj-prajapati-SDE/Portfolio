@@ -218,11 +218,19 @@ top: -5px;
 }
 
 @media (max-width: 1200px) {
+    .Services-about {
+        height: 45%;
+ 
+    }
+    .technology-knows-container {     
+        margin-bottom: 0%;
+        margin-top: 20px;
+    }
     .Services-about-2 {
         padding: 0px 30px;
     }
     .Services-about .Services-about-text-container {
-        border-radius: 20px;
+        border-radius: 10px;
         height: 90%;
     }
     .Services-about .Services-experience-boxes {
@@ -230,24 +238,24 @@ top: -5px;
         /* background-color: rgb(255, 23, 23); */
     }
     .Services-about-2 .service-responsive-screenshot {  
-        border-radius: 20px;
+        border-radius: 10px;
         width: 50%; 
         height: 80%;
     }
     .Services-about-2 .service-code-screenshot {
         width: 50%;
-        border-radius: 20px;
+        border-radius: 10px;
         margin-top: 30px;
         height: 80%;
     }
     .Services-about-2 .service-responsive-screenshot img {
         height: auto;
-        margin-top: 30px;
+        margin-top: 0px;
     }
     .Services-about-2 .service-code-screenshot img {
         width: 100%;
         height: auto;
-        margin-top: 30px;
+        margin-top: 0px;
         object-fit: cover;
     }.technology-knows-container .tech-heading-icon-container .heading-icon {
         width: 15%;

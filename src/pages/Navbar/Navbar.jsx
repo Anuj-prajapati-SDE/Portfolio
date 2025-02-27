@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); 
 
 function Navbar() { 
   const [navClick, setNavClick] = useState(false);
@@ -14,7 +14,7 @@ function Navbar() {
   const navLinksRef = useRef([]);
 
   useEffect(() => {
-    let truetl = gsap.timeline();
+    let truetl = gsap.timeline(); 
     let falsetl = gsap.timeline();
     falsetl.add("same-time-out")
     if (navClick) { 

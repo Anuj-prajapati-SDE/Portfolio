@@ -221,12 +221,15 @@ background-color: var(--theme-text-color);
     }
 }
 @media (max-width: 450px) {
+    .navbar-container {
+        padding: 0px 10px;
+    }
     .left-navbar {  
         font-size: smaller;
     }
     .hambargar-clicked-section {
-        top: 10vh;
-        left: 5%;
+        top: 13vh;
+        left: 2%;
         border-radius: 10px;
     }
 }
