@@ -6,8 +6,8 @@ function MarqueeAnimation() {
     const tl = gsap.timeline();
     useGSAP(() => {    
         tl.to(".top-aqua-line .heading-or-folwer", {
-            transform:"translateX(-150%)",
-            scrollTrigger: {
+            transform:"translateX(-150%)", 
+            scrollTrigger: { 
                 trigger: ".top-aqua-line",
                 scroller: "body",
                 start: "100% 11%",

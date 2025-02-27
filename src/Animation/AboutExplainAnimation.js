@@ -47,7 +47,7 @@ const AboutExplainAnimation = () => {
         { 
             position: "relative",     
            duration: 1,
-          top:"300px",
+          top:"500px",
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",

@@ -24,9 +24,6 @@ const ServiceAnimation = ()=>{
             // markers: true
           }}
         );
-        // const tl2 = gsap.timeline( 
-        //     {}
-        // );
         const tl3 = gsap.timeline({
           scrollTrigger: {
             scrub: 1,
@@ -53,7 +50,7 @@ const ServiceAnimation = ()=>{
             stagger:0.9,
             duration:2 
           })
-          tl1.from(".service-responsive-screenshot, .service-code-screenshot", {
+          tl1.from(".service-responsive-screenshot", {
           opacity:0,
           y:200,
           duration:2,
@@ -63,7 +60,21 @@ const ServiceAnimation = ()=>{
             scroller: "body",
             trigger: ".Services-content-section", 
             start: "20% 40%",
-            end: "30% 60%",
+            end: "40% 60%",
+            // markers: true
+          }
+          })
+          tl1.from(".service-code-screenshot", {
+          opacity:0,
+          y:200,
+          duration:2,
+          scale:0,
+          scrollTrigger: {
+            scrub: 3,
+            scroller: "body",
+            trigger: ".Services-content-section", 
+            start: "35% 40%",
+            end: "40% 60%",
             // markers: true
           }
           })

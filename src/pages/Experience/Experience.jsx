@@ -7,9 +7,7 @@ import { Link } from 'react-router-dom';
 function Experience() {
   ExperienceAnimation() 
  function reload(){
-window.reload()}
-
-  
+window.reload()}  
   return ( 
     <>
       <section id='projects' className='Work-project-section'>
