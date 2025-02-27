@@ -118,17 +118,22 @@ color: var(--text-color);
   }
   @media (max-width: 480px) {
     .About-Explain .title-left h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         display: inline-block;
+    }
+    .About-Explain .title-left {
+        width: 30%;
     }
     .About-Explain-section .About-Explain {
         padding: 0px 15px;
+        height: 28%;
     }
     .About-Explain .title-explaination {
-        font-size: x-small; 
+        font-size: x-small;
+        width: 50%;
     }
     .About-Explain .title-explaination span {
-        font-size: 3.5rem;
+        font-size: 3rem;
         left: 60%;
         top: 50px;
     }

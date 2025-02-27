@@ -11,7 +11,7 @@ function AboutExplain() {
         <div className="title-left">
           <h1><span>W</span>ebsite</h1>
         </div> 
-        <div className="title-explaination"> 
+        <div className="title-explaination">  
           <p>
             Focused on creating visually stunning interfaces and exceptional user experiences. Every click is crafted for user-friendly, efficient, and meaningful products.
           </p>
