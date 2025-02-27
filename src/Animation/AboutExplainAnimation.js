@@ -18,7 +18,7 @@ const AboutExplainAnimation = () => {
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",
-            start: "top 15%",
+            start: "top 11%",
             scrub: 2,
             end: "bottom 20%",
             pin: true,
@@ -34,9 +34,9 @@ const AboutExplainAnimation = () => {
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",
-            start: "top 15%",
+            start: "top 11%",
             scrub: 2,
-            end: "60% 20%",
+            end: "bottom 20%",
             // markers:true
           }
         }
@@ -51,7 +51,7 @@ const AboutExplainAnimation = () => {
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",
-            start: "top 15%",
+            start: "top 11%",
             scrub: 2,
             end: "bottom 20%",
           }

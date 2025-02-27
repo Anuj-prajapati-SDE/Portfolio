@@ -7,6 +7,19 @@ padding: 0px 20px;
     height: 90vh;
     /* background-color: aquamarine; */
 }
+.fixed-position {
+    position: relative;
+  }
+  
+  .hidden-element {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .relative-position {
+    position: relative;
+  }
+  
 .About-Explain-section video{
     position: absolute;
     margin-top: 15px;

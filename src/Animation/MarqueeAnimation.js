@@ -13,7 +13,7 @@ function MarqueeAnimation() {
                 start: "100% 11%",
                 end: "200% 20%",
                 scrub: 2,
-                markers:true,
+                // markers:true,
             }
         })
         tl.to(".bottom-black-line .heading-or-folwer", {
@@ -24,7 +24,7 @@ function MarqueeAnimation() {
                 start: "80% 11%",
                 end: "200% 20%",
                 scrub: 2,
-                // markers:true,
+                // markers:true, 
             }
         })
     })
