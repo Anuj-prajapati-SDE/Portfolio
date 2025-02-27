@@ -19,8 +19,8 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "20% 80%",
-            end: "50% 100%",
+            start: "-5% 30%",
+            end: "15% 50%",
             // markers: true
           }}
         );
@@ -29,9 +29,9 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "20% 50%",
-            end: "50% 80%",
-            // markers: true
+            start: "30% 40%",
+            end: "50% 60%",
+            markers: true
           }}
         );
         const tl3 = gsap.timeline({
@@ -39,7 +39,7 @@ const ServiceAnimation = ()=>{
             scrub: 1,
             trigger: ".Services-content-section",
             start: "60% 50%",
-            end: "90% 70%",
+            end: "100% 70%",
             // markers: true
           }
         });
@@ -74,6 +74,6 @@ const ServiceAnimation = ()=>{
             scale: 0       // Starts from scale 0
           });
        
-    })} 
+    })}  
 export default ServiceAnimation;
 

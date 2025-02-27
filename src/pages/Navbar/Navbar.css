@@ -228,9 +228,12 @@ background-color: var(--theme-text-color);
         font-size: smaller;
     }
     .hambargar-clicked-section {
-        top: 13vh;
+        top: 10vh;
         left: 2%;
         border-radius: 10px;
+    }
+    .hambargar-clicked-section .developer_name h4 {
+        padding-left: 35%;
     }
 }
 

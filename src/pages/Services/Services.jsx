@@ -9,7 +9,7 @@ function Services() {
         <>
             <section id='services' className='Services-section'>
                 <h1>WHAT</h1> 
-                <h1>SERVICES I</h1> 
+                <h1>SERVICES I</h1>  
                 <h1>PROVIDE</h1>  
             </section> 
             <section className='Services-content-section'>

@@ -3,15 +3,15 @@
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    height: 60vh;
     overflow: hidden;
-    /* background-color: blue; */
+    /* background-color: aqua; */
+  
 }
 .Services-section h1{
     font-size: 7rem;
     opacity: 1;
     overflow: hidden;
-    line-height: 100px;
+    line-height:110px;
     margin-left: 5%;
     color: var(--text-2-color);
 }
@@ -23,9 +23,11 @@
     color: var(--text-color);
 }
 .Services-content-section{
+    position: relative;
     width: 100%;
-    height: 150vh;
-    /* background-color: rgb(18, 43, 43); */
+    padding: 20px;
+    height: 170vh;
+    /* background-color: rgb(4, 144, 144); */
 }
 .Services-about{
     position: relative;
@@ -71,7 +73,7 @@ margin-top: 25px;
     gap: 20px;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
     height: 100%;
     /* background-color: rgb(255, 23, 23); */
 }
@@ -112,7 +114,7 @@ margin-top: 25px;
 }
 .Services-about-2 .service-responsive-screenshot{
     margin-top: 30px;
-    border-radius: 20px;
+    border-radius: 10px;
     opacity: 1;
     width: 40%;
     scale: 1;
@@ -135,7 +137,7 @@ object-fit: cover;
 }
 .Services-about-2 .service-code-screenshot{
     width: 40%;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-top: 30px;
 height: 90%;
 outline: 0.5px solid white;
@@ -155,10 +157,11 @@ height: 80%;
 object-fit: cover;
 }
 .technology-knows-container{
-    width: 90%;
-    margin-left: 5%;
-    /* margin-top: 20px; */
-    border-radius: 20px;
+    width: 85%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 15px;
     padding: 10px;
     text-align: center;
     height:23%;
@@ -167,6 +170,7 @@ object-fit: cover;
     background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
+    /* background-color: aquamarine; */
 }
 .technology-knows-container h1{
     color: var(--text-color);
@@ -219,23 +223,23 @@ top: -5px;
 
 @media (max-width: 1200px) {
     .Services-about {
-        height: 45%;
- 
+        height: 40%;
     }
     .technology-knows-container {     
-        margin-bottom: 0%;
-        margin-top: 20px;
+        margin-top: -20px;
+        margin-bottom: 0px;
+        width: 95%;
     }
     .Services-about-2 {
         padding: 0px 30px;
+        gap: 30px;
     }
     .Services-about .Services-about-text-container {
         border-radius: 10px;
-        height: 90%;
+        height: 85%;
     }
     .Services-about .Services-experience-boxes {
         height: 85%;
-        /* background-color: rgb(255, 23, 23); */
     }
     .Services-about-2 .service-responsive-screenshot {  
         border-radius: 10px;
@@ -286,10 +290,20 @@ top: -5px;
         font-size: 1.4vw;
     }
   }
-  @media (max-width: 992px) {
-  /*no need  responsive  */
-  }
-  @media (max-width: 768px) {
+  
+  @media (max-width: 769px) {
+    .Services-about .Services-about-text-container {
+        border-radius: 10px;
+        height: 70%;
+        width: 55%;
+        padding: 0px 25px;
+    }
+    .Services-about .Services-experience-boxes {
+        height: 70%;
+    }
+    .Services-section h1 {
+        font-size: 6rem;
+    }
     .Services-about .Services-about-text-container p {
         font-size: 2vw;
         text-align: justify;
@@ -307,18 +321,16 @@ top: -5px;
     }
     .Services-about-2 {
         gap: 25px;
+        padding: 0px 20px;
+        height: 55vh;
     }
-    .Services-about-2 .service-responsive-screenshot {
+    .Services-about-2 .service-responsive-screenshot, .Services-about-2 .service-code-screenshot {
         border-radius: 10px;
         width: 50%;
-        height: 75%;
+      margin-top: 0px;
+        height:85%;
     }
-    .Services-about-2 .service-code-screenshot {
-        width: 50%;
-        border-radius: 10px;
-        margin-top: 30px;
-        height: 75%;
-    }
+    
     .Services-about-2 .service-code-screenshot h2 { 
         font-size: 3.3vw;
     }
@@ -326,16 +338,21 @@ top: -5px;
         font-size: 3.5vw;
     }
     .technology-knows-container {
-        margin-left: 5%;
-        margin-top: -32px;
+        margin-top: 0px;
         border-radius: 15px;
         
     }
   }
   
-  @media (max-width: 576px) { 
+  @media (max-width: 576px) 
+  {
+    .Services-about-2 {
+        margin-top: 20px;
+
+    }
     .Services-section h1 {
-        font-size: 16vw;
+        font-size: 14vw;
+        line-height: 85px;
     } 
     .Services-section h1:nth-child(1) {
         margin-left: 5%;
@@ -354,14 +371,9 @@ top: -5px;
         width: 100%;
         display: flex;
         flex-direction: column;
+        gap: 0px;
   }
-  .Services-about .Services-experience-boxes {
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-    flex-direction: column;
-    gap: 0px;
-}
+
 .Services-about .Services-experience-boxes .experience-box {
     width: 120px;
     border-radius: 10px;
@@ -371,15 +383,9 @@ top: -5px;
     width: 94%;
     gap: 0px;
 }
-.Services-about-2 .service-responsive-screenshot {
+.Services-about-2 .service-responsive-screenshot, .Services-about-2 .service-code-screenshot {
     border-radius: 10px;
     width: 50%;
-    height: 60%;
-}
-.Services-about-2 .service-code-screenshot {
-    width: 50%;
-    border-radius: 10px;
-    margin-top: 30px;
     height: 60%;
 }
 .technology-knows-container h1 {
@@ -394,7 +400,7 @@ top: -5px;
     margin-left: 3%;
     width: 95%;
     height: 22%;
-    margin-top: -100px;
+    margin-top: -10px;
     border-radius: 15px;
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon {
@@ -410,6 +416,17 @@ top: -5px;
 }
 }
   @media (max-width: 480px) {
+    .Services-section {
+        margin-top: 30px;
+    }
+    .Services-content-section {     
+        height: auto;
+ 
+    }
+    .Services-section h1 {
+        font-size: 14vw;
+        line-height: 70px;
+    }
     .Services-about {
         position: relative;
         width: 100%;
@@ -418,17 +435,14 @@ top: -5px;
         /* background-color: blueviolet; */
     }
     .Services-about .Services-experience-boxes {
-        width: 90%;
+        width: 100%;
         gap: 20px;
+        padding: 15px;
         flex-direction: row;
     }
     .Services-about .Services-about-text-container {
         height: 150px;
         width: 79%;
-    }
-    .Services-about-2 {
-        display: block;
- 
     }
     .Services-about-2 .service-responsive-screenshot {
         border-radius: 10px;
@@ -452,14 +466,14 @@ top: -5px;
     }
     .Services-about-2 {
         display: block;
-        height: 50vh;
+        height: auto;
+        margin-top: 0px;
     }
     .technology-knows-container {
-            margin-left: 3%;
-            width: 95%;
+            width:92%;
             height: 22%;
-            margin-top: 150px;
-            border-radius: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
         }
         .Services-about-2 .service-code-screenshot {
             width: 100%;
@@ -473,12 +487,12 @@ top: -5px;
             height: 25%;
         }
         .Services-about-2 .service-code-screenshot h2 {
-            margin-top: 30px;
+            margin-top: 0px;
             position: relative;
-            top: 20px;
+            top: 5px;
         }
   }
-  @media (max-width: 391px) {
+  /* @media (max-width: 391px) {
     .Services-section {
         height: 40vh;
 
@@ -493,4 +507,4 @@ top: -5px;
         margin-top: -70px;
         border-radius: 15px;
     }
-  }
+  } */
