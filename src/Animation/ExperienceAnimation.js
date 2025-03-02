@@ -39,7 +39,7 @@ const  ExperienceAnimation = () => {
           scrollTrigger: {
             trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             markers:true,
             end: "bottom 20%",
@@ -56,7 +56,7 @@ const  ExperienceAnimation = () => {
           scrollTrigger: {
             trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -72,7 +72,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -84,7 +84,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -96,7 +96,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -109,7 +109,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -122,7 +122,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -135,7 +135,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -148,7 +148,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -161,7 +161,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -173,7 +173,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -186,7 +186,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -198,7 +198,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
        trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
@@ -210,7 +210,7 @@ const  ExperienceAnimation = () => {
       scrollTrigger:{
         trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "1% 12%",
+            start: "top 12%",
             scrub: 2,
             // markers:true,
             end: "bottom 20%",
