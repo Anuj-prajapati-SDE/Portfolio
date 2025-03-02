@@ -5,7 +5,6 @@ function AboutExplain() {
   AboutExplainAnimation()
   return (
     <section className='About-Explain-section'>
-         {/* <p>some quote write here</p> */}
       <div className='About-Explain background-shadow'>
      
         <div className="title-left">
