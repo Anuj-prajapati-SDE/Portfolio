@@ -137,10 +137,10 @@ color: var(--text-color);
     .About-Explain .title-left {
         width: 30%;
     }
-    .About-Explain-section .About-Explain {
+    /* .About-Explain-section .About-Explain {
         padding: 0px 15px;
         height: 28%;
-    }
+    } */
     .About-Explain .title-explaination {
         font-size: x-small;
         width: 50%;
