@@ -19,9 +19,9 @@ const AboutExplainAnimation = () => {
             trigger: ".About-Explain-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
             end: "bottom 20%",
-            pin: true,
+            scrub: 3,
+            pin:true,
           //  markers:true
           }
         }
