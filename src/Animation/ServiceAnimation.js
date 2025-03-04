@@ -19,24 +19,25 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "-5% 30%",
-            end: "15% 50%",
+            start: "10% 80%",
+            end: "50% 100%",
             // markers: true
           }}
         );
-        const tl3 = gsap.timeline({
-          scrollTrigger: {
-            scrub: 1,
+        const tl2 = gsap.timeline( 
+            {scrollTrigger: {
+            scrub: 3,
+            scroller: "body",
             trigger: ".Services-content-section",
-            start: "70% 50%",
-            end: "110% 70%",
+            start: "20% 50%",
+            end: "50% 80%",
             // markers: true
-          }
-        });
+          }}
+        );
         tl.from(".Services-section h1", {
          opacity:0,
           y:200,
-          overflow:"hidden",
+         overflow:"hidden",
           stagger:0.5
 
           })
@@ -50,42 +51,14 @@ const ServiceAnimation = ()=>{
             stagger:0.9,
             duration:2 
           })
-          tl1.from(".service-responsive-screenshot", {
+          tl2.from(".service-responsive-screenshot, .service-code-screenshot", {
           opacity:0,
           y:200,
-          duration:2,
+          duration:2 ,
           scale:0,
-          scrollTrigger: {
-            scrub: 3,
-            scroller: "body",
-            trigger: ".Services-content-section", 
-            start: "20% 40%",
-            end: "40% 60%",
-            // markers: true
-          }
           })
-          tl1.from(".service-code-screenshot", {
-          opacity:0,
-          y:200,
-          duration:2,
-          scale:0,
-          scrollTrigger: {
-            scrub: 3,
-            scroller: "body",
-            trigger: ".Services-content-section", 
-            start: "35% 40%",
-            end: "40% 60%",
-            // markers: true
-          }
-          })
-          tl3.from(".heading-icon", {
-            stagger: 0.5,  // Adds delay between each animation
-            duration: 1,   // Each animation lasts 1 second
-            opacity:1,
-            y: 100,        // Moves up from 100px
-            scale: 0       // Starts from scale 0
-          });
+         
        
-    })}  
+    })} 
 export default ServiceAnimation;
 
