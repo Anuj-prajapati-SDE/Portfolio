@@ -41,14 +41,24 @@
 }
 
 .Work-project-show-section {
- position: relative;
+ position: relative; 
+    width: 100%;
+    height: auto;
+    padding: 10px 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: rgb(13, 33, 35);
+}
+.Work-project-show-container {
+ position: relative; 
     width: 100%;
     height: 90vh;
     padding: 10px 30px;
     display: flex;
     gap: 10px;
     justify-content: center;
-    /* background-color: rgb(8, 234, 255); */
+    background-color: rgb(8, 234, 255);
 }
 
 .project-frame-count-name {
@@ -305,7 +315,7 @@ margin-top: 10px;
     .project-frame-count-name {
         width: 20%;
     }
-    .Work-project-show-section .project-frame {
+    .Work-project-show-section .Work-project-show-container .project-frame {
         width: 50%;
     }
     .project-year-role-description .project-year {
@@ -351,7 +361,7 @@ margin-top: 10px;
         padding-left: 8px;
         padding-top: 5px;
     }
-    .Work-project-show-section {
+    .Work-project-show-section .Work-project-show-container {
     
         display: block;
     }
@@ -384,7 +394,7 @@ margin-top: 10px;
         padding: 2px;
         height: 100px;
     }
-    .Work-project-show-section .project-frame {
+    .Work-project-show-section .Work-project-show-container .project-frame {
         position: relative;
         padding: 0px 50px;
         display: flex;
@@ -489,7 +499,7 @@ margin-top: 10px;
     .project-year-role-description .project-role .roles {
         font-size: 13px;
     }
-    .Work-project-show-section .project-frame {
+    .Work-project-show-section .Work-project-show-container .project-frame {
         height: 50%;
        
     }
@@ -561,7 +571,7 @@ margin-top: 10px;
         padding-left: 0px;
         padding-top: 8px;
     }
-    .Work-project-show-section .project-frame {
+    .Work-project-show-section .Work-project-show-container .project-frame {
         height: 50%;
         padding: 0px 30px;
        margin-top: 5px;

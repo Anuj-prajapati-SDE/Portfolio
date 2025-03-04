@@ -17,6 +17,7 @@ window.reload()}
         <span>R</span>
       </section>
       <section className='Work-project-show-section'>
+        <div className="Work-project-show-container">
         <div className='project-frame-count-name background-shadow'>
           <div className="project-work-frame">
             <div className="img-frames">
@@ -84,6 +85,7 @@ window.reload()}
           <div className="All-project-link">
             <Link to={"/all-projects"} onClick={reload}>View All Projects</Link>
           </div>
+        </div>
         </div>
       </section>
     </>

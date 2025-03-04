@@ -20,14 +20,14 @@ padding: 0px 20px;
     position: relative;
   }
   
-.About-Explain-section video{
+/* .About-Explain-section video{
     position: absolute;
     margin-top: 15px;
     width: 100%; 
     z-index: -1;
     object-fit: cover;
     height: 100%;
-}
+} */
 .About-Explain-section .About-Explain{
     width: 100%;
   border-radius: 5px;

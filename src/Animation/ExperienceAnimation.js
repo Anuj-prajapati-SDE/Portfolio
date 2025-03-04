@@ -33,7 +33,7 @@ const  ExperienceAnimation = () => {
       })
       tl.to(
         ".project-frame .project-frame-img-frame-1",
-        { 
+        {  
             scaleX:"0",
             scaleY:"0",
           scrollTrigger: {

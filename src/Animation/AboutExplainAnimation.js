@@ -16,13 +16,13 @@ const AboutExplainAnimation = () => {
            duration: 1,
           top:"-300px",
           scrollTrigger: {
-            trigger: ".About-Explain-section",
+            trigger: ".About-Explain-section", 
             scroller: "body",
             start: "top 11%",
             scrub: 2,
             end: "bottom 20%",
+            markers:true,
             pin: true,
-            markers:true
           }
         }
       )
@@ -52,6 +52,7 @@ const AboutExplainAnimation = () => {
             scroller: "body",
             start: "top 11%",
             scrub: 2,
+          
             end: "bottom 20%",
           }
         }
@@ -59,7 +60,7 @@ const AboutExplainAnimation = () => {
     }
     )
     return () => [AboutExplainPin.revert()];
-}
+} 
 ,[])
 }
 export default AboutExplainAnimation
