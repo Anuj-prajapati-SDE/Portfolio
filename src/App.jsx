@@ -8,7 +8,7 @@ import MouseFollower from "./Animation/MouseFollower"
 
 function App() {
   return (
-    <>
+    <>        
       <SmoothScrolling>
       <MouseFollower></MouseFollower>
         <Router>
