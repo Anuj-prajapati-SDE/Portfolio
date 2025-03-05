@@ -27,7 +27,7 @@ function AboutExplain() {
         </div>
       <div className="title-left skill">
           <h1><span>S</span>kill</h1>
-        </div>
+        </div> 
       </div>
       <div className='About-Explain background-shadow'>
         <div className="title-left">
