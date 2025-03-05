@@ -1,0 +1,161 @@
+.About-Explain-section{
+    position: relative;
+      margin-top: 7%;
+    width: 100%; 
+overflow: hidden;
+padding: 0px 20px; 
+    height: 90vh;
+    /* background-color: aquamarine; */
+}
+.fixed-position {
+    position: relative;
+  }
+  
+  .hidden-element {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .relative-position {
+    position: relative;
+  }
+  
+/* .About-Explain-section video{
+    position: absolute;
+    margin-top: 15px;
+    width: 100%; 
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
+} */
+.About-Explain-section .About-Explain{
+    width: 100%;
+  border-radius: 5px;
+    display: flex;
+    /* display: none; */
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 50px;
+    height: 32%;
+    border-bottom: 2px solid var(--theme-text-color);
+}
+
+.About-Explain-section .About-Explain .skill{
+text-align: end;
+
+}
+.About-Explain .title-left{
+    width: 70%;
+}
+.About-Explain .title-left h1{
+font-size: 10rem;
+color: var(--text-color);
+}
+.About-Explain .title-left h1>span{
+    color: var(--theme-text-color);
+}
+.About-Explain .title-explaination{ 
+    position: relative;
+width: 30%;
+font-size: larger;
+font-weight: 500;
+color: var(--text-color);
+}
+.About-Explain .title-explaination span{
+  position: absolute;
+   left: 80%;
+   top: 45px;
+   height: 100px;
+   font-size:5rem;
+}
+
+ 
+@media (max-width: 1200px) {
+    .About-Explain .title-left h1 {
+        font-size: 9rem;
+        color: var(--text-color);
+    }
+    .About-Explain .title-explaination span { 
+        left: 80%;
+        top: 72px;
+    }
+  }
+  @media (max-width: 1030px) {
+    .About-Explain .title-left h1 {
+        font-size: 8rem;
+        color: var(--text-color);
+    }
+  }
+  @media (max-width: 992px) {
+    .About-Explain .title-explaination {  
+        font-size: medium;
+    }
+    .About-Explain .title-explaination span {
+        left: 80%;
+        top: 50px;
+    }
+  }
+  @media (max-width: 768px) {
+    .About-Explain .title-left h1 {
+        font-size: 5rem;
+        color: var(--text-color);
+    }
+    .About-Explain .title-explaination {
+        font-size: small;
+    }
+    .About-Explain .title-explaination span {
+        left: 78%;
+        top: 35px;
+    }
+    .About-Explain-section .About-Explain {     
+        padding: 0px 25px;
+    }
+  }
+  
+  @media (max-width: 576px) { 
+    .About-Explain .title-left {
+        width: 55%;
+    }
+    .About-Explain .title-explaination {
+        font-size: small;
+        width: 38%;
+    }
+    .About-Explain .title-explaination span {
+        font-size: 4.5rem;
+    }
+    .About-Explain .title-left h1 {
+        font-size: 3.75rem;
+        display: inline-block;
+    }
+  }
+  @media (max-width: 480px) {
+    .About-Explain .title-left h1 {
+        font-size: 2rem;
+        display: inline-block;
+    }
+    .About-Explain .title-left {
+        width: 30%;
+    }
+
+    .About-Explain .title-explaination {
+        font-size: x-small;
+        width: 50%;
+    }
+    .About-Explain .title-explaination span {
+        font-size: 3rem;
+        left: 60%;
+        top: 50px;
+    }
+}
+
+  @media (max-width: 381px) {
+    .About-Explain .title-left h1 {
+        font-size: 2.5rem;
+        display: inline-block;
+    }
+    .About-Explain .title-explaination {
+        font-size: xx-small;
+        text-align: center;
+    }
+  } 

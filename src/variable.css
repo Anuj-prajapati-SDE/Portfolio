@@ -1,0 +1,13 @@
+:root{
+    --back-ground-color : #ebebeb;
+    --background-black: rgb(30, 29, 29);
+    --text-2-color:rgb(118, 118, 118);
+    /* --theme-text-color : #ff5100; */
+    --theme-text-color : #08afff;
+     --text-color:rgb(243, 243, 243);
+}
+.background-shadow{
+background: rgba(97, 97, 97, 0.12);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+}
