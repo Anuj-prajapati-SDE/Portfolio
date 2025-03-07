@@ -5,7 +5,7 @@ const AboutAnimation = () => {
   gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
     const tl = gsap.timeline();
-    const tl1  = gsap.timeline();
+    const tl1  = gsap.timeline(); 
     tl.to(".img-frame-1", {
       x: 30,
       y: 50,

@@ -6,7 +6,7 @@ const  ExperienceAnimation = () => {
   gsap.registerPlugin(ScrollTrigger)
 
   useEffect(() => {
-    const headingTl = gsap.timeline({
+    const headingTl = gsap.timeline({ 
       scrollTrigger: {
         trigger: ".Work-project-section",
         scroller: "body",
@@ -39,8 +39,8 @@ const  ExperienceAnimation = () => {
           scrollTrigger: {
             trigger: ".Work-project-show-section",
             scroller: "body",
-            start: "top 11%",
-            scrub: 2,
+            start: "top 10%",
+            scrub: 3,
             markers:true,
             end: "bottom 20%",
             pin: true,
@@ -57,7 +57,7 @@ const  ExperienceAnimation = () => {
             trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
           }
@@ -72,7 +72,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -84,7 +84,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -96,7 +96,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -109,7 +109,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -122,7 +122,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -135,7 +135,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -148,7 +148,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -161,7 +161,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -173,7 +173,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -186,7 +186,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -198,7 +198,7 @@ const  ExperienceAnimation = () => {
        trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }
@@ -210,7 +210,7 @@ const  ExperienceAnimation = () => {
         trigger: ".Work-project-show-section",
             scroller: "body",
             start: "top 11%",
-            scrub: 2,
+            scrub: 3,
             // markers:true,
             end: "bottom 20%",
       }

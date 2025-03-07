@@ -19,8 +19,8 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "10% 80%",
-            end: "50% 100%",
+            start: "5% 80%",
+            end: "30% 100%",
             // markers: true
           }}
         );
@@ -29,7 +29,7 @@ const ServiceAnimation = ()=>{
             scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
-            start: "20% 50%",
+            start: "35% 50%",
             end: "50% 80%",
             // markers: true
           }}
@@ -44,21 +44,27 @@ const ServiceAnimation = ()=>{
           tl1.from(".Services-about-text-container", {
            scale:0,
            stagger:0.9,
-           duration:4,
+           duration:2,
           })
           tl1.from(".experience-box", {
             scale:0,
             stagger:0.9,
-            duration:2 
+            duration:1 
           })
-          tl2.from(".service-responsive-screenshot, .service-code-screenshot", {
+          tl2.from(".service-responsive-screenshot", {
           opacity:0,
           y:200,
-          duration:2 ,
           scale:0,
+          stagger:0.9,
+          duration:3
           })
-         
-       
+          tl2.from(".service-code-screenshot", {
+          opacity:0,
+          y:200,
+          scale:0,
+          stagger:0.9,
+          duration:3
+          })
     })} 
 export default ServiceAnimation;
 

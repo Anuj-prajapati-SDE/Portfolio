@@ -19,15 +19,7 @@ padding: 0px 20px;
   .relative-position {
     position: relative;
   }
-  
-/* .About-Explain-section video{
-    position: absolute;
-    margin-top: 15px;
-    width: 100%; 
-    z-index: -1;
-    object-fit: cover;
-    height: 100%;
-} */
+
 .About-Explain-section .About-Explain{
     width: 100%;
   border-radius: 5px;
@@ -147,6 +139,18 @@ color: var(--text-color);
         left: 60%;
         top: 50px;
     }
+}
+@media (max-width: 450px) {
+    .About-Explain .title-left h1 {
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+    .About-Explain-section .About-Explain {
+      
+        height: 28%;
+ 
+    }
+    
 }
 
   @media (max-width: 381px) {

@@ -8,13 +8,13 @@ function Experience() {
   ExperienceAnimation() 
  function reload(){
 window.reload()}  
-  return ( 
+  return (  
     <>
       <section id='projects' className='Work-project-section'>
         <h1>PROJECTS I </h1> 
         <h1>WORKED ON</h1>
         <h1>24-25</h1>
-        <span>R</span>
+        <span>R</span> 
       </section>
       <section className='Work-project-show-section'>
         <div className="Work-project-show-container">

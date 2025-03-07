@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const AboutExplainAnimation = () => {
   gsap.registerPlugin(ScrollTrigger)
 
-  useEffect(() => {
+  useEffect(() => { 
     const tl = gsap.timeline();
     tl.add("same-time-pin"); 
     const  AboutExplainPin= gsap.context(() => {
@@ -18,10 +18,10 @@ const AboutExplainAnimation = () => {
           scrollTrigger: {
             trigger: ".About-Explain-section", 
             scroller: "body",
-            start: "top 11%",
+            start: "top 11%", 
             scrub: 2,
             end: "bottom 20%",
-            markers:true,
+        
             pin: true,
           }
         }
@@ -36,7 +36,7 @@ const AboutExplainAnimation = () => {
             scroller: "body",
             start: "top 11%",
             scrub: 2,
-            end: "bottom 20%",
+            end: "bottom 20%", 
           }
         }
       )
@@ -46,7 +46,7 @@ const AboutExplainAnimation = () => {
         { 
             position: "relative",     
            duration: 1,
-          top:"300px",
+          top:"500px",
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",

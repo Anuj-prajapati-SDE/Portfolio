@@ -613,12 +613,33 @@ margin-top: 10px;
     }
     
 }
-  @media (max-width: 381px) {
+@media (max-width: 450px) {
+    .Work-project-section span {
+        margin-top: 31%;
+    }
+    .Work-project-section h1 {
+       
+        line-height: 60px;
+    }
+    .project-frame-count-name {
+        padding: 10px;
+        
+    }
+    .project-frame-count-name .project-name {
+        font-size: 0.8rem;
+         padding-top: 60px;
+    }
+    .project-year-role-description .project-role .roles {
+        font-size: 11px;
+        margin-top: 5px;
+    }
+}
+  @media (max-width: 391px) {
     .Work-project-section {  
         padding: 0px 20px;
     }
     .Work-project-section span {
-        width: 9%;
+        width: 9%; 
         margin-top: 70px;
         padding-left: 10px;
         padding-top: 5px;
