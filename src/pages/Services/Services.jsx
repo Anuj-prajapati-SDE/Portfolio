@@ -1,5 +1,20 @@
 import React from 'react'
 import "./Services.css" 
+import { AiOutlineHtml5 } from "react-icons/ai";
+import { IoLogoCss3 } from "react-icons/io";
+import { FaNodeJs } from "react-icons/fa6";
+import { FaBootstrap } from "react-icons/fa";
+import { RiJavaLine } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
+import { FaGithubSquare } from "react-icons/fa";
+import { DiDocker } from "react-icons/di";
+import { SiSpringboot } from "react-icons/si";
+import expressIcon from '../../assets/expressIcon.png'
+import { FaSquareJs } from "react-icons/fa6";
+import { FaReact } from "react-icons/fa";
+import { RiTailwindCssLine } from "react-icons/ri";
+import cppIcon from '../../assets/cpp_icon.webp'
+import { TbBrandRedux } from "react-icons/tb";
 import Res_screenShot from "../../assets/responsive-screenshot-img.webp"
 import code_screenShot from "../../assets/code-screenshot-img.webp"
 import ServiceAnimation from '../../Animation/ServiceAnimation'
@@ -51,49 +66,69 @@ function Services() {
                         <h1>Teachnology knows</h1>
                         <div className="tech-heading-icon-container">
                             <div className="heading-icon">
-                                <span><i className="ri-html5-line"></i></span>
+                                <span><AiOutlineHtml5 /></span>
                                 <h2>Html</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><i className="ri-css3-line"></i></span>
+                                <span><IoLogoCss3 /></span>
                                 <h2>CSS</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><i className="ri-javascript-line"></i></span>
+                                <span><FaSquareJs /></span>
                                 <h2>JavaScript</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><i className="ri-reactjs-line"></i></span>
+                                <span><FaReact /></span>
                                 <h2>React</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><box-icon type='logo' name='redux'></box-icon></span>
-                                <h2>Redux ToolKit</h2>
+                                <span><TbBrandRedux /></span>
+                                <h2>Redux</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><i className="ri-tailwind-css-line"></i></span>
-                                <h2>Tailwind CSS</h2>
+                                <span><RiTailwindCssLine /></span>
+                                <h2>Tailwind</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><i className="ri-nodejs-line"></i></span>
+                                <span><FaBootstrap /></span>
+                                <h2>Bootstrap</h2>
+                            </div>
+                            <div className="heading-icon">
+                                <span><FaNodeJs /></span>
                                 <h2>Node JS</h2>
                             </div>
                             <div className="heading-icon">
-                                <span></span>
+                                <span><img src={expressIcon} className='express'></img></span>
                                 <h2>Express JS</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><box-icon type='logo' name='mongodb'></box-icon></span>
+                                <span><SiMongodb /></span>
                                 <h2>Mongodb</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><img src="https://1stwebdesigner.com/wp-content/uploads/2019/11/gsap-animation-01.png" /></span>
-                        
+                                <span><FaGithubSquare /></span>
+                                <h2>Git & GitHub</h2>
                             </div>
                             <div className="heading-icon">
-                                <span></span>
-                                <h2>Lenis & Locomotive</h2>
-                            </div> 
+                                <span><img src={cppIcon}></img></span>
+                                <h2>C</h2>
+                            </div>    
+                            <div className="heading-icon">
+                                <span><img src={cppIcon}></img></span>
+                                <h2>C++</h2>
+                            </div>    
+                            <div className="heading-icon">
+                                <span><RiJavaLine /></span>
+                                <h2>Java</h2>
+                            </div>    
+                            <div className="heading-icon">
+                                <span><SiSpringboot /></span>
+                                <h2>SpringBoot</h2>
+                            </div>    
+                            <div className="heading-icon">
+                                <span><DiDocker /></span>
+                                <h2>Docker</h2>
+                            </div>    
                         </div>
                        </div>
             </section>

@@ -15,7 +15,7 @@
     margin-left: 5%;
     color: var(--text-2-color);
 }
-.Services-section h1:nth-child(1){
+.Services-section h1:nth-child(1){ 
     margin-left: 25%;
 }
 .Services-section h1:nth-child(3){
@@ -119,7 +119,7 @@ margin-top: 25px;
     width: 40%;
     scale: 1;
  outline: 0.5px solid white;
-height: 90%;
+height:auto;
 background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
@@ -135,6 +135,7 @@ background: rgba(97, 97, 97, 0.12);
 height: 80%;
 object-fit: cover;
 }
+
 .Services-about-2 .service-code-screenshot{
     width: 40%;
     border-radius: 10px;
@@ -164,7 +165,7 @@ object-fit: cover;
     border-radius: 15px;
     padding: 10px;
     text-align: center;
-    height:23%;
+    height:auto;
     outline: 0.5px solid white;
     margin-bottom: 40%;
     background: rgba(97, 97, 97, 0.12);
@@ -190,14 +191,14 @@ object-fit: cover;
     /* background-color: blue; */
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon{
-    width: 15%;
-    height:45%;
+    width: 12%;
+   padding: 10px;
     opacity: 1;
     scale: 1;
     padding-top: 10px;
     border-radius: 10px;
     gap: 40px;
-    font-size: 1.1rem;
+    font-size: 1rem;
      color: var(--text-color);
      cursor: pointer;
      transition: 0.3s ease-in-out;
@@ -206,17 +207,17 @@ object-fit: cover;
      backdrop-filter: blur(6.8px);
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon span{
-    font-size: 1.5rem;
-
+    font-size: 1.2rem;
     color: var(--text-color);
     
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon span img{
-width: 100%;
+width: 20%;
 position: relative;
-height: 95%;
-top: -5px;
+height: 80%;
+
 }
+
 .technology-knows-container .tech-heading-icon-container .heading-icon h2{
  font-size: 1.3rem;
 }

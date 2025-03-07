@@ -6,7 +6,7 @@ const ContactAnimation = () => {
     useGSAP(() => {
         const tl = gsap.timeline({
             scrollTrigger: {
-                scrub: 2,
+                scrub: 3,
                 scroller: "body", 
                 trigger: ".contact-section",
                 start: "90% 10%",
@@ -14,6 +14,7 @@ const ContactAnimation = () => {
             //    markers:true
               }
         });
+   
         tl.from(".contact-section h1", {
             y:400,
             opacity:0,
@@ -26,6 +27,7 @@ const ContactAnimation = () => {
 
         }
         )            
+                
            
     })
 }

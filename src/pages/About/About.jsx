@@ -16,7 +16,7 @@ function About() {
           functional &<br/>
           visually pleasing<br/>
           interfaces for<br/>
-          web.</p>
+          website.</p>
           {/* <Link to='/about' className=''>know More</Link> */}
          <div className="signature-svg">
          <svg version="1.0" width="80%" height="80%" viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
@@ -162,7 +162,7 @@ l-31 -66 -4 36 c-3 37 27 226 52 319 8 30 17 76 21 102 6 40 4 48 -13 57 -37
 114 279 222 477 291 43 15 81 31 84 34 10 9 -38 5 -82 -9z" className="svg-elem-26"></path>
 </g>
          </svg>
-         </div>
+         </div> 
       </div>
       <div className="right_section">
         <div className='img-frame-1 img-frame'>

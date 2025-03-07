@@ -21,12 +21,12 @@ const AboutExplainAnimation = () => {
             start: "top 11%", 
             scrub: 2,
             end: "bottom 20%",
-         markers:true,
-            pin: true,
+          // markers:true,
+            pin: true, 
           }
         }
-      )
-      tl.to(
+      ) 
+      tl.to( 
         ".About-Explain-section .About-Explain:nth-child(2)",
         { 
             position: "relative",     
@@ -36,7 +36,8 @@ const AboutExplainAnimation = () => {
             scroller: "body",
             start: "top 11%",
             scrub: 2,
-            end: "bottom 20%", 
+            end: "30% 20%", 
+            // markers:true
           }
         }
       )
@@ -50,10 +51,24 @@ const AboutExplainAnimation = () => {
           scrollTrigger: {
             trigger: ".About-Explain-section",
             scroller: "body",
-            start: "top 11%",
+            start: "top 11%", 
             scrub: 2,
-          
             end: "bottom 20%",
+          }
+        }
+      )
+      tl.to(
+        ".About-thinking",
+        { 
+          scale:1, 
+          opacity:1,
+          scrollTrigger: {
+            trigger: ".About-Explain-section",
+            scroller: "body",
+            start: "top 11%",
+            end: "bottom 20%",
+            scrub: 2,
+            // markers:true
           }
         }
       )

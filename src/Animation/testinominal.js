@@ -6,20 +6,20 @@ const TestinominalAnimation = () => {
   useGSAP(() => {
     let tl = gsap.timeline({
       scrollTrigger:{
-        start: "20% 80%",
-        end: "60% 100%",
-        scrub: 3,
+        start: "420% 100%",
+        end: "200% 80%",
+        scrub: 3, 
         scroller: "body",
         // markers:true,
-        trigger: ".Testimonials-section"
+        trigger: ".Testimonials-heading"
       }
     });
-    tl.from(".Testimonials-section h1", {
+    
+    tl.from("#testimonials h1", {
         opacity:0,
-        y:300,
+        y:300, 
         stagger:0.3
     })
-   
-    
+      
 })} 
 export default TestinominalAnimation; 

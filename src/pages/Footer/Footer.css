@@ -76,9 +76,15 @@
     justify-content: end;
   }
   .image_and_bottom_container h1{
+    position: relative;
+    
     font-size: 8rem;
     overflow: hidden;
     word-spacing: 20px;
+  }
+  .image_and_bottom_container h1 span{
+    opacity:1;
+    scale: 1;
   }
   .bottom_container{
       bottom: 0%;
@@ -121,7 +127,7 @@
     font-size: 25px;
   transition: 0.3s ease-in-out;
   }
-  .bottom_right i:hover{
+  .bottom_right a:hover{
   color: var(--theme-text-color);
   }
   @media (max-width: 1200px) { 

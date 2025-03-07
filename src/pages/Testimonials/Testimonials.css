@@ -35,6 +35,7 @@
     position: relative;
     display: flex;
     width: 100%;
+    opacity:1;
     color: var(--text-2-color);
     justify-content: space-around;
     border-bottom: 1px solid var(--theme-text-color);

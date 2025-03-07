@@ -2,10 +2,10 @@ import React from 'react'
 import './Experience.css'
 import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
-// import ExperienceAnimation from '../../Animation/ExperienceAnimation'
+import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import { Link } from 'react-router-dom';
 function Experience() {
-  // ExperienceAnimation() 
+  ExperienceAnimation() 
  function reload(){
 window.reload()}  
   return (  
@@ -14,9 +14,9 @@ window.reload()}
         <h1>PROJECTS I </h1> 
         <h1>WORKED ON</h1>
         <h1>24-25</h1>
-        <span>R</span> 
+        <span>R</span>  
       </section>
-      <section className='Work-project-show-section'>
+      <section className='Work-project-show-section'> 
         <div className="Work-project-show-container">
         <div className='project-frame-count-name background-shadow'>
           <div className="project-work-frame">

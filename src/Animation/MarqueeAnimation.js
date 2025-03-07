@@ -10,7 +10,7 @@ function MarqueeAnimation() {
             scrollTrigger: { 
                 trigger: ".top-aqua-line",
                 scroller: "body",
-                start: "100% 11%",
+                start: "80% 11%",
                 end: "200% 20%",
                 scrub: 2,
                 // markers:true,

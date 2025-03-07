@@ -1,9 +1,10 @@
 import React from 'react'
 import "./AboutExplain.css"
 import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
+
 function AboutExplain() {
   AboutExplainAnimation()
-  return (
+  return ( 
     <section className='About-Explain-section'>
       <div className='About-Explain background-shadow'>
      
@@ -14,8 +15,8 @@ function AboutExplain() {
           <p>
             Focused on creating visually stunning interfaces and exceptional user experiences. Every click is crafted for user-friendly, efficient, and meaningful products.
           </p>
-          <span>...</span>
-    
+          <span>...</span> 
+     
       </div>  
       </div>
       <div className='About-Explain background-shadow'>
@@ -39,6 +40,10 @@ function AboutExplain() {
           <span>...</span>
         </div>
       </div>
+        
+        <div className="About-thinking">
+          <p>"Welcome to a world of innovation and learning! Let's build, grow, and explore technology together. 🚀"</p>
+        </div>
      
     </section>
   )

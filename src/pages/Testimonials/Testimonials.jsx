@@ -3,21 +3,23 @@ import "./Testimonials.css"
 import Customer_img_1 from "../../assets/customer-img-1.jpeg"
 import Customer_img_2 from "../../assets/customer-img-2.jpeg"
 import Customer_img_3 from "../../assets/customer-img-3.jpeg"
-// import TestinominalAnimation from '../../Animation/testinominal.js'
+import TestinominalAnimation from '../../Animation/testinominal.js'
 function Testimonials() {
-  //  TestinominalAnimation()
+   TestinominalAnimation()
   return ( 
     <>   
     <section id='testimonials' className='Testimonials-section'>
+    <div className="Testimonials-heading">
         <h1>WHAT</h1> 
         <h1>PEOPLE SAY</h1>
         <h1>ABOUT <span>ME</span></h1> 
+    </div>
      </section>
      <section className='Testimonials-person-section'>
        <div className="Testimonials-person">
          <div className='Testimonials-person-count'>
             <span>01</span>
-            <img src={Customer_img_1} alt="" />
+            <img src={Customer_img_1} alt="" /> 
          </div>
          <div className='Testimonials-person-name'>
               <h1>Ravi Kumar</h1>

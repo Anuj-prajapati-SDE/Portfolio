@@ -41,7 +41,7 @@ const  ExperienceAnimation = () => {
             scroller: "body",
             start: "top 10%",
             scrub: 3,
-            markers:true,
+            // markers:true,
             end: "bottom 20%",
             pin: true,
           }
