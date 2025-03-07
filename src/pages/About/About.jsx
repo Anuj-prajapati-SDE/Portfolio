@@ -1,6 +1,7 @@
 import React from 'react'
 import img1 from '../../assets/pic-1.jpg'
 import './About.css'
+import { Link } from 'react-router-dom'
 import AboutAnimation from '../../Animation/AboutAnimation'
 function About() {
   AboutAnimation()
@@ -16,6 +17,7 @@ function About() {
           visually pleasing<br/>
           interfaces for<br/>
           web.</p>
+          {/* <Link to='/about' className=''>know More</Link> */}
          <div className="signature-svg">
          <svg version="1.0" width="80%" height="80%" viewBox="0 0 500.000000 500.000000" preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)" fill="#08afff" stroke="none">
@@ -169,6 +171,7 @@ l-31 -66 -4 36 c-3 37 27 226 52 319 8 30 17 76 21 102 6 40 4 48 -13 57 -37
     </div>
     </section>
   )
+ 
 } 
 
 export default About

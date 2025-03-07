@@ -9,7 +9,6 @@ const AboutAnimation = () => {
     tl.to(".img-frame-1", {
       x: 30,
       y: 50,
-
       scrollTrigger: {
         scrub: 3,
         scroller: "body",

@@ -21,7 +21,7 @@ function Home() {
          <h2>Stack</h2> 
           <h1>Developer</h1>
         </div>
-      </section>
+      </section> 
  
     </>
   ) 

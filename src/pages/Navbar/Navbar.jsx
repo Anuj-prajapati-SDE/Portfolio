@@ -14,14 +14,14 @@ function Navbar() {
   const navLinksRef = useRef([]);
 
   useEffect(() => {
-    let truetl = gsap.timeline(); 
+    let truetl = gsap.timeline();  
     let falsetl = gsap.timeline();
     falsetl.add("same-time-out")
     if (navClick) { 
       truetl.to(menuRef.current, { 
         duration: 0.6,
         height: "86.6vh",
-        opacity:1,
+        opacity:1, 
          ease: 'power3.inOut'
         })
         truetl.to(".hambargar-clicked-section .menu-btn", {

@@ -5,9 +5,9 @@ import { ToastContainer, toast } from 'react-toastify';
 import emailjs from "@emailjs/browser";
 import { Link } from 'react-router-dom'
 import Contact_video from '../../assets/contact-video.mp4'
-import ContactAnimation from '../../Animation/ContactAnimation'
+// import ContactAnimation from '../../Animation/ContactAnimation'
 function Contact() {
-  ContactAnimation();
+  // ContactAnimation();
   const form = useRef();
   const sendEmail = (e) => { 
     e.preventDefault();

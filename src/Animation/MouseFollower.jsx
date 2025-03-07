@@ -3,8 +3,6 @@ import { gsap } from "gsap";
 
 const MouseFollower = () => {
   const circleRef = useRef(null);
- 
-
   useEffect(() => {
     const handleMouseMove = (event) => {
       gsap.to(circleRef.current, {

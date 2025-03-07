@@ -21,7 +21,7 @@ const AboutExplainAnimation = () => {
             start: "top 11%", 
             scrub: 2,
             end: "bottom 20%",
-        
+         markers:true,
             pin: true,
           }
         }

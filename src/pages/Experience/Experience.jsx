@@ -2,10 +2,10 @@ import React from 'react'
 import './Experience.css'
 import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
-import ExperienceAnimation from '../../Animation/ExperienceAnimation'
+// import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import { Link } from 'react-router-dom';
 function Experience() {
-  ExperienceAnimation() 
+  // ExperienceAnimation() 
  function reload(){
 window.reload()}  
   return (  
