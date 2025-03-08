@@ -5,13 +5,14 @@ import Customer_img_2 from "../../assets/customer-img-2.jpeg"
 import Customer_img_3 from "../../assets/customer-img-3.jpeg"
 import TestinominalAnimation from '../../Animation/testinominal.js'
 function Testimonials() {
+  const windowWidth =window.innerWidth;
    TestinominalAnimation()
   return ( 
-    <>   
+    <>    
     <section id='testimonials' className='Testimonials-section'>
     <div className="Testimonials-heading">
         <h1>WHAT</h1> 
-        <h1>PEOPLE SAY</h1>
+        <h1>PEOPLE SAY</h1> 
         <h1>ABOUT <span>ME</span></h1> 
     </div>
      </section>
@@ -25,9 +26,12 @@ function Testimonials() {
               <h1>Ravi Kumar</h1>
          </div>
          <div className='Testimonials-person-response'>
-             <p>
+          {windowWidth>550 ? (<p>
              "Working with Anuj Prajapati was a game-changer for our business. He developed a sleek, user-friendly website that has significantly improved our online presence. Anuj's expertise in MERN-stack development and his creative approach to design have made a huge difference. We highly recommend his services to anyone looking for top-notch web development."
-             </p>
+             </p>) : (<p>
+             "Working with Anuj Prajapati was a game-changer for our business. He developed a sleek, user-friendly website that has significantly improved our online presence..."
+             </p>)}
+             
          </div>
        </div>
        <div className="Testimonials-person">
@@ -39,9 +43,12 @@ function Testimonials() {
               <h1>Amit Verma</h1>
          </div>
          <div className='Testimonials-person-response'>
-             <p>
+          {windowWidth>550 ?(<p>
              I had the pleasure of collaborating with Anuj Prajapati on a complex web application project. His technical skills and problem-solving abilities are outstanding. Anuj's ability to understand our requirements and translate them into a functional and visually appealing application was impressive. I highly recommend him for any web development project.
-             </p>
+             </p>) : (<p>
+             I had the pleasure of collaborating with Anuj Prajapati on a complex web application project. His technical skills and problem-solving abilities are outstanding...
+             </p>)}
+             
          </div>
        </div>
        <div className="Testimonials-person">
@@ -53,9 +60,12 @@ function Testimonials() {
               <h1>Sachin gupta</h1>
          </div>
          <div className='Testimonials-person-response'>
-             <p>
+          {windowWidth >550 ? (<p>
              "Anuj Prajapati's dedication and passion for web development are evident in his work. He created a stunning portfolio website for me that perfectly showcases my skills and projects. Anuj's creativity and technical expertise have exceeded my expectations. I am grateful for his hard work and highly recommend him to anyone in need of a talented web developer."
-             </p>
+             </p>) : (<p>
+             "Anuj Prajapati's dedication and passion for web development are evident in his work. He created a stunning portfolio website for me that perfectly showcases my skills and projects..."
+             </p>)}
+             
          </div>
        </div>
 

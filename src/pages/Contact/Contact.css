@@ -312,9 +312,10 @@ height: 60%;
   @media (max-width: 480px) {
     .contact-section h1 {
         margin-top: 0px;
-        font-size: 4rem;
+        font-size: 3rem;
         margin-left: 0%; 
     }
+    
     .contact-form-section .contact-number-textarea-btn button {
         width: 38%;
         height: 12%;
@@ -340,7 +341,7 @@ height: 60%;
         padding-bottom: 50px;
     }
     .contact-links a {
-        font-size: x-small;
+        font-size: xx-small;
     }
     .contact-form-section .left-contact-form .contact-name-email {
         margin-top: 80px;

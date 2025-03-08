@@ -1,10 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./AboutExplain.css"
 import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
 function AboutExplain() {
-  const windowWidth =window.innerWidth;
-  {windowWidth >500 && AboutExplainAnimation()}
-  
+  AboutExplainAnimation() 
   return ( 
     <section className='About-Explain-section'>
       <div className='About-Explain background-shadow'>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Experience.css'
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAnglesRight } from "react-icons/fa6";
@@ -6,10 +6,18 @@ import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
 import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import { Link } from 'react-router-dom';
+
 function Experience() {
-  ExperienceAnimation() 
+  const [ProjectRightTrue , setProjectRightTrue] = useState(false);
+  ExperienceAnimation(ProjectRightTrue) 
  function reload(){
 window.reload()}   
+const nextProjectClick  = ()=>{
+   setProjectRightTrue(true)
+}
+const preProjectClick  = ()=>{
+  setProjectRightTrue(false) 
+}
   return (  
     <>
       <section id='projects' className='Work-project-section'>
@@ -46,7 +54,7 @@ window.reload()}
           </div>
         </div>
         <div className='project-frame '>
-          <div className="view-first-project">
+          <div className="view-first-project" onClick={preProjectClick}>
           <FaAngleDoubleLeft />
           </div>
           <div className="img-frames project-frame-img-frame-1">
@@ -59,7 +67,7 @@ window.reload()}
             <img src={ProjectImg_2} alt="" />
           </Link>
           </div> 
-          <div className="view-second-project">
+          <div className="view-second-project" onClick={nextProjectClick}>
           <FaAnglesRight />
             </div>    
         </div>

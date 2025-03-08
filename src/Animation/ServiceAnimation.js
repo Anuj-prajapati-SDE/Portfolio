@@ -17,7 +17,7 @@ const ServiceAnimation = ()=>{
         );
         const tl1 = gsap.timeline(
             {scrollTrigger: {
-            scrub: 5,
+            scrub: 4,
             scroller: "body",
             trigger: ".Services-content-section",
             start: "1% 80%",

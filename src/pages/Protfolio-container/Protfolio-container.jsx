@@ -11,7 +11,7 @@ import Footer from '../Footer/Footer'
 import Loader from '../../Loader/Loader'
 import './Profolio_container.css'
 function Protfolio_container() {
-  
+  const windowWidth =window.innerWidth;
   return (
     <>
       <div className='Protfolio_container'>
@@ -27,7 +27,7 @@ function Protfolio_container() {
         <div id='stars' className='stars'></div>
         <div id='stars2' className='stars'></div>
         <div id='stars3' className='stars'></div>
-         <ScrollSlide></ScrollSlide>
+       {windowWidth >550 && <ScrollSlide></ScrollSlide>}
         <Experience></Experience>
         <Testimonials></Testimonials>
         <Contact></Contact>

@@ -152,7 +152,7 @@
         height: 28vh;
     }
     .Testimonials-section h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         line-height: normal;
     }
     .Testimonials-section h1:nth-child(1) {
@@ -165,12 +165,19 @@
         height: 20vh;
     }
     .Testimonials-person-section .Testimonials-person .Testimonials-person-count img {
-        width: 80px;
-        height: 100px;
+        width: 50px;
+        height: 70px;
     }
     .Testimonials-person-section {
         height: 68vh;
         padding: 0px 20px;
+    }
+    .Testimonials-person-section .Testimonials-person .Testimonials-person-name {
+        font-size: 10px;
+    }
+    .Testimonials-person-section .Testimonials-person .Testimonials-person-response {
+        padding: 0px 10px;
+  text-align: center;
     }
 }
   @media (max-width: 381px) {

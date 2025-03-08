@@ -109,10 +109,10 @@ function Contact() {
             <p>Fill out the form and we'll contact you.</p>
             <div className='contact-name-email'>
               <input type='text' name='user_name' placeholder='Your Name' required />
-              <input type='email' name='user_email' placeholder='Your Email' required />
+              <input type='tel' name='user_number' placeholder='Your Number' maxLength='12' minLength='10' required />
             </div>
             <div className='contact-number-textarea-btn'>
-              <input type='tel' name='user_number' placeholder='Your Number' maxLength='12' minLength='10' required />
+              <input type='email' name='user_email' placeholder='Your Email' required />
               <textarea name='message' placeholder='Write Your Feedback..' required></textarea>
               <button type='submit'>SEND OUT <i className='ri-arrow-right-fill'></i></button>
             </div>

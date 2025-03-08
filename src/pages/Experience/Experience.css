@@ -557,6 +557,10 @@ margin-top: 10px;
         height: 40px;
 
     }
+    .project-year-role-description .projects-description {
+      
+        font-size: xx-small;
+    }
   .project-frame .view-second-project{
         position: absolute;
         display: flex;
