@@ -11,7 +11,7 @@
     /* overflow: hidden; */
 }
 
-
+ 
 .ScrollSlide-section .top-aqua-line {
     position: absolute;
     min-width: 110%;
@@ -131,4 +131,34 @@ background-color: black;
         left: 5px;
         height: 40%;
     }
+  }
+  @media (max-width: 480px) {
+    .ScrollSlide-section {
+   height: 50vh;
+    }
+    .ScrollSlide-section .top-aqua-line {
+        rotate: 15deg;
+    }
+    .ScrollSlide-section .bottom-black-line {
+        rotate: -18deg;
+    }
+    .ScrollSlide-section .heading-or-folwer {
+        min-width: 35%;
+    }
+    .ScrollSlide-section .heading-or-folwer .marquee-heading {
+        font-size: 0.5rem;
+    }
+    .ScrollSlide-section .top-aqua-line {
+        height: 3rem;
+    }
+    .ScrollSlide-section .top-aqua-line, .ScrollSlide-section .bottom-black-line {
+        height: 3rem;
+    }
+    .ScrollSlide-section .heading-or-folwer .marquee-flower {
+        width: 14%;
+        top: 15px;
+        left: 3px;
+        height: 30%;
+    }
+
   }

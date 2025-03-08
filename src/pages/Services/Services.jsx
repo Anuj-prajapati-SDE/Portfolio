@@ -8,6 +8,7 @@ import { RiJavaLine } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { FaGithubSquare } from "react-icons/fa";
 import { DiDocker } from "react-icons/di";
+import { TbBrandReactNative } from "react-icons/tb";
 import { SiSpringboot } from "react-icons/si";
 import expressIcon from '../../assets/expressIcon.png'
 import { FaSquareJs } from "react-icons/fa6";
@@ -63,16 +64,16 @@ function Services() {
                        </div>
                 </section>
                        <div className='technology-knows-container'>
-                        <h1>Teachnology knows</h1>
+                        <h1>Professional Skillset</h1>
                         <div className="tech-heading-icon-container">
                             <div className="heading-icon">
                                 <span><AiOutlineHtml5 /></span>
-                                <h2>Html</h2>
+                                <h2>Html 5</h2>
                             </div>
                             <div className="heading-icon">
                                 <span><IoLogoCss3 /></span>
                                 <h2>CSS</h2>
-                            </div>
+                            </div> 
                             <div className="heading-icon">
                                 <span><FaSquareJs /></span>
                                 <h2>JavaScript</h2>
@@ -94,12 +95,8 @@ function Services() {
                                 <h2>Bootstrap</h2>
                             </div>
                             <div className="heading-icon">
-                                <span><FaNodeJs /></span>
+                                <span><FaNodeJs /></span> 
                                 <h2>Node JS</h2>
-                            </div>
-                            <div className="heading-icon">
-                                <span><img src={expressIcon} className='express'></img></span>
-                                <h2>Express JS</h2>
                             </div>
                             <div className="heading-icon">
                                 <span><SiMongodb /></span>
@@ -109,6 +106,10 @@ function Services() {
                                 <span><FaGithubSquare /></span>
                                 <h2>Git & GitHub</h2>
                             </div>
+                            <div className="heading-icon">
+                                <span><TbBrandReactNative /></span>
+                                <h2>React Native</h2>
+                            </div> 
                             <div className="heading-icon">
                                 <span><img src={cppIcon}></img></span>
                                 <h2>C</h2>
@@ -125,6 +126,7 @@ function Services() {
                                 <span><SiSpringboot /></span>
                                 <h2>SpringBoot</h2>
                             </div>    
+                              
                             <div className="heading-icon">
                                 <span><DiDocker /></span>
                                 <h2>Docker</h2>

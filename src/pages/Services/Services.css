@@ -118,8 +118,8 @@ margin-top: 25px;
     opacity: 1;
     width: 40%;
     scale: 1;
+    height: 80%;
  outline: 0.5px solid white;
-height:auto;
 background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
@@ -137,14 +137,15 @@ object-fit: cover;
 }
 
 .Services-about-2 .service-code-screenshot{
-    width: 40%;
+    position: relative;
+    width: 40%; 
     border-radius: 10px;
     margin-top: 30px;
-height: 90%;
-outline: 0.5px solid white;
-background: rgba(97, 97, 97, 0.12);
+    outline: 0.5px solid white;
+    background: rgba(97, 97, 97, 0.12);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6.8px);
+    height: 80%;
 }
 .Services-about-2 .service-code-screenshot h2{
     margin-top: 30px;
@@ -176,6 +177,7 @@ object-fit: cover;
 .technology-knows-container h1{
     color: var(--text-color);
     font-size: 1.8rem;
+    margin: 10px;
 }
 .technology-knows-container .tech-heading-icon-container{
     width: 100%;
@@ -196,15 +198,20 @@ object-fit: cover;
     opacity: 1;
     scale: 1;
     padding-top: 10px;
-    border-radius: 10px;
+    border-radius: 8px;
     gap: 40px;
+    outline: 0.5px solid var(--theme-text-color);
     font-size: 1rem;
      color: var(--text-color);
      cursor: pointer;
-     transition: 0.3s ease-in-out;
      background: rgba(132, 132, 132, 0.12);
      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
      backdrop-filter: blur(6.8px);
+     transition: 0.3s ease-in-out;
+}
+.technology-knows-container .tech-heading-icon-container .heading-icon:hover{
+    position: relative;
+ transform: translate(0px ,-5px);
 }
 .technology-knows-container .tech-heading-icon-container .heading-icon span{
     font-size: 1.2rem;

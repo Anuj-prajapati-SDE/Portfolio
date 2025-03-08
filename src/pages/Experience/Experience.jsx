@@ -1,5 +1,7 @@
 import React from 'react'
 import './Experience.css'
+import { FaAngleDoubleLeft } from "react-icons/fa";
+import { FaAnglesRight } from "react-icons/fa6";
 import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
 import ExperienceAnimation from '../../Animation/ExperienceAnimation'
@@ -7,7 +9,7 @@ import { Link } from 'react-router-dom';
 function Experience() {
   ExperienceAnimation() 
  function reload(){
-window.reload()}  
+window.reload()}   
   return (  
     <>
       <section id='projects' className='Work-project-section'>
@@ -27,7 +29,7 @@ window.reload()}
             <div className=" work-frame project-work-frame-2">
                <img src={ProjectImg_2} alt="" />
             </div>
-            </div>
+            </div> 
           </div> 
           <div className='project-count-name '>
           <div className="project-count">
@@ -44,6 +46,9 @@ window.reload()}
           </div>
         </div>
         <div className='project-frame '>
+          <div className="view-first-project">
+          <FaAngleDoubleLeft />
+          </div>
           <div className="img-frames project-frame-img-frame-1">
             <Link to={"https://codequest-frontend.onrender.com"} target='_blank'>
              <img src={ProjectImg_1} alt="" />        
@@ -53,7 +58,10 @@ window.reload()}
           <Link to={"https://samiah-group.onrender.com/"} target='_blank'>
             <img src={ProjectImg_2} alt="" />
           </Link>
-          </div>     
+          </div> 
+          <div className="view-second-project">
+          <FaAnglesRight />
+            </div>    
         </div>
         <div className='project-year-role-description background-shadow'>
           <div className="project-year">

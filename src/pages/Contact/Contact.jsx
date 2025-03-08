@@ -18,10 +18,10 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
-    
+
     const userEmail = form.current.user_email.value;
     const userName = form.current.user_name.value;
-    
+
     emailjs.sendForm(
       'service_58uqyzw',
       'template_37nds6h',
@@ -76,7 +76,7 @@ function Contact() {
         <div className="contact-link">
           <Link to={"https://www.instagram.com/anuj_prajapati_.123/"} target='_blank'>
             <span className='link-icon'>
-             <FaInstagramSquare />
+              <FaInstagramSquare />
             </span>
             <h2>Instagram</h2>
           </Link>
@@ -118,6 +118,19 @@ function Contact() {
             </div>
             <Toaster />
           </form>
+        </div>
+        <div className="right-contact-form">
+           {/* 3D Model Embed */}
+        <div className="flex justify-center items-center">
+          {/* <div className="sketchfab-embed-wrapper w-full max-w-2xl">
+            <iframe
+              src="https://sketchfab.com/models/c5a9adc234d04a8d9e79700ff5fa0071/embed?autostart=1&transparent=1&ui_hint=0"
+              allowFullScreen
+              className="w-full h-96"
+            ></iframe>
+          </div> */}
+        </div>
+
         </div>
       </div>
     </section>

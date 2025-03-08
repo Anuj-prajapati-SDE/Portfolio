@@ -8,10 +8,11 @@ import AboutMe from '../src/Components/About-me/AboutMe'
 import MouseFollower from "./Animation/MouseFollower"
 
 function App() {
+  const windowWidth =window.innerWidth;
   return (
     <>        
       <SmoothScrolling>
-      <MouseFollower></MouseFollower>
+        {windowWidth>550 && <MouseFollower></MouseFollower>}
         <Router>
           <Routes> 
                <Route path='/' element={<Protfolio_container />} />

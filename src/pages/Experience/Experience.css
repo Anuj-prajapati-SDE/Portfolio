@@ -545,6 +545,30 @@ margin-top: 10px;
         font-size: 2.5rem;
         top: 30%;
     }
+    .project-frame  .view-first-project{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid var(--theme-text-color);
+        width: 40px;
+        border-radius: 50px;
+        left: 0px;
+        height: 40px;
+
+    }
+  .project-frame .view-second-project{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border:1px solid var(--theme-text-color);
+        width: 40px;
+        border-radius: 50px;
+        left: 88%;
+        height: 40px;
+
+    }
     .project-frame-count-name .project-count-name {
         width: 60%;
         padding-left: 1%;
@@ -559,7 +583,7 @@ margin-top: 10px;
     .project-frame .img-frames {
         margin-top: 5px;
         position: absolute;
-        width: 80%;
+        width: 70%;
         margin-top: 5px;
         height: 97%;
     }
@@ -582,6 +606,7 @@ margin-top: 10px;
         height: 25%;
         flex-wrap: wrap;
         gap: 10px;
+        padding: 5px;
         margin-top: 13px;
         color: var(--text-color);
         /* background-color: rgb(38, 242, 41); */
@@ -594,8 +619,8 @@ margin-top: 10px;
         height: 35%;
     }
     .project-year-role-description .project-year .year-container {
-        margin-top: -5px;
-       font-size: large;
+        margin-top: 0px;
+       font-size:medium;
     }
     .project-year-role-description .project-role {
         width: 43%;
@@ -627,7 +652,7 @@ margin-top: 10px;
     }
     .project-frame-count-name .project-name {
         font-size: 0.8rem;
-         padding-top: 60px;
+         padding-top:25px;
     }
     .project-year-role-description .project-role .roles {
         font-size: 11px;

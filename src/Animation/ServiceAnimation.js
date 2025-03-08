@@ -4,11 +4,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ServiceAnimation = ()=>{
     gsap.registerPlugin(ScrollTrigger)
     useGSAP(() => {
+      const windowWidth =window.innerWidth;
         const tl = gsap.timeline(
             {scrollTrigger: {
             scrub: 3,
             scroller: "body",
-            trigger: ".Services-section",
+            trigger: ".Services-section", 
             start: "20% 90%",
             end: "100% 100%", 
             // markers: true
@@ -53,19 +54,22 @@ const ServiceAnimation = ()=>{
             stagger:0.9,
             duration:1 
           })
-          tl2.from(".service-responsive-screenshot", {
-          opacity:0,
-          y:200,
-          scale:0,
-          stagger:0.9,
-        
-          })
-          tl2.from(".service-code-screenshot", {
-          opacity:0,
-          y:200,
-          scale:0,
-          stagger:0.9,
-          })
+          if( windowWidth>500){
+            tl2.from(".service-responsive-screenshot", {
+            opacity:0,
+            y:200,
+            scale:0,
+            stagger:0.9,
+          
+            })
+            tl2.from(".service-code-screenshot", {
+            opacity:0,
+            y:200,
+            scale:0,
+            stagger:0.9,
+            })
+          }
+         
           
           
     })} 
