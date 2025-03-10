@@ -14,13 +14,16 @@ function Navbar() {
   const navLinksRef = useRef([]);
 
   useEffect(() => {
+    let windowWidth = window.innerWidth;
+    let heightValue = windowWidth < 550 ?  "80vh" : "86.6vh";
+        heightValue = windowWidth >550 && windowWidth <800  ? "81vh" :"86.6vh";
     let truetl = gsap.timeline();  
     let falsetl = gsap.timeline();
     falsetl.add("same-time-out")
     if (navClick) { 
       truetl.to(menuRef.current, { 
         duration: 0.6,
-        height: "86.6vh",
+       height :heightValue,
         opacity:1, 
          ease: 'power3.inOut'
         })
@@ -114,7 +117,7 @@ function Navbar() {
         </div>
         <div className="terms_condition">
           <div className="developer_name">
-            <h4>Developed By: <span>Anuj Prajapati</span></h4>
+            <h4>Developed By: <span> Anuj Prajapati</span></h4>
           </div>
         </div>
       </div>

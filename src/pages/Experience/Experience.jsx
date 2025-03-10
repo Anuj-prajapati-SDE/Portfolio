@@ -25,7 +25,7 @@ const preProjectClick  = ()=>{
         <h1>PROJECTS I </h1> 
         <h1>WORKED ON</h1>
         <h1>24-25</h1>
-        <span>R</span>  
+        <span>Y</span>  
       </section>
       <section className='Work-project-show-section'> 
         <div className="Work-project-show-container">
@@ -89,9 +89,9 @@ const preProjectClick  = ()=>{
               <p className='role-2'>FullStack Developer</p>
              </div>          
           </div>
-          <div className="projects-description">
+          <div className="projects-description"> 
           <h4>Description:</h4>
-          <div className="description">
+          <div className="description"> 
           <p className='project-1-description'>
           A MERN stack-based coding competition website designed to facilitate teacher student interactions. The platform provides features such 
           as live feedback, progress tracking, and real-time communication to enhance the learning experience

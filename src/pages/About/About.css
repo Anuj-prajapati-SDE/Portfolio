@@ -8,7 +8,7 @@
 }
 .About-section .left_section{
     position: relative;
-    width: 40%;
+    width: 40%; 
  height: 100%;
  /* background-color:blue; */
 }
@@ -71,51 +71,29 @@
 }
 .right_section .img-frame img:hover{
   scale: 1.02;
-    filter:none;   
+    filter:none;    
 }
-@media (max-width: 1200px) {
- 
-  
-.right_section .img-frame {
-  height: 75%;
-}
- 
-.About-section .left_section p {
-  margin-top: 10%;
-  margin-left: 40%;
-}
-}
-@media (max-width: 1030px) {
-    .About-section .left_section p {
-      margin-top: 10%;
-      margin-left: 25%;
-  }
-    .right_section .img-frame {
-      height: 65%;
-      width: 75%;
-  }
-  .About-section .left_section {
 
-    width: 50%;
-    height: 100%;
-}
-}
-@media (max-width: 992px) {
-/*no need  responsive  */
-}
+
+
 @media (max-width: 768px) {
   .About-section .left_section h1 {
-    font-size: 8vw;
+    margin-top: 30%;
+    font-size: 6vw;
 }
 .About-section .left_section p {
-  font-size: 1.5rem;
+  margin-top: 20%;
+  font-size: 1.1rem;
 
 }
+.About-section .right_section {
+  padding-top: 20%;
+}
 .signature-svg{
-  margin-top: 5%;
+  margin-top: 20%;
 }
 .right_section .img-frame {
-  height: 60%;
+  height: 35%;
   width: 80%;
 }
 }
@@ -193,7 +171,7 @@ margin-left: -13%;
 }
 }
 
-@media (max-width: 381px) {
+@media (max-width: 391px) {
 .right_section .img-frame {
   height: 95%;
   width: 46%;

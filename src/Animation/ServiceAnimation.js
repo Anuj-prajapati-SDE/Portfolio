@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ServiceAnimation = ()=>{
   const windowWidth =window.innerWidth;
     gsap.registerPlugin(ScrollTrigger)
-    if( windowWidth>500){
+    if( windowWidth>500){ 
     useGSAP(() => {
         const tl = gsap.timeline(
             {scrollTrigger: {
@@ -29,7 +29,7 @@ const ServiceAnimation = ()=>{
         
         const tl2 = gsap.timeline( 
             {scrollTrigger: {
-            scrub: 5,
+            scrub: 3,
             scroller: "body",
             trigger: ".Services-content-section",
             start: "35% 50%",
@@ -70,7 +70,7 @@ const ServiceAnimation = ()=>{
             stagger:0.9,
             })
        
-         
+           
           
           
     })}  

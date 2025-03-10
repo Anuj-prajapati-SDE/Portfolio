@@ -144,61 +144,33 @@ background-color: var(--theme-text-color);
 }
 .hambargar-clicked-section .developer_name h4 span{
     color:var(--text-color);
+ 
+}
 
-}
-@media (max-width: 1200px) { 
-.hambargar-clicked-section {
-    left: 57.89%;
-}
-}
-@media (max-width: 1030px) {
-    .hambargar-clicked-section {
-        left: 50.89%;
-    }
-    .hambargar-clicked-section .nav-links a {    
-        font-size: 2.4rem;
-    }
-}
-@media (max-width: 992px) {
-    .hambargar-clicked-section { 
-    top: 13vh;
-    left: 56.89%;
-    width: 420px;
-    height: 86vh;
-}
-    .hambargar-clicked-section .nav-links a {
-        font-size: 1.9rem;
-    }
-    .hambargar-clicked-section .developer_name h4 {
-        padding-left: 40%;
-    }
-}
 @media (max-width: 768px) {
     .hambargar-clicked-section {
-        top: 13.1vh;
-        left: 48.89%;
-        width: 380px;
-        height: 85vh;
+        top: 9vh;
+        left: 7%;
+        width: 600px;
     }
     .hambargar-clicked-section .nav-links a {
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
     .hambargar-clicked-section .terms_condition .condition {
         
         font-size: smaller;
         justify-content: center;
-        gap: 5px;
+        gap: 10px;
     }
     .hambargar-clicked-section .menu-btn {
         font-size: medium;
     }
-}
-@media (max-width: 576px) {
-    .hambargar-clicked-section {
-        top: 13vh;
-        left: 20%;
-        width: 380px;
-        height: 86vh;
+    .hambargar-clicked-section .developer_name {
+       
+        top: 50%;
+    }
+    .hambargar-clicked-section .developer_name h4 {
+        padding-left: 30%;
     }
 }
 @media (max-width: 480px) {
@@ -217,7 +189,14 @@ background-color: var(--theme-text-color);
         border-radius: 12px;
         border-top: 1px solid;
         width: 380px;
-        height: 82vh;
+    }
+    .hambargar-clicked-section .developer_name {
+       
+        top: 40%;
+        /* background-color: rgb(255, 0, 111); */
+    }
+    .hambargar-clicked-section .developer_name h4 {
+        padding-left: 30%;
     }
 }
 @media (max-width: 450px) {
@@ -231,9 +210,6 @@ background-color: var(--theme-text-color);
         top: 10vh;
         left: 2%;
         border-radius: 10px;
-    }
-    .hambargar-clicked-section .developer_name h4 {
-        padding-left: 35%;
     }
 }
 
@@ -268,4 +244,4 @@ background-color: var(--theme-text-color);
         font-size: medium;
       
     }
-}
+} 

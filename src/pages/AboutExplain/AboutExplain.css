@@ -72,50 +72,28 @@ color: var(--text-color);
       transform: translate(-50%, -50%);
 }
  
-@media (max-width: 1200px) {
-    .About-Explain .title-left h1 {
-        font-size: 9rem;
-        color: var(--text-color);
-    }
-    .About-Explain .title-explaination span { 
-        left: 80%;
-        top: 72px;
-    }
-  }
-  @media (max-width: 1030px) {
-    .About-Explain .title-left h1 {
-        font-size: 8rem;
-        color: var(--text-color);
-    }
-  }
-  @media (max-width: 992px) {
-    .About-Explain .title-explaination {  
-        font-size: medium;
-    }
-    .About-Explain .title-explaination span {
-        left: 80%;
-        top: 50px;
-    }
-  }
   @media (max-width: 768px) {
     .About-Explain .title-left h1 {
-        font-size: 5rem;
+        font-size: 4rem;
         color: var(--text-color);
     }
     .About-Explain .title-explaination {
         font-size: small;
     }
     .About-Explain .title-explaination span {
-        left: 78%;
-        top: 35px;
+        left: 60%;
+        top:65%;
     }
     .About-Explain-section .About-Explain {     
         padding: 0px 25px;
     }
+    .About-thinking {
+        font-size:xx-large;
+    }
   }
   
   @media (max-width: 576px) { 
-    .About-Explain .title-left {
+    .About-Explain .title-left { 
         width: 55%;
     }
     .About-Explain .title-explaination {
@@ -162,9 +140,9 @@ color: var(--text-color);
     
 }
 
-  @media (max-width: 381px) {
+  @media (max-width: 391px) {
     .About-Explain .title-left h1 {
-        font-size: 2.5rem;
+        font-size: 1.5rem;
         display: inline-block;
     }
     .About-Explain .title-explaination {
