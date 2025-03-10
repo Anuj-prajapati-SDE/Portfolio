@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 gsap.registerPlugin(useGSAP);
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 const  ExperienceAnimation = (ProjectRightTrue) => {
-  console.log(ProjectRightTrue)
+  // console.log(ProjectRightTrue)
   gsap.registerPlugin(ScrollTrigger)
   const windowWidth =window.innerWidth;
     useEffect(() => {
@@ -14,19 +14,18 @@ const  ExperienceAnimation = (ProjectRightTrue) => {
       const tl3 = gsap.timeline();
       const tl4 = gsap.timeline();
       const tl5 = gsap.timeline();
-      const headingTl = gsap.timeline({ 
-        scrollTrigger: {
-          trigger: ".Work-project-section",
-          scroller: "body",
-          start: "top 70%",
-          scrub: 2,
-          // markers:true, 
-          end: "bottom 90%",
-        }
-      });
       tl.add("same-time-pin"); 
       const  ExperienceAnimationPin = gsap.context(() => {
-  
+        const headingTl = gsap.timeline({ 
+          scrollTrigger: { 
+            trigger: ".Work-project-section",
+            scroller: "body",
+            start: "top 70%",
+            scrub: 2,
+            // markers:true, 
+            end: "bottom 90%",
+          }
+        });
         headingTl.from(".Work-project-section h1",{
            opacity:0,
            stagger:0.3,

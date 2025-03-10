@@ -4,7 +4,7 @@
     padding: 20px 30px;
     /* background-color: blueviolet; */
 }
-
+ 
 .Work-project-section h1 {
     display: inline-block;
     overflow: hidden;
@@ -162,26 +162,48 @@
     /* background-color: rgb(240, 73, 199); */
 }
 
+.Project-link {
+    position: absolute;
+    z-index: 99;
+    right: 5%;
+    padding: 7px 15px;
+    border: 1px solid var(--text-color);
+    font-size: medium;
+    border-radius: 50px;
+    background-color: var(--theme-text-color);
+    text-decoration: none;
+    bottom: 7%;
+    color:white
+}
+.Project-link span{
+    position: relative;
+    top: 4px;
+    left:4px;
+}
 .project-frame .img-frames {
     position: absolute;
     width: 90%;
-     border-radius: 5px;
-     padding: 3px;
+     /* border-radius: 5px; */
+     padding: 1px;
 outline: 0.5px solid white;
 overflow: hidden;
     height: 90%;
+}
+.view-first-project, .view-second-project{
+    display: none;
 }
 
 .project-frame .img-frames img{
     position: relative;
     object-fit:fill;
     width: 100%;
-    border-radius: 5px;
+    opacity: 0.85;
     height: 100%;
     transition: 0.3s ease-in-out;
 }
 .project-frame .img-frames img:hover{
-    scale: 1.04;
+    scale: 1.02;
+    opacity: 1;
 }
 .project-frame .project-frame-img-frame-1 {
     transform-origin: top left;
@@ -558,7 +580,7 @@ margin-top: 10px;
 
     }
     .project-year-role-description .projects-description {
-      
+       
         font-size: xx-small;
     }
   .project-frame .view-second-project{
@@ -637,8 +659,19 @@ margin-top: 10px;
        
     }
     .project-year-role-description .All-project-link a {
-        top: 25px;
+        top: 30px;
       
+    }
+    .Project-link {
+        right: 5%;
+        padding: 5px 10px;
+        font-size:xx-small;
+        bottom: 8%;
+    }
+    .Project-link span{
+        position: relative;
+        top: 2px;
+        left:2px;
     }
     
 }

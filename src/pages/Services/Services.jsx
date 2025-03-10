@@ -10,7 +10,7 @@ import { FaGithubSquare } from "react-icons/fa";
 import { DiDocker } from "react-icons/di";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiSpringboot } from "react-icons/si";
-import expressIcon from '../../assets/expressIcon.png'
+
 import { FaSquareJs } from "react-icons/fa6";
 import { FaReact } from "react-icons/fa";
 import { RiTailwindCssLine } from "react-icons/ri";

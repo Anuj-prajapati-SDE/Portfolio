@@ -35,7 +35,7 @@ function AboutExplain() {
         </div>
         <div className="title-explaination">
           <p>
-          With expertise in MERN-stack development, I build dynamic applications that combine seamless animations, interactive features, and optimized workflows, delivering both functionality and visual appeal.          </p>
+          Currently I'm  Software Intern – in Morling Global Private Limited (January 2025 – Present) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
           <span>...</span>
         </div>
       </div>

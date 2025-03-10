@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Experience.css'
+import { FaArrowCircleRight } from "react-icons/fa";
 import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAnglesRight } from "react-icons/fa6";
 import ProjectImg_1 from "../../assets/project-img-1.png";
@@ -12,7 +13,7 @@ function Experience() {
   ExperienceAnimation(ProjectRightTrue) 
  function reload(){
 window.reload()}   
-const nextProjectClick  = ()=>{
+const nextProjectClick  = ()=>{ 
    setProjectRightTrue(true)
 }
 const preProjectClick  = ()=>{
@@ -53,19 +54,21 @@ const preProjectClick  = ()=>{
           </div>
           </div>
         </div>
-        <div className='project-frame '>
+        <div className='project-frame '> 
           <div className="view-first-project" onClick={preProjectClick}>
           <FaAngleDoubleLeft />
-          </div>
+          </div> 
           <div className="img-frames project-frame-img-frame-1">
             <Link to={"https://codequest-frontend.onrender.com"} target='_blank'>
              <img src={ProjectImg_1} alt="" />        
             </Link>
+             <Link to={"https://codequest-frontend.onrender.com"} className='Project-link'><p>View Project <span><FaArrowCircleRight /></span></p></Link>
           </div>
-          <div className="img-frames project-frame-img-frame-2">
-          <Link to={"https://samiah-group.onrender.com/"} target='_blank'>
+          <div className="img-frames project-frame-img-frame-2"> 
+          <Link to={"https://samiah.co.in/"} target='_blank'>
             <img src={ProjectImg_2} alt="" />
           </Link>
+          <Link to={"https://samiah.co.in/"} className='Project-link'><p>View Project <span><FaArrowCircleRight /></span></p></Link>
           </div> 
           <div className="view-second-project" onClick={nextProjectClick}>
           <FaAnglesRight />
@@ -98,7 +101,7 @@ const preProjectClick  = ()=>{
           </p>
           </div>
           </div>
-          <div className="All-project-link">
+          <div className="All-project-link"> 
             <Link to={"/all-projects"} onClick={reload}>View All Projects</Link>
           </div>
         </div>
