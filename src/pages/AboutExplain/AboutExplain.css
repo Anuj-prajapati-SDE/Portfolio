@@ -5,7 +5,7 @@
      align-items: center;
      flex-direction: column;
     width: 100%; 
-  overflow: hidden;
+  overflow: hidden; 
 padding: 0px 20px; 
     height: 45.5rem;
     z-index: 5;
@@ -32,7 +32,7 @@ padding: 0px 20px;
     justify-content: space-between;
     padding: 0px 50px;
     height: 29%;
-  outline: none;
+  outline: 0px solid transparent;
     border-bottom: 2px solid var(--theme-text-color);
 }
 
@@ -77,45 +77,28 @@ color: var(--text-color);
  
   @media (max-width: 768px) {
     .About-Explain .title-left h1 {
-        font-size: 4rem;
+        font-size: 3rem;
         color: var(--text-color);
     }
+    .About-Explain .title-left {
+        width: 40%;
+    }
     .About-Explain .title-explaination {
         font-size: small;
+        width: 45%;
     }
-    .About-Explain .title-explaination span {
-        left: 60%;
-        top:65%;
-    }
-    .About-Explain-section .About-Explain {     
+    .About-Explain-section .About-Explain {
         padding: 0px 25px;
+        height: 35%;
     }
-    .About-thinking {
-        font-size:xx-large;
-    }
+
+.About-thinking {
+ font-size: 2rem;
+}
+
   }
   
-  @media (max-width: 576px) { 
-    .About-Explain .title-left { 
-        width: 55%;
-    }
-    .About-Explain .title-explaination {
-        font-size: small;
-        width: 38%;
-    }
-    .About-Explain .title-explaination span {
-        font-size: 4.5rem;
-    }
-    .About-Explain .title-left h1 {
-        font-size: 3.75rem;
-        display: inline-block;
-    }
-  }
   @media (max-width: 480px) {
-    .About-Explain .title-left h1 {
-        font-size: 2rem;
-        display: inline-block;
-    }
     .About-Explain .title-left {
         width: 30%;
     }
@@ -129,19 +112,15 @@ color: var(--text-color);
         left: 60%;
         top: 50px;
     }
-}
-@media (max-width: 450px) {
     .About-Explain .title-left h1 {
         font-size: 1.5rem;
         display: inline-block;
     }
-    .About-Explain-section .About-Explain {
-      
+    .About-Explain-section .About-Explain {  
         height: 28%;
- 
     }
-    
 }
+
 
   @media (max-width: 391px) {
     .About-Explain .title-left h1 {

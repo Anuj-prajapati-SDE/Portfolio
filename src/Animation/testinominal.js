@@ -12,7 +12,7 @@ const TestinominalAnimation = () => {
           start: "420% 100%",
           end: "200% 80%",
           scrub: 3, 
-          scroller: "body",
+          scroller: "body", 
           // markers:true,
           trigger: ".Testimonials-heading"
         }       

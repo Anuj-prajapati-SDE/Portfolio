@@ -1,6 +1,6 @@
 .Work-project-section {
     width: 100%;
-    height: 50vh;
+    height: 25rem;
     padding: 20px 30px;
     /* background-color: blueviolet; */
 }
@@ -52,7 +52,7 @@
 .Work-project-show-container {
  position: relative; 
     width: 100%;
-    height: 90vh;
+    height: 42rem;
     padding: 10px 30px;
     display: flex;
     gap: 10px;
@@ -183,7 +183,6 @@
 .project-frame .img-frames {
     position: absolute;
     width: 90%;
-     /* border-radius: 5px; */
      padding: 1px;
 outline: 0.5px solid white;
 overflow: hidden;
@@ -208,16 +207,16 @@ overflow: hidden;
 .project-frame .project-frame-img-frame-1 {
     transform-origin: top left;
     z-index: 3;
-    /* background-color: aquamarine; */
+    
 }
 
 .project-frame .project-frame-img-frame-2 {
     position: absolute;
     transform-origin: bottom right;
     transform: scale(0, 0);
-    /* visibility: hidden; */
+   
     z-index: 2;
-    /* background-color: rgb(102, 49, 200); */
+    
 } 
 
 
@@ -227,7 +226,7 @@ overflow: hidden;
     color: var(--text-color);
     outline: 0.5px solid white;
     border-radius: 5px;
-/* background-color: rgb(38, 242, 41); */
+
 }
 
 .project-year-role-description .project-year
@@ -238,7 +237,6 @@ overflow: hidden;
     width: 100%;
     height: 25%; 
     border-bottom: 1px solid var(--theme-text-color);
-    /* background-color: blueviolet; */
 }
 .project-year-role-description .project-year .year-container{
     width: 100%;
@@ -327,6 +325,13 @@ margin-top: 10px;
 
   
   @media (max-width: 768px) {
+    .Work-project-show-container {
+        height:  60rem;
+    }
+
+    .Work-project-section>span {
+        margin-top: 30px;
+    }
     .Work-project-section h1 {
         font-size: 4rem;
     }
@@ -423,84 +428,14 @@ margin-top: 10px;
         font-size: 15px;
     }
   }
-  
-  @media (max-width: 576px) { 
-    .Work-project-section h1 {
-        position: relative;
-        font-size: 3.7rem;
-         top: 10%;
-        line-height: normal;
-    }
    
-    .Work-project-section span {
-        width: 5%;
-    }
-    .project-work-frame .img-frames {
-        margin-top: 15px;
-    }
-    .project-frame-count-name .project-count-name {
-        padding-left: 43%;
-    }
-    .project-frame-count-name .project-name {
-        width: 100%;
-        height: 6rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        overflow: hidden;
-        padding-top: 10%;
-        font-size: 1.7rem; 
-        color: var(--text-2-color);
-        padding-left: 0%;
-        /* background-color: rgb(12, 69, 50); */
-    }
-    .project-year-role-description .project-role .roles {
-        font-size: 13px;
-    }
-    .Work-project-show-section .Work-project-show-container .project-frame {
-        height: 50%;
-       
-    }
-    .project-frame-count-name .project-count-name {
-        padding-top: 1%;
-       
-    }
-    .project-frame .img-frames {   
-        margin-top: 5px;
-    }
-    .project-year-role-description {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content:space-around;
-        height: 28%;
-    }
-    .project-year-role-description .project-year {
-        padding-top: 10px;
-        padding-left: 5px;
-        width: 19%;
-        height: 40%;
-    }
-    .project-year-role-description .project-role {
-        position: relative;
-        width: 26%;
-        padding: 10px;
-        height:40%;
-    }
-    .project-year-role-description .projects-description { 
-        width: 90%;
-        padding: 11px;
-        height: 45%;
-        font-size: small;
-    }
-    .project-year-role-description .All-project-link a {
-        position: relative;
-        top: 3px;
-        text-decoration: underline;
-        letter-spacing: 0px;
-        font-size: 19px;
-    }
-  }
+
   @media (max-width: 480px) {
+
     .Work-project-section h1 {
+        position: relative;
+        line-height: normal;
+        top: 10%;
         font-size: 2.5rem;
         top: 30%;
     }
@@ -610,11 +545,8 @@ margin-top: 10px;
         top: 2px;
         left:2px;
     }
-    
-}
-@media (max-width: 450px) {
     .Work-project-section span {
-        margin-top: 31%;
+        margin-top: 30%;
     }
     .Work-project-section h1 {
        
@@ -633,6 +565,7 @@ margin-top: 10px;
         margin-top: 5px;
     }
 }
+
   @media (max-width: 390px) {
     .Work-project-section {  
         padding: 0px 20px;

@@ -10,7 +10,7 @@ function AboutExplain() {
         <div className="title-left">
           <h1><span>E</span>xperience</h1>
         </div>
-        <div className="title-explaination">
+        <div className="title-explaination"> 
           <p>
           Currently I'm  Software Intern – in Morling Global Private Limited (January 2025 – Present) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
           <span>...</span>

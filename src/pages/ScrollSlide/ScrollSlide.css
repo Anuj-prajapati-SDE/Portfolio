@@ -7,7 +7,8 @@
     justify-content: center;
     align-items: center;
     background: radial-gradient(circle , rgba(8, 177, 255, 0.242) 0%);
-    height: 80vh; 
+    height: 40rem; 
+    /* background-color: aqua; */
     /* overflow: hidden; */
 }
 
@@ -85,34 +86,7 @@ background-color: black;
     filter: blur(0px);
 }
 
-@media (max-width: 1200px) {
-   .ScrollSlide-section .heading-or-folwer .marquee-heading {
-    font-size: 1.6rem;
-}
-  }
-  @media (max-width: 1030px) {
-    .ScrollSlide-section .heading-or-folwer .marquee-flower { 
-        width: 15%;
-        top: 20px;
-        left: 5px;   
-        height: 53%;
-      
-    }
-    .ScrollSlide-section .heading-or-folwer .marquee-heading {
-        font-size: 1.4rem;
-    }
-  }
-  @media (max-width: 992px) {
-    .ScrollSlide-section .top-aqua-line {
-        height: 5.5rem;
-    }
-    .ScrollSlide-section .bottom-black-line {
-        height: 5.5rem;
-    }
-    .ScrollSlide-section .heading-or-folwer .marquee-heading {
-        font-size: 1.3rem;
-    }
-  }
+
   @media (max-width: 768px) {
     .ScrollSlide-section .top-aqua-line {
         height: 5rem;
@@ -131,33 +105,4 @@ background-color: black;
         height: 40%;
     }
   }
-  @media (max-width: 480px) {
-    .ScrollSlide-section {
-   height: 50vh;
-    }
-    .ScrollSlide-section .top-aqua-line {
-        rotate: 15deg;
-    }
-    .ScrollSlide-section .bottom-black-line {
-        rotate: -18deg;
-    }
-    .ScrollSlide-section .heading-or-folwer {
-        min-width: 35%;
-    }
-    .ScrollSlide-section .heading-or-folwer .marquee-heading {
-        font-size: 0.5rem;
-    }
-    .ScrollSlide-section .top-aqua-line {
-        height: 3rem;
-    }
-    .ScrollSlide-section .top-aqua-line, .ScrollSlide-section .bottom-black-line {
-        height: 3rem;
-    }
-    .ScrollSlide-section .heading-or-folwer .marquee-flower {
-        width: 14%;
-        top: 15px;
-        left: 3px;
-        height: 30%;
-    }
-
-  }
+ 

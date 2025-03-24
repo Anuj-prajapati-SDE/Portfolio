@@ -1,12 +1,11 @@
 .Testimonials-section{
     position: relative;
     width: 100%;
-    height: 60vh;
+    height: 25rem;
     display: flex;
     justify-content: center;
     flex-direction: column;
     overflow: hidden;
-    /* background-color: aqua; */
 }
 
 .Testimonials-section h1{
@@ -28,8 +27,9 @@
 }
 .Testimonials-person-section{
     width: 100%;
-    height: 90vh;
+    height: 43rem;
     padding: 0px 30px;
+    /* background-color: blue; */
 }
 .Testimonials-person-section .Testimonials-person{
     position: relative;
@@ -39,7 +39,7 @@
     color: var(--text-2-color);
     justify-content: space-around;
     border-bottom: 1px solid var(--theme-text-color);
-    height: 30vh;
+    height: 32%;
     transition: 0.5s ease-in-out;
     /* background-color: aquamarine; */
 }
@@ -91,18 +91,6 @@
     /* background-color: rgb(72, 78, 76); */
 }
 
-@media (max-width: 1200px) {
-    /* on need responsive */
-  }
-  @media (max-width: 1030px) {
-   /* on need responsive */
-  }
-  @media (max-width: 992px) {
-    .Testimonials-section h1 {
-        font-size: 6rem;  
-        margin-left: 4%;
-    }
-  }
   @media (max-width: 768px) {
     .Testimonials-section h1 {
         font-size: 5rem;
@@ -122,34 +110,13 @@
         height: 120px;
     }
   }
-  
-  @media (max-width: 576px) { 
-    .Testimonials-person-section .Testimonials-person .Testimonials-person-response {
-        padding: 0px 20px;
-      font-size: x-small;
-    }
-    .Testimonials-person-section .Testimonials-person .Testimonials-person-name {
-        font-size: 15px;
-    }
-    .Testimonials-section {
-        height: 50vh;
 
-    }
-    .Testimonials-section h1 {
-        font-size: 4rem;
-        line-height: normal;
-    }
-    .Testimonials-section h1:nth-child(3) {
-        margin-left: 28%;
-    }
-    .Testimonials-person-section .Testimonials-person { 
-        height: 27vh;
-
-    }
-  }
   @media (max-width: 480px) {
     .Testimonials-section {
-        height: 28vh;
+        position: relative;
+        top: 30px;
+        height: 15rem;
+
     }
     .Testimonials-section h1 {
         font-size: 3rem;
@@ -161,16 +128,17 @@
     .Testimonials-section h1:nth-child(3) {
         margin-left: 20%;
     }
-    .Testimonials-person-section .Testimonials-person {
-        height: 20vh;
-    }
+
     .Testimonials-person-section .Testimonials-person .Testimonials-person-count img {
         width: 50px;
         height: 70px;
     }
     .Testimonials-person-section {
-        height: 68vh;
+        height: 35rem;
         padding: 0px 20px;
+    }
+    .Testimonials-person-section .Testimonials-person .Testimonials-person-response {
+        font-size: xx-small;
     }
     .Testimonials-person-section .Testimonials-person .Testimonials-person-name {
         font-size: 10px;
@@ -180,15 +148,12 @@
   text-align: center;
     }
 }
-  @media (max-width: 381px) {
+  @media (max-width: 391px) {
     .Testimonials-section h1 {
         font-size: 2.9rem;
         line-height: normal;
     }
-    .Testimonials-person-section .Testimonials-person {
-        height: 22vh;
-        flex-wrap: wrap;
-    }
+    
     .Testimonials-person-section .Testimonials-person .Testimonials-person-count {     
         width: 30%;
         position: relative;

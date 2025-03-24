@@ -11,11 +11,11 @@ import { Link } from 'react-router-dom';
 function Experience() {
   const [ProjectRightTrue , setProjectRightTrue] = useState(false);
   ExperienceAnimation(ProjectRightTrue) 
- function reload(){
+ function reload(){ 
 window.reload()}   
 const nextProjectClick  = ()=>{ 
    setProjectRightTrue(true)
-}
+} 
 const preProjectClick  = ()=>{
   setProjectRightTrue(false) 
 }
@@ -48,9 +48,9 @@ const preProjectClick  = ()=>{
             </span>
             <span>/02</span>
           </div>
-          <div className="project-name">
+          <div className="project-name"> 
             <h2 className="project-1-name">Code-Quest</h2>
-            <h2 className="project-2-name">Samiah Group</h2>       
+            <h2 className="project-2-name">Skill Vedaa</h2>       
           </div>
           </div>
         </div>
@@ -65,10 +65,10 @@ const preProjectClick  = ()=>{
              <Link to={"https://codequest-frontend.onrender.com"} className='Project-link'><p>View Project <span><FaArrowCircleRight /></span></p></Link>
           </div>
           <div className="img-frames project-frame-img-frame-2"> 
-          <Link to={"https://samiah.co.in/"} target='_blank'>
+          <Link to={"https://skillvedaa.in/"} target='_blank'>
             <img src={ProjectImg_2} alt="" />
           </Link>
-          <Link to={"https://samiah.co.in/"} className='Project-link'><p>View Project <span><FaArrowCircleRight /></span></p></Link>
+          <Link to={"https://skillvedaa.in/"} className='Project-link'><p>View Project <span><FaArrowCircleRight /></span></p></Link>
           </div> 
           <div className="view-second-project" onClick={nextProjectClick}>
           <FaAnglesRight />
@@ -85,19 +85,19 @@ const preProjectClick  = ()=>{
           <div className="project-role">
              <h3>Role</h3>
              <div className="roles">
-              <p className='role-1'>Fontend Developer</p>
+              <p className='role-1'>FullStack Developer</p>
               <p className='role-2'>FullStack Developer</p>
              </div>          
           </div>
           <div className="projects-description"> 
           <h4>Description:</h4>
           <div className="description"> 
-          <p className='project-1-description'>
+          <p className='project-1-description'> 
           A MERN stack-based coding competition website designed to facilitate teacher student interactions. The platform provides features such 
           as live feedback, progress tracking, and real-time communication to enhance the learning experience
           </p>
           <p className='project-2-description'>
-          “Samiah International Builders Ltd.”, is registered with the Registrar of Company, National Capital Territory of Delhi & Haryana, having DELHI REGD. & HEAD OFFICE G-74, 1st Floor, Samiah Place, Sarita vihar Road, Shaheen BaghNew Delhi – 110025 (India). SAMIAH’ is involved in the construction business from last many years. 
+          SkillVedaa, a unit of Morling Global Pvt Ltd., is a premier upskilling and training platform. In which incudes a multiple featured such as live classes, payment gateways, and a user-friendly interface.
           </p>
           </div>
           </div>
