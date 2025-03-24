@@ -41,7 +41,7 @@ const SmoothScrolling = ({ children }) => {
   }, []);
 
   return (
-    <div ref={containerRef} className="Portfolio-container😎">
+    <div ref={containerRef} className="Portfolio-main">
       {children}
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import './Contact.css';
 import toast, { Toaster } from 'react-hot-toast';
 import { FaInstagramSquare } from "react-icons/fa";
+
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
@@ -12,7 +13,7 @@ import ContactAnimation from '../../Animation/ContactAnimation';
 
 function Contact() {
   ContactAnimation();
-  const form = useRef();
+  const form = useRef(); 
 
   const notify = (message) => toast.success(message);
 
@@ -122,13 +123,7 @@ function Contact() {
         <div className="right-contact-form">
            {/* 3D Model Embed */}
         <div className="flex justify-center items-center">
-          {/* <div className="sketchfab-embed-wrapper w-full max-w-2xl">
-            <iframe
-              src="https://sketchfab.com/models/c5a9adc234d04a8d9e79700ff5fa0071/embed?autostart=1&transparent=1&ui_hint=0"
-              allowFullScreen
-              className="w-full h-96"
-            ></iframe>
-          </div> */}
+       
         </div>
 
         </div>

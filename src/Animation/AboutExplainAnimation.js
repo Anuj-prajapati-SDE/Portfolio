@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 import { useEffect } from "react";
 gsap.registerPlugin(useGSAP);
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 const AboutExplainAnimation = () => {
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
   const windowWidth = window.innerWidth;
   if(windowWidth>550){
     useEffect(() => { 
@@ -19,7 +19,7 @@ const AboutExplainAnimation = () => {
             scrollTrigger: {
               trigger: ".About-Explain-section", 
               scroller: "body",
-              start: "top 11%", 
+              start: "5% 11%", 
               scrub: 2,
               end: "bottom 20%",
             // markers:true,
@@ -35,7 +35,7 @@ const AboutExplainAnimation = () => {
             scrollTrigger: {
               trigger: ".About-Explain-section",
               scroller: "body",
-              start: "top 11%",
+              start: "5% 11%",
               scrub: 2,
               end: "30% 20%", 
               // markers:true
@@ -52,7 +52,7 @@ const AboutExplainAnimation = () => {
             scrollTrigger: {
               trigger: ".About-Explain-section",
               scroller: "body",
-              start: "top 11%", 
+              start: "5% 11%", 
               scrub: 2,
               end: "bottom 20%",
             }
@@ -66,7 +66,7 @@ const AboutExplainAnimation = () => {
             scrollTrigger: {
               trigger: ".About-Explain-section",
               scroller: "body",
-              start: "top 11%",
+              start: "5% 11%",
               end: "bottom 20%",
               scrub: 2,
               // markers:true

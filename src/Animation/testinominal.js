@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 const TestinominalAnimation = () => {
   const windowWidth =window.innerWidth;
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
 
     if(windowWidth>550){
@@ -15,7 +15,7 @@ const TestinominalAnimation = () => {
           scroller: "body",
           // markers:true,
           trigger: ".Testimonials-heading"
-        }
+        }       
       });
       tl.from("#testimonials h1", {
           opacity:0,

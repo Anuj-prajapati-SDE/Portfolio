@@ -2,12 +2,41 @@
     --back-ground-color : #ebebeb;
     --background-black: rgb(30, 29, 29);
     --text-2-color:rgb(118, 118, 118);
-    /* --theme-text-color : #ff5100; */
     --theme-text-color : #08afff;
      --text-color:rgb(243, 243, 243);
 }
 .background-shadow{
-background: rgba(97, 97, 97, 0.12);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
+    outline: 0.5px solid white;
+    background: rgba(97, 97, 97, 0.12);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(6.8px);
+-webkit-backdrop-filter: blur(6.8px);
+ 
+} 
+/* 
+.navbar-container::before{
+    content: "";
+    position: absolute;
+    left: -30px;
+    background: linear-gradient(120deg, rgba(137, 136, 136, 0) 30%);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(10px);
+    rotate: 5deg; 
+    height: 100%;
+    transition: 0.5s ease-in-out;
+    animation: shine 2s infinite linear;
+    
+} */
+/* Shine Animation */
+/* @keyframes shine {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
 }
+.navbar-container:hover::before{
+    transform: translateY(-100%);
+ 
+} */

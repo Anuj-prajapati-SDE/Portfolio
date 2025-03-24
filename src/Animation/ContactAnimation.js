@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 const ContactAnimation = () => {
     const windowWidth =window.innerWidth;
-    gsap.registerPlugin(ScrollTrigger)
+    // gsap.registerPlugin(ScrollTrigger)
     useGSAP(() => {
         if(windowWidth>550){
         const tl = gsap.timeline({

@@ -1,15 +1,17 @@
 .About-Explain-section{
     position: relative;
-      margin-top: 7%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
     width: 100%; 
-overflow: hidden;
+  overflow: hidden;
 padding: 0px 20px; 
-    height: 90vh;
+    height: 45.5rem;
+    z-index: 5;
     /* background-color: aquamarine; */
-}
-.fixed-position {
-    position: relative;
-  }
+} 
+
   
   .hidden-element {
     opacity: 1;
@@ -29,7 +31,8 @@ padding: 0px 20px;
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
-    height: 32%;
+    height: 29%;
+  outline: none;
     border-bottom: 2px solid var(--theme-text-color);
 }
 

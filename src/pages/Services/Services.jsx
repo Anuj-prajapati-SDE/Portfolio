@@ -6,64 +6,64 @@ import { FaNodeJs } from "react-icons/fa6";
 import { FaBootstrap } from "react-icons/fa";
 import { RiJavaLine } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare } from "react-icons/fa" ;
 import { DiDocker } from "react-icons/di";
 import { TbBrandReactNative } from "react-icons/tb";
 import { SiSpringboot } from "react-icons/si";
 
 import { FaSquareJs } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa";
+import { FaReact } from "react-icons/fa"; 
 import { RiTailwindCssLine } from "react-icons/ri";
 import cppIcon from '../../assets/cpp_icon.webp'
 import { TbBrandRedux } from "react-icons/tb";
 import Res_screenShot from "../../assets/responsive-screenshot-img.webp"
 import code_screenShot from "../../assets/code-screenshot-img.webp"
-import ServiceAnimation from '../../Animation/ServiceAnimation'
-function Services() {
-    ServiceAnimation()
+// import ServiceAnimation from '../../Animation/ServiceAnimation'
+function Services() { 
+    // ServiceAnimation()
     return (
         <>
-            <section id='services' className='Services-section'>
+             <section id='services' className='Services-section'>
                 <h1>WHAT</h1> 
                 <h1>SERVICES I</h1>  
                 <h1>PROVIDE</h1>  
-            </section> 
-            <section className='Services-content-section'>
+             </section> 
+             <section className='Services-content-section'>
                 <section className='Services-about'>
-                    <div className='Services-about-text-container'>
+                    <div className='Services-about-text-container background-shadow'>
                      <h1>Blending Creativity with Functionality</h1>
                     <p>I am a passionate and dedicated Mern Stack developer, specializing in creating unique and effective design solutions. With extensive experience in web, apps, and branding, as well as effective UX/UI design, I have collaborated with companies of all types, both nationally and internationally, ensuring efficiency and flexibility in every project.</p>
                     </div>
                     <div className='Services-experience-boxes'>
-                        <div className="experience-box">
+                        <div className="experience-box background-shadow">
                             <h2>1+</h2>
                             <p> Year of <br/>Experience</p>
                         </div>
-                        <div className="experience-box">
+                        <div className="experience-box background-shadow">
                         <h2>5+</h2>
                         <p> Successfull <br/>Project</p>
                         </div>
-                        <div className="experience-box">
+                        <div className="experience-box background-shadow">
                          <h2>100%</h2>
                         <p>Secure code</p>
                         </div>
-                        <div className="experience-box">
+                        <div className="experience-box background-shadow">
                         <h2>100%</h2>
                         <p>Professinal &<br/>Quality Code</p>
                         </div>
                     </div> 
                 </section>
                 <section className='Services-about-2'>
-                       <div className='service-responsive-screenshot'>
+                       <div className='service-responsive-screenshot background-shadow'>
                            <h2>Responsive Web</h2>
                            <img src={Res_screenShot} alt="" />
                        </div>
-                       <div className='service-code-screenshot'> 
+                       <div className='service-code-screenshot background-shadow'> 
                        <h2>Simple and Efficient Code</h2>
                        <img src={code_screenShot} alt="" />
                        </div>
                 </section>
-                       <div className='technology-knows-container'>
+                       <div className='technology-knows-container background-shadow'>
                         <h1>Professional Skillset</h1>
                         <div className="tech-heading-icon-container">
                             <div className="heading-icon">
@@ -133,7 +133,7 @@ function Services() {
                             </div>    
                         </div>
                        </div>
-            </section>
+             </section>
         </>
     )
 }

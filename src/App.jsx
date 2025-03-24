@@ -7,6 +7,7 @@ import AllProjects from './Components/AllProjects/AllProjects'
 import AboutMe from '../src/Components/About-me/AboutMe'
 import MouseFollower from "./Animation/MouseFollower"
 
+// import { app, analytics } from "../config/firebaseConfig"; // Import Firebase setup
 function App() {
   const windowWidth =window.innerWidth;
   return (

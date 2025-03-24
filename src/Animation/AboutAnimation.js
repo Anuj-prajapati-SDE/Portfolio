@@ -1,14 +1,14 @@
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 const AboutAnimation = () => {
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
     const tl = gsap.timeline();
     const tl1  = gsap.timeline(); 
     tl.to(".img-frame-1", {
       x: 30,
-      y: 50,
+      y: 60,
       scrollTrigger: {
         scrub: 3,
         scroller: "body",

@@ -10,11 +10,8 @@
     justify-content: space-between;
     align-items: center;
     height: 5rem;
-  background: rgba(255, 255, 255, 0.03);
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-border-bottom: 1px solid rgba(255, 255, 255, 0.94);
+  border:none ;
+border-bottom: 1px solid var(--text-color);
 }
 .left-navbar{ 
  font-family: "Tangerine", cursive;
@@ -48,26 +45,23 @@ font-style: normal;
 } 
  .hambargar-clicked-section{
     position: fixed;
-    top: 11vh;
+    top: 5.1rem;
     left: 66.89%;
     overflow: hidden;
     z-index: 100;
     width: 500px;
+    /* background-color: rgb(5, 33, 33); */
     opacity: 0;
-    height: 0vh; 
+    height: 0rem; 
    color: var(--text-color);
     border-radius: 10px;
-    background: rgba(255, 255, 255, 0.03);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.94);
+
+ 
     border-top: none;
     /* border-left: 1px solid rgba(255, 255, 255, 0.94); */
 }
  .hambargar-clicked-section .menu-btn{
     width: 100%;
-    height: 10.6vh;
     display: flex;
     color: var(--theme-text-color);
     padding: 35px;
@@ -100,7 +94,8 @@ background-color: var(--theme-text-color);
     gap: 20px;
     cursor: pointer;
     width: 100%;
-    height:55vh;
+    
+    height:25rem;
 }
 .hambargar-clicked-section .nav-links a{
     color: var(--text-color);
@@ -127,21 +122,16 @@ background-color: var(--theme-text-color);
 }
 .hambargar-clicked-section .terms_condition{
     position: relative;
-    width: 100%;
-    height: 22vh;
+    display: flex;
+    justify-content:end;
+    align-items:end;
+    padding: 10px 20px;
+    width: 100%; 
+    height: 7rem;
+    color: var(--theme-text-color);
     /* background-color: aqua; */
 }
 
-.hambargar-clicked-section .developer_name{
-    position: relative;
-
-  top: 70%;
-    /* background-color: rgb(255, 0, 111); */ 
-}
-.hambargar-clicked-section .developer_name h4{
-    color: var(--theme-text-color);
-    padding-left: 55%;
-}
 .hambargar-clicked-section .developer_name h4 span{
     color:var(--text-color);
  
@@ -149,29 +139,27 @@ background-color: var(--theme-text-color);
 
 @media (max-width: 768px) {
     .hambargar-clicked-section {
-        top: 9vh;
+        top: 6rem;
         left: 7%;
         width: 600px;
     }
-    .hambargar-clicked-section .nav-links a {
-        font-size: 2rem;
+    .hambargar-clicked-section .nav-links{
+margin-top: 15%;
     }
-    .hambargar-clicked-section .terms_condition .condition {
-        
-        font-size: smaller;
+    .hambargar-clicked-section .nav-links a {
+        font-size: 2.7rem;
+    }
+    .hambargar-clicked-section .terms_condition  {
+        margin-top: 25%;
+        font-size:medium;
         justify-content: center;
         gap: 10px;
     }
     .hambargar-clicked-section .menu-btn {
-        font-size: medium;
+        font-size:larger;
     }
-    .hambargar-clicked-section .developer_name {
-       
-        top: 50%;
-    }
-    .hambargar-clicked-section .developer_name h4 {
-        padding-left: 30%;
-    }
+   
+  
 }
 @media (max-width: 480px) {
     .navbar-container {
@@ -184,32 +172,35 @@ background-color: var(--theme-text-color);
         margin-left: 10px;
     }
     .hambargar-clicked-section {
-        top: 13vh;
-        left: 10%;
-        border-radius: 12px;
-        border-top: 1px solid;
-        width: 380px;
-    }
-    .hambargar-clicked-section .developer_name {
-       
-        top: 40%;
-        /* background-color: rgb(255, 0, 111); */
-    }
-    .hambargar-clicked-section .developer_name h4 {
-        padding-left: 30%;
-    }
-}
-@media (max-width: 450px) {
-    .navbar-container {
-        padding: 0px 10px;
-    }
-    .left-navbar {  
-        font-size: smaller;
-    }
-    .hambargar-clicked-section {
-        top: 10vh;
-        left: 2%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, 0);
         border-radius: 10px;
+        width: 370px;
+        border:1px solid var(--text-color);
+    }
+    .hambargar-clicked-section .nav-links  {
+        margin-top: 5%;
+    }
+    .hambargar-clicked-section .nav-links a {
+        font-size: 2rem;
+        
+    }
+    .hambargar-clicked-section .terms_condition {
+        margin-top: 8%;
+        font-size: small;
+
+    }
+    .hambargar-clicked-section .menu-btn {
+        font-size:medium;
+    }
+   
+    .left-navbar {
+        font-size: small;
+    }
+    .right-navbar .cv-btn a, .right-navbar .hambargar-icon a {
+        padding: 7px 15px;
+        font-size: small;
     }
 }
 
@@ -221,27 +212,22 @@ background-color: var(--theme-text-color);
         font-size: small;     
     }
     .hambargar-clicked-section {
-        top: 13vh;
-        left: 6%;
-        border-radius: 10px;
-        border-top: 1px solid;
-        width: 347px;
-        height: 85vh;
+        width: 340px;
     }
-    .right-navbar .cv-btn a, .right-navbar .hambargar-icon a {   
-        padding: 7px 15px;
-        font-size: small; 
-        font-weight: 600;
+    .right-navbar .cv-btn a, .right-navbar .hambargar-icon a {
+        
+        font-size: x-small;
     }
-    .hambargar-clicked-section .developer_name h4 {
-        padding-left: 35%;
+    .hambargar-clicked-section .nav-links  {
+        margin-top:0%;
     }
-    
-    .hambargar-clicked-section .menu-btn {
-        font-size: smaller;
+    .hambargar-clicked-section .nav-links a {
+        font-size: 1.5rem;
+        
     }
-    .hambargar-clicked-section .terms_condition h3 {
-        font-size: medium;
-      
+    .hambargar-clicked-section .terms_condition {
+        margin-top: 0%;
+        align-items: center;
     }
+
 } 

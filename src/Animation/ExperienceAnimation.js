@@ -1,10 +1,10 @@
 import { useGSAP } from "@gsap/react";
 import { useEffect, useState } from "react";
 gsap.registerPlugin(useGSAP);
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
 const  ExperienceAnimation = (ProjectRightTrue) => {
   // console.log(ProjectRightTrue)
-  gsap.registerPlugin(ScrollTrigger)
+  // gsap.registerPlugin(ScrollTrigger)
   const windowWidth =window.innerWidth;
     useEffect(() => {
       const tl = gsap.timeline();

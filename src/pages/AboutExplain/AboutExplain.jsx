@@ -5,18 +5,16 @@ function AboutExplain() {
   AboutExplainAnimation() 
   return ( 
     <section className='About-Explain-section'>
+      
       <div className='About-Explain background-shadow'>
-     
         <div className="title-left">
-          <h1><span>W</span>ebsite</h1>
-        </div> 
-        <div className="title-explaination">  
+          <h1><span>E</span>xperience</h1>
+        </div>
+        <div className="title-explaination">
           <p>
-            Focused on creating visually stunning interfaces and exceptional user experiences. Every click is crafted for user-friendly, efficient, and meaningful products.
-          </p>
-          <span>...</span> 
-     
-      </div>  
+          Currently I'm  Software Intern – in Morling Global Private Limited (January 2025 – Present) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
+          <span>...</span>
+        </div>
       </div>
       <div className='About-Explain background-shadow'>
         <div className="title-explaination">
@@ -30,14 +28,17 @@ function AboutExplain() {
         </div> 
       </div>
       <div className='About-Explain background-shadow'>
+     
         <div className="title-left">
-          <h1><span>E</span>xperience</h1>
-        </div>
-        <div className="title-explaination">
+          <h1><span>F</span>reelancer</h1>
+        </div> 
+        <div className="title-explaination">  
           <p>
-          Currently I'm  Software Intern – in Morling Global Private Limited (January 2025 – Present) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
-          <span>...</span>
-        </div>
+            Focused on creating visually stunning interfaces and exceptional user experiences. Every click is crafted for user-friendly, efficient, and meaningful products.
+          </p>
+          <span>...</span> 
+      
+      </div>  
       </div>
         
         <div className="About-thinking">
