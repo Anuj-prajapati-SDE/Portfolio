@@ -6,7 +6,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: radial-gradient(circle , rgba(8, 177, 255, 0.242) 0%);
+    /* background: radial-gradient(circle , rgba(8, 177, 255, 0.242) 0%); */
     height: 40rem; 
     /* background-color: aqua; */
     /* overflow: hidden; */

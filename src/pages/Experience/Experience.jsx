@@ -5,14 +5,12 @@ import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAnglesRight } from "react-icons/fa6";
 import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
-import ExperienceAnimation from '../../Animation/ExperienceAnimation'
+// import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import { Link } from 'react-router-dom';
 
 function Experience() {
   const [ProjectRightTrue , setProjectRightTrue] = useState(false);
-  ExperienceAnimation(ProjectRightTrue) 
- function reload(){ 
-window.reload()}   
+  // ExperienceAnimation(ProjectRightTrue)    
 const nextProjectClick  = ()=>{ 
    setProjectRightTrue(true)
 } 
@@ -102,7 +100,7 @@ const preProjectClick  = ()=>{
           </div>
           </div>
           <div className="All-project-link"> 
-            <Link to={"/all-projects"} onClick={reload}>View All Projects</Link>
+            <Link to={"/all-projects"} >View All Projects</Link>
           </div>
         </div>
         </div>

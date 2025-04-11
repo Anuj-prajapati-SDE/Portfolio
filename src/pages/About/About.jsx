@@ -2,13 +2,13 @@ import React from 'react'
 import img1 from '../../assets/pic-1.jpg'
 import './About.css'
 import { Link } from 'react-router-dom'
-import AboutAnimation from '../../Animation/AboutAnimation'
+// import AboutAnimation from '../../Animation/AboutAnimation'
 function About() {
-  AboutAnimation()
-  return ( 
+  // AboutAnimation()
+  return (
     <section id='about' className='About-section'>
       <div className="left_section">
-        <h1>Hii<span> 👋,</span></h1> 
+        <h1>Hii<span> 👋,</span></h1>
         <p>
           I am Anuj Prajapati,<br />
           I create,<br />

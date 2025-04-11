@@ -2,11 +2,11 @@ import React from 'react'
 import { useRef, useEffect } from 'react';
 
 import './ScrollSlide.css'
-import MarqueeAnimation from '../../Animation/MarqueeAnimation'
+// import MarqueeAnimation from '../../Animation/MarqueeAnimation'
 
 function ScrollSlide() {
   const sectionRef = useRef(null);
-MarqueeAnimation()
+// MarqueeAnimation()
   useEffect(() => {
     const handleMouseMove = (event) => {
       const rect = sectionRef.current.getBoundingClientRect();
@@ -152,7 +152,7 @@ MarqueeAnimation()
 
           </span>
         </div>
-      <div className='heading-or-folwer'>
+      <div className='heading-or-folwer'> 
           <h1 className='marquee-heading'>
           Efficient Code
           </h1>

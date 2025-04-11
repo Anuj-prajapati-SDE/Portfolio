@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+
 import "./AboutExplain.css"
-import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
+// import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
 function AboutExplain() {
-  AboutExplainAnimation() 
+  // AboutExplainAnimation() 
   return ( 
     <section className='About-Explain-section'>
       
