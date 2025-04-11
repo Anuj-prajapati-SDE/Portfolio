@@ -5,12 +5,12 @@ import { FaAngleDoubleLeft } from "react-icons/fa";
 import { FaAnglesRight } from "react-icons/fa6";
 import ProjectImg_1 from "../../assets/project-img-1.png";
 import ProjectImg_2 from "../../assets/project-img-2.png";
-// import ExperienceAnimation from '../../Animation/ExperienceAnimation'
+import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import { Link } from 'react-router-dom';
 
 function Experience() {
   const [ProjectRightTrue , setProjectRightTrue] = useState(false);
-  // ExperienceAnimation(ProjectRightTrue)    
+  ExperienceAnimation(ProjectRightTrue)    
 const nextProjectClick  = ()=>{ 
    setProjectRightTrue(true)
 } 

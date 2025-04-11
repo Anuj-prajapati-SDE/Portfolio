@@ -11,7 +11,8 @@ import MouseFollower from "./Animation/MouseFollower"
 function App() {
   const windowWidth =window.innerWidth;
   return (
-    <>        
+    <> 
+           
       <SmoothScrolling>
         {windowWidth>550 && <MouseFollower></MouseFollower>}
         <Router>

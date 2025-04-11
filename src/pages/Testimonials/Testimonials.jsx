@@ -3,10 +3,10 @@ import "./Testimonials.css"
 import Customer_img_1 from "../../assets/customer-img-1.jpeg"
 import Customer_img_2 from "../../assets/customer-img-2.jpeg"
 import Customer_img_3 from "../../assets/customer-img-3.jpeg"
-// import TestinominalAnimation from '../../Animation/testinominal.js'
+import TestinominalAnimation from '../../Animation/testinominal.js'
 function Testimonials() {
   const windowWidth =window.innerWidth;
-  //  TestinominalAnimation()
+   TestinominalAnimation()
   return ( 
     <>    
     <section id='testimonials' className='Testimonials-section'>
