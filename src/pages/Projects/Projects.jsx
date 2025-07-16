@@ -1,0 +1,286 @@
+import React, { useState, useRef } from 'react'
+import './Projects.css' // Assuming you have a CSS file for styling 
+
+const Projects = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  
+  const projects = [
+  {
+    id: '1', 
+    title: 'BlissCamp',
+    category: 'Web Development',
+    image: "https://picsum.photos/seed/project1/600/400",
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'A website for Tourists and Travellers',
+    links: {
+      live: 'https://nk2552003.github.io/BlissCampIndia/',
+      github: 'https://github.com/NK2552003/BlissCampIndia',
+      codepen: 'https://github.com/NK2552003/BlissCampIndia'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '2',
+    title: "lil' me",
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project2/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'An animated moving boy using pure CSS, HTML & JS',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe',
+      github: 'https://github.com/NK2552003/lil-me-male-version-',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '3',
+    title: 'Cursor',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project3/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'The custom modified cursor for better interactivity with users',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey',
+      github: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '4',
+    title: 'Background',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project4/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'A randomized background generator for any content creator',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/VwoLgrj',
+      github: 'https://github.com/NK2552003/Random_Character_Background',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/VwoLgrj'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '5',
+    title: 'CSS Filters',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project5/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'A CSS filter section displaying images on hover with animation',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza',
+      github: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '6',
+    title: 'HostelEase',
+    category: 'App Development',
+    image: 'https://picsum.photos/seed/project6/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'The management app for hostelers, warden, for seamless interaction.',
+    links: {
+      live: 'https://github.com/NK2552003/Hostel_Management_App',
+      github: 'https://github.com/NK2552003/Hostel_Management_App',
+      codepen: 'https://github.com/NK2552003/Hostel_Management_App'
+    },
+    progress: 'Working on it'
+  },
+  {
+    id: '7',
+    title: 'Portfolio',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project7/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'Created the portfolio for my colleague for resume purposes.',
+    links: {
+      live: 'https://rohit-s-portfolio.netlify.app/',
+      github: 'https://github.com/NK2552003/Rohit-s_Portfolio',
+      codepen: 'https://github.com/NK2552003/Rohit-s_Portfolio'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '8',
+    title: 'LandingPage',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project8/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'The webpage features images and text content with stunning visuals.',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MWdKBpa',
+      github: 'https://github.com/NK2552003/Dynamic_Landing_WebPage',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MWdKBpa'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '9',
+    title: 'Satranj',
+    category: 'App Development',
+    image: 'https://picsum.photos/seed/project9/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'A Simple and Easy-to-Play Ancient Chess Game in Flutter',
+    links: {
+      live: 'https://github.com/NK2552003/Satranj-Chess-_Game',
+      github: 'https://github.com/NK2552003/Satranj-Chess-_Game',
+      codepen: 'https://github.com/NK2552003/Satranj-Chess-_Game'
+    },
+    progress: 'Completed'
+  },
+  {
+    id: '10',
+    title: 'Civic Link',
+    category: 'Web Development',
+    image: 'https://picsum.photos/seed/project10/600/400',
+    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
+    description: 'A collaborative platform dedicated to society or community to report or for services in the society means a community handler.',
+    links: {
+      live: 'https://nk2552003.github.io/Civic_Link/',
+      github: 'https://github.com/NK2552003/Civic_Link',
+      codepen: 'https://nk2552003.github.io/Civic_Link/'
+    },
+    progress: 'Completed'
+  }
+];
+
+  const categories = ['All', 'App Development', 'Web Development'];
+
+  // Helper functions for video playback
+  const playVideo = (video) => {
+    if (video) {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch((error) => {
+          console.error('Error playing video:', error);
+        });
+      }
+    }
+  };
+
+  const pauseVideo = (video) => {
+    if (video) {
+      try {
+        video.pause();
+        video.currentTime = 0;
+      } catch (error) {
+        console.error('Error pausing video:', error);
+      }
+    }
+  };
+
+  // Project component with video interactions
+  const ProjectCard = ({ project }) => {
+    const videoRef = useRef(null);
+    
+    const handleMouseEnter = () => {
+      if (videoRef.current) {
+        videoRef.current.style.opacity = 1;
+        playVideo(videoRef.current);
+      }
+    };
+    
+    const handleMouseLeave = () => {
+      if (videoRef.current) {
+        videoRef.current.style.opacity = 0;
+        pauseVideo(videoRef.current);
+      }
+    };
+    
+    const handleTouchStart = () => {
+      if (videoRef.current) {
+        videoRef.current.style.opacity = 1;
+        playVideo(videoRef.current);
+      }
+    };
+    
+    const handleTouchEnd = () => {
+      if (videoRef.current) {
+        videoRef.current.style.opacity = 0;
+        pauseVideo(videoRef.current);
+      }
+    };
+
+    return (
+      <div 
+        className="portfolio-group relative overflow-hidden"
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
+        <div className="portfolio-media-wrapper relative">
+          <img src={project.image} alt={project.title} className="portfolio-image portfolio-aspect-3-2 portfolio-object-cover" />
+          <video 
+            ref={videoRef}
+            src={project.video} 
+            muted 
+            loop 
+            className="portfolio-video portfolio-aspect-3-2 portfolio-object-cover"
+            style={{ opacity: 0 }}
+          />
+          <div className="portfolio-overlay-blur"></div>
+        </div>
+        <div className="portfolio-overlay portfolio-absolute portfolio-inset-0 portfolio-bg-gradient-to-t"></div>
+        <div className="portfolio-absolute portfolio-bottom-0 portfolio-p-4">
+          <p className="portfolio-progress">{project.progress}</p>
+          <h3 className="portfolio-text-xl portfolio-font-semibold portfolio-text-white">{project.title}</h3>
+          <p className="portfolio-description">{project.description}</p>
+          <div className="portfolio-links mt-4">
+            <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+              <button className="button">
+                {/* ...existing SVG code... */}
+              </button>
+            </a>
+            <a href={project.links.github} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+              <button className="button">
+                {/* ...existing SVG code... */}
+              </button>
+            </a>
+            <a href={project.links.codepen} target="_blank" rel="noopener noreferrer" className="portfolio-btn">
+              <button className="button">
+                {/* ...existing SVG code... */}
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    );
+  }; 
+ 
+  // Filter projects based on selected category
+  const filteredProjects = projects.filter(project => 
+    selectedCategory === 'All' || project.category === selectedCategory
+  );
+
+  return (
+    <div className="portfolio-min-h-screen portfolio-bg-black portfolio-p-8 ">
+      {/* Filter Buttons */}
+      <div className="portfolio-mb-8 portfolio-flex portfolio-flex-wrap portfolio-gap-4">
+        {categories.map(category => (
+          <button
+            key={category}
+            className={selectedCategory === category 
+              ? 'portfolio-bg-white portfolio-text-black filterBtn ' 
+              : 'portfolio-text-white portfolio-bg-black filterBtn'}
+            onClick={() => setSelectedCategory(category)}
+          >
+            {category}
+          </button>
+        ))}
+      </div>
+      
+      {/* Projects Grid */}
+      <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
+        {filteredProjects.map(project => (
+          <ProjectCard key={project.id} project={project} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;
