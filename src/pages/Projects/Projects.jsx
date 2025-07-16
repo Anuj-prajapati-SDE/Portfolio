@@ -4,6 +4,8 @@ import './Projects.css' // Assuming you have a CSS file for styling
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [projectsPerPage] = useState(6);
 
   const projects = [
   {
@@ -34,6 +36,7 @@ const Projects = () => {
     id: '2',
     title: "lil' me",
     category: 'Web Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     image: 'https://picsum.photos/seed/project2/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
     description: 'An animated moving boy using pure CSS, HTML & JS',
@@ -56,6 +59,7 @@ const Projects = () => {
   {
     id: '3',
     title: 'Cursor',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     category: 'Web Development',
     image: 'https://picsum.photos/seed/project3/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
@@ -80,6 +84,7 @@ const Projects = () => {
     id: '4',
     title: 'Background',
     category: 'Web Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     image: 'https://picsum.photos/seed/project4/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
     description: 'A randomized background generator for any content creator',
@@ -103,6 +108,7 @@ const Projects = () => {
     id: '5',
     title: 'CSS Filters',
     category: 'Web Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     image: 'https://picsum.photos/seed/project5/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
     description: 'A CSS filter section displaying images on hover with animation',
@@ -125,6 +131,7 @@ const Projects = () => {
   {
     id: '6',
     title: 'HostelEase',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     category: 'App Development',
     image: 'https://picsum.photos/seed/project6/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
@@ -148,6 +155,7 @@ const Projects = () => {
   {
     id: '7',
     title: 'Portfolio',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     category: 'Web Development',
     image: 'https://picsum.photos/seed/project7/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
@@ -172,6 +180,7 @@ const Projects = () => {
     id: '8',
     title: 'LandingPage',
     category: 'Web Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     image: 'https://picsum.photos/seed/project8/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
     description: 'The webpage features images and text content with stunning visuals.',
@@ -195,6 +204,7 @@ const Projects = () => {
     id: '9',
     title: 'Satranj', 
     category: 'App Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     image: 'https://picsum.photos/seed/project9/600/400',
     video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
     description: 'A Simple and Easy-to-Play Ancient Chess Game in Flutter',
@@ -216,6 +226,7 @@ const Projects = () => {
   },
   {
     id: '10',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
     title: 'Civic Link',
     category: 'Web Development',
     image: 'https://picsum.photos/seed/project10/600/400',
@@ -318,10 +329,12 @@ const Projects = () => {
       </div>
       <div className="portfolio-overlay portfolio-absolute portfolio-inset-0 portfolio-bg-gradient-to-t"></div>
       <div className="portfolio-absolute portfolio-bottom-0 portfolio-p-4">
+        <p className="portfolio-category">{project.category}</p>
         <p className="portfolio-progress">{project.progress}</p>
         <h3 className="portfolio-text-xl portfolio-font-semibold portfolio-text-white">{project.title}</h3>
         <p className="portfolio-description">{project.description}</p>
         <div className="portfolio-links mt-4">
+          <a className="portfolio-project-btn">
         <button 
           onClick={() => {
           const index = filteredProjects.findIndex(p => p.id === project.id);
@@ -331,6 +344,7 @@ const Projects = () => {
         >
           View Details 
         </button>
+          </a>
         <a href={project.links.live} target="_blank" rel="noopener noreferrer" className="portfolio-project-btn">
           <button>
           Live Preview           
@@ -346,6 +360,56 @@ const Projects = () => {
   const filteredProjects = projects.filter(project => 
     selectedCategory === 'All' || selectedCategory === "all" || project.category === selectedCategory
   );
+
+  // Pagination logic
+  const indexOfLastProject = currentPage * projectsPerPage;
+  const indexOfFirstProject = indexOfLastProject - projectsPerPage;
+  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+
+  // Reset to first page when category changes
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
+
+  // Pagination component
+  const Pagination = () => {
+    if (totalPages <= 1) return null;
+
+    return (
+      <div className="pagination-container">
+        <button 
+          className="pagination-btn"
+          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        
+        <div className="pagination-numbers">
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+            <button
+              key={page}
+              className={`pagination-number ${currentPage === page ? 'active' : ''}`}
+              onClick={() => setCurrentPage(page)}
+            >
+              {page}
+            </button>
+          ))}
+        </div>
+        
+        <button 
+          className="pagination-btn"
+          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          disabled={currentPage === totalPages}
+        >
+          Next
+        </button>
+      </div>
+    );
+  };
+
   return (
     <div className="portfolio-min-h-screen portfolio-bg-black portfolio-p-8 ">
       {/* Filter Buttons */}
@@ -356,7 +420,7 @@ const Projects = () => {
             className={selectedCategory === category 
               ? 'portfolio-bg-white portfolio-text-black filterBtn ' 
               : 'portfolio-text-white portfolio-bg-black filterBtn'}
-            onClick={() => setSelectedCategory(category)}
+            onClick={() => handleCategoryChange(category)}
           >
             {category}
           </button>
@@ -365,12 +429,15 @@ const Projects = () => {
       
       {/* Projects Grid */}
       <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
-        {filteredProjects.map(project => (
+        {currentProjects.map(project => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
 
-       {/* Detailed Project Modal */} 
+      {/* Pagination */}
+      <Pagination />
+
+      {/* Detailed Project Modal */}
       {activeProject !== null && (
         <div className="project-modal-overlay" onClick={() => setActiveProject(null)}>
           <div className="project-modal background-shadow" onClick={e => e.stopPropagation()}>
@@ -430,6 +497,7 @@ const Projects = () => {
           </div>
         </div>
       )}
+      {/* End of Detailed Project Modal */}
     </div>
   );
 };

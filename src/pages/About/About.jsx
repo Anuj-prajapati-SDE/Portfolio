@@ -1,14 +1,39 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import img1 from '../../assets/pic-1.jpg'
 import './About.css'
 import { Link } from 'react-router-dom'
 import AboutAnimation from '../../Animation/AboutAnimation'
 function About() {
   AboutAnimation()
+  const leftSectionRef = useRef(null);
+  const handRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          handRef.current?.classList.add('wave-hand');
+        } else {
+          handRef.current?.classList.remove('wave-hand');
+        }
+      },
+      { threshold: 0.5 }
+    );
+    if (leftSectionRef.current) {
+      observer.observe(leftSectionRef.current);
+    }
+    return () => {
+      if (leftSectionRef.current) observer.unobserve(leftSectionRef.current);
+    };
+  }, []);
+
   return (
     <section id='about'  className='About-section'>
-      <div className="left_section">
-        <h1>Hii<span> 👋,</span></h1>
+      <div className="left_section" ref={leftSectionRef}>
+        <h1>
+          Hii
+          <span ref={handRef} className="hand-emoji"> 👋,</span>
+        </h1>
         <p>
           I am Anuj Prajapati,<br />
           I create,<br />
