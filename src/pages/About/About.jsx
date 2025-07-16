@@ -6,7 +6,7 @@ import AboutAnimation from '../../Animation/AboutAnimation'
 function About() {
   AboutAnimation()
   return (
-    <section id='about' className='About-section'>
+    <section id='about'  className='About-section'>
       <div className="left_section">
         <h1>Hii<span> 👋,</span></h1>
         <p>
