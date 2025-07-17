@@ -7,7 +7,8 @@ import Protfolio_container from './pages/Protfolio-container/Protfolio-container
 // import AboutMe from './Components/About-me/AboutUs'
 import MouseFollower from "./Animation/MouseFollower"
 
-// import { app, analytics } from "../config/firebaseConfig"; // Import Firebase setup
+import { account, databases, storage } from './config/appwrite';
+
 function App() {
   const windowWidth =window.innerWidth;
   return (
