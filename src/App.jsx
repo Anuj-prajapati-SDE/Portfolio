@@ -11,7 +11,7 @@ import { account, databases, storage } from './config/appwrite';
 import LoginPage from './pages/Auth/LoginPage'
 import ForgetPasswordPage from './pages/Auth/ForgetPassword'
 import ResetPasswordPage from './pages/Auth/ResetPasswordPage'
-import AdminDasboard from './pages/Admin/AdminDasboard'
+import AdminDasboard from './pages/Admin/AdminDashboard'
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 

@@ -3,6 +3,35 @@
   height:auto;
   overflow: hidden;
 }
+
+/* Dynamic Configuration Indicator */
+.dynamic-config-indicator {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-color, #7843e9);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 16px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dynamic-config-indicator:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .dynamic-config-indicator {
+    bottom: 15px;
+    right: 15px;
+    padding: 6px;
+    font-size: 14px;
+  }
+}
 .stars{
   position: absolute;
 }
