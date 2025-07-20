@@ -12,6 +12,7 @@ import LoginPage from './pages/Auth/LoginPage'
 import ForgetPasswordPage from './pages/Auth/ForgetPassword'
 import ResetPasswordPage from './pages/Auth/ResetPasswordPage'
 import AdminDasboard from './pages/Admin/AdminDashboard'
+import Error404 from './pages/Error404';
 import { AuthProvider } from './context/AuthContext'
 import ProtectedRoute from './components/ProtectedRoute'
 
@@ -28,11 +29,13 @@ function App() {
                  <Route path='/login' element={<LoginPage />} />
                  <Route path='/forgot-password' element={<ForgetPasswordPage />} />
                  <Route path='/reset-password' element={<ResetPasswordPage />} />
-                  <Route path='/admin-dashboard' element={
+                 <Route path='/admin-dashboard' element={
                     <ProtectedRoute>
                       <AdminDasboard />
                     </ProtectedRoute>
                   } />
+                 <Route path='/404' element={<Error404 />} />
+                 <Route path='*' element={<Error404 />} />
                  {/* <Route path='/about' element={<AboutMe></AboutMe>} /> */}
                  {/* <Route path='/all-projects' element={<AllProjects />} /> */}
             </Routes>
