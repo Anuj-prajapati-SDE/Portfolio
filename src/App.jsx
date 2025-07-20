@@ -14,7 +14,7 @@ import ResetPasswordPage from './pages/Auth/ResetPasswordPage'
 import AdminDasboard from './pages/Admin/AdminDashboard'
 import Error404 from './pages/Error404';
 import { AuthProvider } from './context/AuthContext'
-import ProtectedRoute from './components/ProtectedRoute'
+import ProtectedRoute from './Components/ProtectedRoute'
 
 function App() {
   const windowWidth =window.innerWidth;
