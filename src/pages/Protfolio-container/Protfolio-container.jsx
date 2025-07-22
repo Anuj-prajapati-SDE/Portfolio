@@ -8,11 +8,11 @@ import Experience from '../Experience/Experience'
 import Contact from '../Contact/Contact'
 import Testimonials from '../Testimonials/Testimonials'
 import Services from '../Services/Services'
-import Footer from '../Footer/Footer'
-import Loader from '../../Loader/Loader'
+import Footer from '../Footer/Footer' 
+// import Loader from '../../Loader/Loader'
 import './Profolio_container.css'
 
-function Protfolio_container() {
+function Protfolio_container() { 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [components, setComponents] = useState({});
 
@@ -68,7 +68,7 @@ function Protfolio_container() {
           </>
         )}
         
-        {shouldRenderComponent('loader') && <Loader />}
+        {/* {shouldRenderComponent('loader') && <Loader />} */}
         {shouldRenderComponent('navbar') && <Navbar />}
         {shouldRenderComponent('home') && <Home />}
         {shouldRenderComponent('about') && <About />}
@@ -96,14 +96,7 @@ function Protfolio_container() {
         )}
         
         {shouldRenderComponent('footer') && <Footer />}
-      </div>
-      
-      {/* Dynamic Configuration Indicator */}
-      {Object.keys(components).length > 0 && (
-        <div className="dynamic-config-indicator">
-          <span title="Dynamic configuration active">⚙️</span>
-        </div>
-      )}
+      </div> 
     </>
   )
 }

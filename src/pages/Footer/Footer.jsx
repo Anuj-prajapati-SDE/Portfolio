@@ -3,11 +3,9 @@ import { FaInstagramSquare } from "react-icons/fa";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import './Footer.css';
-import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
- 
     return ( 
         <>
             <section id='Footer-section' className="footer">
@@ -16,8 +14,9 @@ export default function Footer() {
                         <h1><span>Thanks</span> <span>for</span> <span>Coming</span> </h1>
                         <div className="bottom_container">
                             <div className="bottom_left">
-                                <ScrollLink to="privacy-policy" smooth={true} duration={500}>Privacy Policy</ScrollLink>
-                                <ScrollLink to="terms-of-use" smooth={true} duration={500}>Terms of Use</ScrollLink>
+                                 <div className="left-navbar">
+                                   <h2>Anuj Prajapati</h2>
+        </div>
                             </div>
                             <div className="bottom_middle">
                                 <p>© 2024-2025 ANUJ PRAJAPATI. All rights reserved.</p>

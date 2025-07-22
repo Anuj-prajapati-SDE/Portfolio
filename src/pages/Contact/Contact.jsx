@@ -9,10 +9,10 @@ import { IoLocationSharp } from "react-icons/io5";
 import { MdMarkEmailRead } from "react-icons/md";
 import emailjs from '@emailjs/browser';
 import { Link } from 'react-router-dom';
-import ContactAnimation from '../../Animation/ContactAnimation';
+// import ContactAnimation from '../../Animation/ContactAnimation';
 
 function Contact() {
-  ContactAnimation();
+  // ContactAnimation();
   const form = useRef(); 
 
   const notify = (message) => toast.success(message);

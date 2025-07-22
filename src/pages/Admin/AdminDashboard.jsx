@@ -2,15 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import './AdminDashboard.css';
-
-// Component Management Imports
-import ComponentManager from '../../Components/ComponentManager/ComponentManager';
-import SiteConfigManager from '../../Components/SiteConfigManager/SiteConfigManager';
-import ContentManager from '../../Components/ContentManager/ContentManager';
-import AnalyticsPanel from '../../Components/AnalyticsPanel/AnalyticsPanel';
-import UserManager from '../../Components/UserManager/UserManager';
-import ProjectsManager from '../../Components/ProjectsManager/ProjectsManager';
-
 const AdminDashboard = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -41,26 +32,7 @@ const AdminDashboard = () => {
     { id: 'users', label: 'Users', icon: '👥' },
   ];
 
-  const renderActiveComponent = () => {
-    switch(activeTab) {
-      case 'overview':
-        return <OverviewComponent user={user} />;
-      case 'components':
-        return <ComponentManager />;
-      case 'content':
-        return <ContentManager />;
-      case 'projects':
-        return <ProjectsManager />;
-      case 'site-config':
-        return <SiteConfigManager />;
-      case 'analytics':
-        return <AnalyticsPanel />;
-      case 'users':
-        return <UserManager />;
-      default:
-        return <OverviewComponent user={user} />;
-    }
-  };
+ 
 
   if (!user) {
     return (
@@ -158,106 +130,10 @@ const AdminDashboard = () => {
 
         {/* Content Area */}
         <div className="admin-content">
-          {renderActiveComponent()}
+          
         </div>
       </main>
     </div>
   );
 };
-
-// Overview Component
-const OverviewComponent = ({ user }) => {
-  const [stats, setStats] = useState({
-    totalComponents: 12,
-    activeProjects: 5,
-    totalVisitors: 1250,
-    lastUpdate: new Date().toLocaleDateString()
-  });
-
-  return (
-    <div className="overview-content">
-      <div className="welcome-section">
-        <h2>Welcome back, {user.name || 'Admin'}! 👋</h2>
-        <p>Here's what's happening with your portfolio today.</p>
-      </div>
-
-      <div className="stats-grid">
-        <div className="stat-card">
-          <div className="stat-icon">🧩</div>
-          <div className="stat-content">
-            <h3>{stats.totalComponents}</h3>
-            <p>Total Components</p>
-          </div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">💼</div>
-          <div className="stat-content">
-            <h3>{stats.activeProjects}</h3>
-            <p>Active Projects</p>
-          </div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">👥</div>
-          <div className="stat-content">
-            <h3>{stats.totalVisitors}</h3>
-            <p>Total Visitors</p>
-          </div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">📅</div>
-          <div className="stat-content">
-            <h3>{stats.lastUpdate}</h3>
-            <p>Last Update</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="quick-actions">
-        <h3>Quick Actions</h3>
-        <div className="action-buttons">
-          <button className="action-btn primary">
-            <span>➕</span> Add New Project
-          </button>
-          <button className="action-btn secondary">
-            <span>🎨</span> Update Theme
-          </button>
-          <button className="action-btn secondary">
-            <span>📝</span> Edit Content
-          </button>
-          <button className="action-btn secondary">
-            <span>📊</span> View Analytics
-          </button>
-        </div>
-      </div>
-
-      <div className="recent-activity">
-        <h3>Recent Activity</h3>
-        <div className="activity-list">
-          <div className="activity-item">
-            <span className="activity-icon">🆕</span>
-            <div className="activity-content">
-              <p>New project "BlissCamp" added</p>
-              <span className="activity-time">2 hours ago</span>
-            </div>
-          </div>
-          <div className="activity-item">
-            <span className="activity-icon">✏️</span>
-            <div className="activity-content">
-              <p>About section content updated</p>
-              <span className="activity-time">1 day ago</span>
-            </div>
-          </div>
-          <div className="activity-item">
-            <span className="activity-icon">🎨</span>
-            <div className="activity-content">
-              <p>Theme colors modified</p>
-              <span className="activity-time">3 days ago</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 export default AdminDashboard;

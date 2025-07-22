@@ -58,6 +58,7 @@ background-color: var(--background-black);
     content: "";
     position: absolute;
     width: 10px;
+    visibility: hidden;
     height: 10px;
     border-radius: 50%;
     border: 4px var(--theme-text-color);

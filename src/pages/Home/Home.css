@@ -1,5 +1,3 @@
-
-
 .hero-section {
     position: relative;
     display: flex;
@@ -7,11 +5,10 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height:100vh;
+    min-height:98vh;
     padding: clamp(10px, 2vw, 20px);
     overflow-x: hidden;
 }
-
 .top-heading {
     position: relative;
     display: flex;
@@ -19,7 +16,7 @@
     align-items: center;
     width: 100%;
     height: auto;
-    margin-bottom: clamp(20px, 4vh, 40px);
+    margin-top: 120px;
 }
 
 .top-heading .title-heading {
@@ -347,5 +344,151 @@
     .bottom-heading h1 span,
     .bottom-heading h2 span {
         color: #333;
+    }
+}
+
+/* ===== JUMPING BALL ANIMATION ===== */
+.jumping-ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #08afff, #ff6b6b);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    opacity: 0;
+    left: -50px;
+    top: 50%;
+}
+
+/* Stage start: Hidden initially */
+.jumping-ball.stage-start {
+    opacity: 0;
+    left: -50px;
+    top: 50%;
+}
+
+/* Stage 0: Initial position (off-screen left) - becomes visible */
+.jumping-ball.stage-0 {
+    left: -30px;
+    top: 50%;
+    opacity: 1;
+}
+
+/* Stage 1: Jump to MERN text */
+.jumping-ball.stage-1 {
+    left: calc(50% - 10px);
+    top: calc(50% - 100px);
+    opacity: 1;
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Stage 2: Jump to Stack text */
+.jumping-ball.stage-2 {
+    left: calc(35% - 10px);
+    top: calc(50% + 20px);
+    opacity: 1;
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Stage 3: Jump to Developer text */
+.jumping-ball.stage-3 {
+    left: calc(65% - 10px);
+    top: calc(50% + 20px);
+    opacity: 1;
+    animation: bounce 0.6s ease-in-out;
+}
+
+/* Stage 4: Final position (bottom right) */
+.jumping-ball.stage-4 {
+    right: 50px;
+    bottom: 50px;
+    left: auto;
+    top: auto;
+    opacity: 1;
+    animation: settle 0.8s ease-out;
+}
+
+/* Bounce animation for jumps */
+@keyframes bounce {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    50% {
+        transform: translateY(-40px) scale(1.2);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+    100% {
+        transform: translateY(-30px) scale(1);
+    }
+}
+
+/* Settle animation for final position */
+@keyframes settle {
+    0% {
+        transform: translateY(-30px) scale(1.2);
+    }
+    50% {
+        transform: translateY(10px) scale(0.9);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Responsive adjustments for ball animation */
+@media (max-width: 768px) {
+    .jumping-ball {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .jumping-ball.stage-1 {
+        left: calc(50% - 7px);
+        top: calc(50% - 100px);
+    }
+    
+    .jumping-ball.stage-2 {
+        left: calc(35% - 7px);
+        top: calc(50% + 30px);
+    }
+    
+    .jumping-ball.stage-3 {
+        left: calc(65% - 7px);
+        top: calc(50% + 30px);
+    }
+    
+    .jumping-ball.stage-4 {
+        right: 30px;
+        bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .jumping-ball {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .jumping-ball.stage-1 {
+        left: calc(50% - 6px);
+        top: calc(50% - 80px);
+    }
+    
+    .jumping-ball.stage-2 {
+        left: calc(30% - 6px);
+        top: calc(50% + 20px);
+    }
+    
+    .jumping-ball.stage-3 {
+        left: calc(70% - 6px);
+        top: calc(50% + 20px);
+    }
+    
+    .jumping-ball.stage-4 {
+        right: 20px;
+        bottom: 20px;
     }
 }

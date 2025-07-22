@@ -7,7 +7,7 @@ function Loader() {
     <section className='Loader-section'>
       <div className='loader-page'>
         <div className="title-portfolio">
-          Design Porfolio <br /><span>@2024</span>
+          Developed Portfolio <br /><span>@2025</span>
         </div>
         <div className="name-show">
           <h3>Anuj<span> Prajapati</span><p className='name-last'> is a</p></h3>

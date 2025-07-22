@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import './Experience.css'
-import ExperienceAnimation from '../../Animation/ExperienceAnimation'
+// import ExperienceAnimation from '../../Animation/ExperienceAnimation'
 import Projects from '../Projects/Projects';
 
 function Experience() {
-  const [ProjectRightTrue , setProjectRightTrue] = useState(false);
-  ExperienceAnimation(ProjectRightTrue)    
+  // const [ProjectRightTrue , setProjectRightTrue] = useState(false);
+  // ExperienceAnimation(ProjectRightTrue)    
 
   return (  
     <>

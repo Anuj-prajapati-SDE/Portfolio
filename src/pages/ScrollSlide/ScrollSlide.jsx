@@ -2,11 +2,11 @@ import React from 'react'
 import { useRef, useEffect } from 'react';
 
 import './ScrollSlide.css'
-import MarqueeAnimation from '../../Animation/MarqueeAnimation'
+// import MarqueeAnimation from '../../Animation/MarqueeAnimation'
 
 function ScrollSlide() {
   const sectionRef = useRef(null);
-MarqueeAnimation()
+// MarqueeAnimation()
   useEffect(() => {
     const handleMouseMove = (event) => {
       const rect = sectionRef.current.getBoundingClientRect();

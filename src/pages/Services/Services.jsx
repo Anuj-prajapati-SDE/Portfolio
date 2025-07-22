@@ -18,9 +18,9 @@ import cppIcon from '../../assets/cpp_icon.webp'
 import { TbBrandRedux } from "react-icons/tb";
 import Res_screenShot from "../../assets/responsive-screenshot-img.webp"
 import code_screenShot from "../../assets/code-screenshot-img.webp"
-import ServiceAnimation from '../../Animation/ServiceAnimation'
+// import ServiceAnimation from '../../Animation/ServiceAnimation'
 function Services() { 
-    ServiceAnimation()
+    // ServiceAnimation()
     return (
         <>
              <section id='services' className='Services-section'>

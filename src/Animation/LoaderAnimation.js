@@ -1,8 +1,8 @@
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP);
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 const LoaderAnimation = () => {
-  // gsap.registerPlugin(ScrollTrigger)
+  gsap.registerPlugin(ScrollTrigger)
   useGSAP(() => {
     const tl = gsap.timeline();
     tl.add("same-time-in, same-time-up, same-time-go")
