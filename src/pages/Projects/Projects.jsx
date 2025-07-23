@@ -1,6 +1,13 @@
 import React, { useState, useRef } from 'react'
 import './Projects.css' // Assuming you have a CSS file for styling 
-
+import Project_1 from '../../assets/project-img-1.png'
+import Project_2 from '../../assets/project-img-2.png'
+import Project_3 from '../../assets/project-img-3.png'
+import Project_4 from '../../assets/project-img-4.png'
+import Video_1 from '../../assets/Video/project_v1.mp4'
+// import Video_2 from '../../assets/Video/project_v2.mp4'
+import Video_3 from '../../assets/Video/project_v3.mp4' 
+import Video_4 from '../../assets/Video/project_v4.mp4'
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(null);
@@ -10,16 +17,42 @@ const Projects = () => {
   const projects = [
   {
     id: '1', 
-    title: 'BlissCamp',
+    title: 'Code Quest',
     category: 'Web Development',
-    image: "https://picsum.photos/seed/project1/600/400",
+    image: Project_1,
      technologies: ["React", "Node.js", "MongoDB", "Express"],
-    video: 'https://res.cloudinary.com/ddgk3lkhq/video/upload/v1752667274/SampleVideo_1280x720_1mb_o2st8t.mp4',
-    description: 'A website for Tourists and Travellers',
+    video: Video_1,
+    description: 'CodeQuest envisions a world where every aspiring programmer has a platform to hone their skills, compete globally, and transform their potential into reality',
     links: {
-      live: 'https://nk2552003.github.io/BlissCampIndia/',
-      github: 'https://github.com/NK2552003/BlissCampIndia', 
+      live: 'https://codequest-frontend.onrender.com/',
+      github: '', 
       codepen: 'https://github.com/NK2552003/BlissCampIndia'
+    },
+     features: [
+        "User Authentication & Authorization",
+        "User Roles and Functionality",
+        "User Dashboard",
+        "Teacher Dashboard",
+        "Responsive and User-Friendly UI",
+        "Admin Dashboard",
+        "Responsive and User-Friendly UI"
+      ],
+       duration: "3 months",
+      status: "Completed",
+    progress: 'Completed'
+  },
+  {
+    id: '2',
+    title: "Skill Vedaa",
+    category: 'Web Development',
+    technologies: ["React", "Node.js", "MongoDB", "Express"],
+    image: Project_2,
+    video:  "",
+    description: 'An animated moving boy using pure CSS, HTML & JS',
+    links: {
+      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe',
+      github: 'https://github.com/NK2552003/lil-me-male-version-',
+      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe'
     },
      features: [
         "User Authentication & Authorization",
@@ -33,17 +66,17 @@ const Projects = () => {
     progress: 'Completed'
   },
   {
-    id: '2',
-    title: "lil' me",
+    id: "3",
+    title: 'Waft Education ',
+    technologies: ["React", "Javascript", "Bootstrap"],
     category: 'Web Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: 'https://picsum.photos/seed/project2/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'An animated moving boy using pure CSS, HTML & JS',
+    image: Project_3,
+    video: Video_3,
+    description: 'At Waft Education Social Trust, our mission has always been to empower lives through education, skill development, and community-driven initiatives.',
     links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe',
-      github: 'https://github.com/NK2552003/lil-me-male-version-',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe'
+      live: 'https://wafteducation.org/',
+      github: '',
+      codepen: ''
     },
     features: [
         "User Authentication & Authorization",
@@ -52,202 +85,36 @@ const Projects = () => {
         "Admin Dashboard",
         "Product Management System"
       ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '3',
-    title: 'Cursor',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    category: 'Web Development',
-    image: 'https://picsum.photos/seed/project3/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The custom modified cursor for better interactivity with users',
-    links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey',
-      github: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/details/ExqvZey'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
+       duration: "1 month",
       status: "Completed",
     progress: 'Completed'
   },
   {
     id: '4',
-    title: 'Background',
+    title: 'Vishu Walfare ',
     category: 'Web Development',
     technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: 'https://picsum.photos/seed/project4/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'A randomized background generator for any content creator',
+    image: Project_4,
+    video: Video_4,
+    description: 'Vishu Welfare Association is a registered non-profit organization based in Delhi, driven by a singular mission—to uplift lives and build stronger, self-reliant communities across India.',
     links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/VwoLgrj',
-      github: 'https://github.com/NK2552003/Random_Character_Background',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/VwoLgrj'
+      live: 'https://vishu.org.in/',
+      github: '',
+      codepen: ''
     },
     features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
+        "Donation System",
+        "Volunteer Registration",
+        
+        "Project Showcase",
+        "News & Updates: A dynamic blog/news",
+        "Contact & Support",
       ],
-       duration: "3 months",
+       duration: "10 days",
       status: "Completed",
     progress: 'Completed'
   },
-  {
-    id: '5',
-    title: 'CSS Filters',
-    category: 'Web Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: 'https://picsum.photos/seed/project5/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'A CSS filter section displaying images on hover with animation',
-    links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza',
-      github: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/KKLVxza'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '6',
-    title: 'HostelEase',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    category: 'App Development',
-    image: 'https://picsum.photos/seed/project6/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The management app for hostelers, warden, for seamless interaction.',
-    links: {
-      live: 'https://github.com/NK2552003/Hostel_Management_App',
-      github: 'https://github.com/NK2552003/Hostel_Management_App',
-      codepen: 'https://github.com/NK2552003/Hostel_Management_App'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Working on it'
-  },
-  {
-    id: '7',
-    title: 'Portfolio',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    category: 'Web Development',
-    image: 'https://picsum.photos/seed/project7/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'Created the portfolio for my colleague for resume purposes.',
-    links: {
-      live: 'https://rohit-s-portfolio.netlify.app/',
-      github: 'https://github.com/NK2552003/Rohit-s_Portfolio',
-      codepen: 'https://github.com/NK2552003/Rohit-s_Portfolio'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '8',
-    title: 'LandingPage',
-    category: 'Web Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: 'https://picsum.photos/seed/project8/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'The webpage features images and text content with stunning visuals.',
-    links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MWdKBpa',
-      github: 'https://github.com/NK2552003/Dynamic_Landing_WebPage',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MWdKBpa'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '9',
-    title: 'Satranj', 
-    category: 'App Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: 'https://picsum.photos/seed/project9/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'A Simple and Easy-to-Play Ancient Chess Game in Flutter',
-    links: {
-      live: 'https://github.com/NK2552003/Satranj-Chess-_Game',
-      github: 'https://github.com/NK2552003/Satranj-Chess-_Game',
-      codepen: 'https://github.com/NK2552003/Satranj-Chess-_Game'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '10',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    title: 'Civic Link',
-    category: 'Web Development',
-    image: 'https://picsum.photos/seed/project10/600/400',
-    video: 'https://videos.pexels.com/video-files/15832152/15832152-hd_1920_1080_30fps.mp4',
-    description: 'A collaborative platform dedicated to society or community to report or for services in the society means a community handler.',
-    links: {
-      live: 'https://nk2552003.github.io/Civic_Link/',
-      github: 'https://github.com/NK2552003/Civic_Link',
-      codepen: 'https://nk2552003.github.io/Civic_Link/'
-    },
-    features: [
-        "User Authentication & Authorization",
-        "Payment Gateway Integration",
-        "Real-time Order Tracking",
-        "Admin Dashboard",
-        "Product Management System"
-      ],
-       duration: "3 months",
-      status: "Completed",
-    progress: 'Completed'
-  }
+
 ];
 
   const categories = ['All', 'App Development', 'Web Development'];
