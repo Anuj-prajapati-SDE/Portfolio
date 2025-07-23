@@ -2,9 +2,9 @@ import React, { useEffect, useRef } from 'react'
 import img1 from '../../assets/pic-1.jpg'
 import './About.css'
 import { Link } from 'react-router-dom'
-// import AboutAnimation from '../../Animation/AboutAnimation'
+import AboutAnimation from '../../Animation/AboutAnimation'
 function About() {
-  // AboutAnimation()
+  AboutAnimation()
   const leftSectionRef = useRef(null);
   const handRef = useRef(null);
 

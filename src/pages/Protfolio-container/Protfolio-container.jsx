@@ -9,7 +9,7 @@ import Contact from '../Contact/Contact'
 import Testimonials from '../Testimonials/Testimonials'
 import Services from '../Services/Services'
 import Footer from '../Footer/Footer' 
-// import Loader from '../../Loader/Loader'
+import Loader from '../../Loader/Loader'
 import './Profolio_container.css'
 
 function Protfolio_container() { 
@@ -68,7 +68,7 @@ function Protfolio_container() {
           </>
         )}
         
-        {/* {shouldRenderComponent('loader') && <Loader />} */}
+        {shouldRenderComponent('loader') && <Loader />}
         {shouldRenderComponent('navbar') && <Navbar />}
         {shouldRenderComponent('home') && <Home />}
         {shouldRenderComponent('about') && <About />}
