@@ -1,34 +1,40 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import './Projects.css' // Assuming you have a CSS file for styling 
+import projectService from '../../services/projectService'
+// Import fallback images
 import Project_1 from '../../assets/project-img-1.png'
 import Project_2 from '../../assets/project-img-2.png'
 import Project_3 from '../../assets/project-img-3.png'
 import Project_4 from '../../assets/project-img-4.png'
 import Video_1 from '../../assets/Video/project_v1.mp4'
-// import Video_2 from '../../assets/Video/project_v2.mp4'
 import Video_3 from '../../assets/Video/project_v3.mp4' 
 import Video_4 from '../../assets/Video/project_v4.mp4'
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [projectsPerPage] = useState(6);
+  const [projectsPerPage] = useState(6); 
+  const [projects, setProjects] = useState([]);
+  const [categories, setCategories] = useState(['All']);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const projects = [
-  {
-    id: '1', 
-    title: 'Code Quest',
-    category: 'Web Development',
-    image: Project_1,
-     technologies: ["React", "Node.js", "MongoDB", "Express"],
-    video: Video_1,
-    description: 'CodeQuest envisions a world where every aspiring programmer has a platform to hone their skills, compete globally, and transform their potential into reality',
-    links: {
-      live: 'https://codequest-frontend.onrender.com/',
-      github: '', 
-      codepen: 'https://github.com/NK2552003/BlissCampIndia'
-    },
-     features: [
+  // Fallback projects data
+  const fallbackProjects = [
+    {
+      id: '1', 
+      title: 'Code Quest',
+      category: 'Web Development',
+      image: Project_1,
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      video: Video_1,
+      description: 'CodeQuest envisions a world where every aspiring programmer has a platform to hone their skills, compete globally, and transform their potential into reality',
+      links: {
+        live: 'https://codequest-frontend.onrender.com/',
+        github: '', 
+        codepen: 'https://github.com/NK2552003/BlissCampIndia'
+      },
+      features: [
         "User Authentication & Authorization",
         "User Roles and Functionality",
         "User Dashboard",
@@ -37,87 +43,116 @@ const Projects = () => {
         "Admin Dashboard",
         "Responsive and User-Friendly UI"
       ],
-       duration: "3 months",
+      duration: "3 months",
       status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '2',
-    title: "Skill Vedaa",
-    category: 'Web Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: Project_2,
-    video:  "",
-    description: 'An animated moving boy using pure CSS, HTML & JS',
-    links: {
-      live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe',
-      github: 'https://github.com/NK2552003/lil-me-male-version-',
-      codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe'
+      progress: 'Completed'
     },
-     features: [
+    {
+      id: '2',
+      title: "Skill Vedaa",
+      category: 'Web Development',
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      image: Project_2,
+      video:  "",
+      description: 'An animated moving boy using pure CSS, HTML & JS',
+      links: {
+        live: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe',
+        github: 'https://github.com/NK2552003/lil-me-male-version-',
+        codepen: 'https://codepen.io/rlaqxvbr-the-bashful/pen/MYgpywe'
+      },
+      features: [
         "User Authentication & Authorization",
         "Payment Gateway Integration",
         "Real-time Order Tracking",
         "Admin Dashboard",
         "Product Management System"
       ],
-       duration: "3 months",
+      duration: "3 months",
       status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: "3",
-    title: 'Waft Education ',
-    technologies: ["React", "Javascript", "Bootstrap"],
-    category: 'Web Development',
-    image: Project_3,
-    video: Video_3,
-    description: 'At Waft Education Social Trust, our mission has always been to empower lives through education, skill development, and community-driven initiatives.',
-    links: {
-      live: 'https://wafteducation.org/',
-      github: '',
-      codepen: ''
+      progress: 'Completed'
     },
-    features: [
+    {
+      id: "3",
+      title: 'Waft Education ',
+      technologies: ["React", "Javascript", "Bootstrap"],
+      category: 'Web Development',
+      image: Project_3,
+      video: Video_3,
+      description: 'At Waft Education Social Trust, our mission has always been to empower lives through education, skill development, and community-driven initiatives.',
+      links: {
+        live: 'https://wafteducation.org/',
+        github: '',
+        codepen: ''
+      },
+      features: [
         "User Authentication & Authorization",
         "Payment Gateway Integration",
         "Real-time Order Tracking",
         "Admin Dashboard",
         "Product Management System"
       ],
-       duration: "1 month",
+      duration: "1 month",
       status: "Completed",
-    progress: 'Completed'
-  },
-  {
-    id: '4',
-    title: 'Vishu Walfare ',
-    category: 'Web Development',
-    technologies: ["React", "Node.js", "MongoDB", "Express"],
-    image: Project_4,
-    video: Video_4,
-    description: 'Vishu Welfare Association is a registered non-profit organization based in Delhi, driven by a singular mission—to uplift lives and build stronger, self-reliant communities across India.',
-    links: {
-      live: 'https://vishu.org.in/',
-      github: '',
-      codepen: ''
+      progress: 'Completed'
     },
-    features: [
+    {
+      id: '4',
+      title: 'Vishu Walfare ',
+      category: 'Web Development',
+      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      image: Project_4,
+      video: Video_4,
+      description: 'Vishu Welfare Association is a registered non-profit organization based in Delhi, driven by a singular mission—to uplift lives and build stronger, self-reliant communities across India.',
+      links: {
+        live: 'https://vishu.org.in/',
+        github: '',
+        codepen: ''
+      },
+      features: [
         "Donation System",
         "Volunteer Registration",
-        
         "Project Showcase",
         "News & Updates: A dynamic blog/news",
         "Contact & Support",
       ],
-       duration: "10 days",
+      duration: "10 days",
       status: "Completed",
-    progress: 'Completed'
-  },
+      progress: 'Completed'
+    },
+  ];
 
-];
+  useEffect(() => {
+    loadProjects();
+  }, []);
 
-  const categories = ['All', 'App Development', 'Web Development'];
+  const loadProjects = async () => {
+    try {
+      setLoading(true);
+      
+      // Try to load projects from Appwrite
+      const dynamicProjects = await projectService.getProjects();
+      const dynamicCategories = await projectService.getCategories();
+      
+      if (dynamicProjects && dynamicProjects.length > 0) {
+        setProjects(dynamicProjects);
+        setCategories(dynamicCategories);
+      } else {
+        // Use fallback data if no projects in database
+        setProjects(fallbackProjects);
+        setCategories(['All', 'App Development', 'Web Development']);
+      }
+      
+      setError(null);
+    } catch (error) {
+      console.error('Error loading projects:', error);
+      // Use fallback data on error
+      setProjects(fallbackProjects);
+      setCategories(['All', 'App Development', 'Web Development']);
+      setError('Using offline data. Projects may not be up to date.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Helper functions for video playback
   const playVideo = (video) => {
@@ -279,30 +314,49 @@ const Projects = () => {
 
   return (
     <div className="portfolio-min-h-screen portfolio-bg-black portfolio-p-8 ">
+      {/* Loading State */}
+      {loading && (
+        <div className="loading-container">
+          <div className="loading-spinner"></div>
+          <p>Loading projects...</p>
+        </div>
+      )}
+
+      {/* Error Message */}
+      {error && (
+        <div className="error-message">
+          <p>⚠️ {error}</p>
+        </div>
+      )}
+
       {/* Filter Buttons */}
-      <div className="portfolio-mb-8 portfolio-flex portfolio-flex-wrap portfolio-gap-4">
-        {categories.map(category => (
-          <button
-            key={category}
-            className={selectedCategory === category 
-              ? 'portfolio-bg-white portfolio-text-black filterBtn ' 
-              : 'portfolio-text-white portfolio-bg-black filterBtn'}
-            onClick={() => handleCategoryChange(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
+      {!loading && (
+        <div className="portfolio-mb-8 portfolio-flex portfolio-flex-wrap portfolio-gap-4">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={selectedCategory === category 
+                ? 'portfolio-bg-white portfolio-text-black filterBtn ' 
+                : 'portfolio-text-white portfolio-bg-black filterBtn'}
+              onClick={() => handleCategoryChange(category)}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+      )}
       
       {/* Projects Grid */}
-      <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
-        {currentProjects.map(project => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-      </div>
+      {!loading && (
+        <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
+          {currentProjects.map(project => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      )}
  
       {/* Pagination */}
-      <Pagination />
+      {!loading && <Pagination />}
 
       {/* Detailed Project Modal */}
       {activeProject !== null && (
