@@ -4,12 +4,12 @@ import { useAuth } from '../../context/AuthContext';
 import './AdminDashboard.css';
 
 // Component Management Imports
-import ComponentManager from '../../Components/ComponentManager/ComponentManager';
-import SiteConfigManager from '../../Components/SiteConfigManager/SiteConfigManager';
-import ContentManager from '../../Components/ContentManager/ContentManager';
-import AnalyticsPanel from '../../Components/AnalyticsPanel/AnalyticsPanel';
-import UserManager from '../../Components/UserManager/UserManager';
-import ProjectsManager from '../../Components/ProjectsManager/ProjectsManager';
+import ComponentManager from '../Admin/Components/ComponentManager/ComponentManager';
+import SiteConfigManager from '../Admin/Components/SiteConfigManager/SiteConfigManager';
+import ContentManager from '../Admin/Components/ContentManager/ContentManager';
+import AnalyticsPanel from '../Admin/Components/AnalyticsPanel/AnalyticsPanel';
+import UserManager from '../Admin/Components/UserManager/UserManager';
+import ProjectsManager from '../Admin/Components/ProjectsManager/ProjectsManager';
 
 const AdminDashboard = () => {
   const { user, logout } = useAuth();

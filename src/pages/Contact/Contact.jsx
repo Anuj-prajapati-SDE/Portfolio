@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './Contact.css';
+import Contact_img  from '../../assets/Contact-graphic-img-1.png'
 import toast, { Toaster } from 'react-hot-toast';
 import { FaInstagramSquare } from "react-icons/fa";
 
@@ -121,15 +122,12 @@ function Contact() {
           </form>
         </div>
         <div className="right-contact-form">
-           {/* 3D Model Embed */}
-        <div className="flex justify-center items-center">
-       
-        </div>
+        <img src={Contact_img} alt="Contact Us" /> 
 
         </div>
       </div>
-    </section>
+    </section> 
   );
-}
+} 
 
 export default Contact;
