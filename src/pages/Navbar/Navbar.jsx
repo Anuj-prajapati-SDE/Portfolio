@@ -21,7 +21,7 @@ function Navbar() {
  
     if (navClick) {
       timeline.to(menuRef.current, {
-        duration: 0.6,
+        duration: 0.6, 
         height: heightValue,
         opacity: 1,
         ease: 'power3.inOut'

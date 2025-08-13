@@ -68,7 +68,7 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container"> 
       <div className="animated-background">
         <div className="gradient-orb orb-1"></div>
         <div className="gradient-orb orb-2"></div>

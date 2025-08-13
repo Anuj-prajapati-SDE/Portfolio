@@ -1,30 +1,59 @@
-import React, { useState } from 'react';
-import { projectService } from '../../services/projectService';
-import { validateProjectData } from '../../utils/projectUtils';
+import React, { useState, useEffect } from 'react';
+import projectService from '../../../../services/projectService';
+import { validateProjectData } from '../../../../utils/projectUtils';
+import { checkDatabaseConnection } from '../../../../scripts/databaseSetup';
+checkDatabaseConnection();
 import './ProjectManager.css';
 
-const ProjectManager = ({ onProjectAdded }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ProjectManager = ({ onProjectAdded, editingProject, onClose }) => {
+  const [isOpen, setIsOpen] = useState(true);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    category: 'Web Development',
+    category: 'Web Development', 
     image: '',
     video: '',
     technologies: '',
     features: '',
-    links: {
+    links: { 
       live: '',
       github: '',
-      codepen: ''
-    },
+      codepen: '' 
+    }, 
     duration: '',
     status: 'Completed',
     priority: 0,
     isActive: true
   });
+
+  useEffect(() => {
+    if (editingProject) {
+      setFormData({
+        title: editingProject.title || '',
+        description: editingProject.description || '',
+        category: editingProject.category || 'Web Development',
+        image: editingProject.image || '',
+        video: editingProject.video || '',
+        technologies: Array.isArray(editingProject.technologies) 
+          ? editingProject.technologies.join(', ') 
+          : '',
+        features: Array.isArray(editingProject.features) 
+          ? editingProject.features.join(', ') 
+          : '',
+        links: {
+          live: editingProject.links?.live || '',
+          github: editingProject.links?.github || '',
+          codepen: editingProject.links?.codepen || ''
+        },
+        duration: editingProject.duration || '',
+        status: editingProject.status || 'Completed',
+        priority: editingProject.priority || 0,
+        isActive: editingProject.isActive !== undefined ? editingProject.isActive : true
+      });
+    }
+  }, [editingProject]);
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -60,6 +89,11 @@ const ProjectManager = ({ onProjectAdded }) => {
         priority: parseInt(formData.priority) || 0
       };
 
+      // Debug: Log the data being sent
+      console.log('Project data before sending:', projectData);
+      console.log('Links object:', projectData.links);
+      console.log('Links type:', typeof projectData.links);
+
       // Validate data
       const validation = validateProjectData(projectData);
       if (!validation.isValid) {
@@ -68,29 +102,30 @@ const ProjectManager = ({ onProjectAdded }) => {
         return;
       }
 
-      // Create project
-      await projectService.createProject(projectData);
+      if (editingProject) {
+        // Update existing project
+        console.log('Editing project object:', editingProject);
+        console.log('Available ID fields:', {
+          id: editingProject.id,
+          $id: editingProject.$id,
+          _id: editingProject._id
+        });
+        
+        const projectId = editingProject.$id || editingProject.id || editingProject._id;
+        if (!projectId) {
+          throw new Error('Project ID is missing. Cannot update project.');
+        }
+        
+        await projectService.updateProject(projectId, projectData);
+        alert('Project updated successfully!');
+      } else {
+        // Create new project
+        await projectService.createProject(projectData);
+        alert('Project added successfully!');
+      }
       
       // Reset form
-      setFormData({
-        title: '',
-        description: '',
-        category: 'Web Development',
-        image: '',
-        video: '',
-        technologies: '',
-        features: '',
-        links: {
-          live: '',
-          github: '',
-          codepen: ''
-        },
-        duration: '',
-        status: 'Completed',
-        priority: 0,
-        isActive: true
-      });
-      
+      resetForm();
       setIsOpen(false);
       
       // Notify parent component
@@ -98,9 +133,12 @@ const ProjectManager = ({ onProjectAdded }) => {
         onProjectAdded();
       }
       
-      alert('Project added successfully!');
+      if (onClose) {
+        onClose();
+      }
+      
     } catch (err) {
-      setError(err.message || 'Failed to add project');
+      setError(err.message || `Failed to ${editingProject ? 'update' : 'add'} project`);
     } finally {
       setLoading(false);
     }
@@ -128,24 +166,24 @@ const ProjectManager = ({ onProjectAdded }) => {
     setError('');
   };
 
+  const handleClose = () => {
+    setIsOpen(false);
+    if (onClose) {
+      onClose();
+    }
+  };
+
   if (!isOpen) {
-    return (
-      <button 
-        onClick={() => setIsOpen(true)}
-        className="project-manager-toggle"
-      >
-        Add New Project
-      </button>
-    );
+    return null;
   }
 
   return (
     <div className="project-manager-overlay">
       <div className="project-manager-modal">
         <div className="project-manager-header">
-          <h2>Add New Project</h2>
+          <h2>{editingProject ? 'Edit Project' : 'Add New Project'}</h2>
           <button 
-            onClick={() => setIsOpen(false)}
+            onClick={handleClose}
             className="project-manager-close"
           >
             ×
@@ -332,8 +370,14 @@ const ProjectManager = ({ onProjectAdded }) => {
             <button type="button" onClick={resetForm}>
               Reset
             </button>
+            <button type="button" onClick={handleClose}>
+              Cancel
+            </button>
             <button type="submit" disabled={loading}>
-              {loading ? 'Adding...' : 'Add Project'}
+              {loading 
+                ? (editingProject ? 'Updating...' : 'Adding...') 
+                : (editingProject ? 'Update Project' : 'Add Project')
+              }
             </button>
           </div>
         </form>

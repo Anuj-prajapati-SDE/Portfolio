@@ -4,9 +4,8 @@ import { useAuth } from '../../context/AuthContext';
 import './AdminDashboard.css';
 
 // Component Management Imports
-import ComponentManager from '../Admin/Components/ComponentManager/ComponentManager';
 import SiteConfigManager from '../Admin/Components/SiteConfigManager/SiteConfigManager';
-import ContentManager from '../Admin/Components/ContentManager/ContentManager';
+import ContentManager from './Components/ContentManager/ContentManager';
 import AnalyticsPanel from '../Admin/Components/AnalyticsPanel/AnalyticsPanel';
 import UserManager from '../Admin/Components/UserManager/UserManager';
 import ProjectsManager from '../Admin/Components/ProjectsManager/ProjectsManager';
@@ -33,7 +32,6 @@ const AdminDashboard = () => {
 
   const menuItems = [
     { id: 'overview', label: 'Overview', icon: '📊' },
-    { id: 'components', label: 'Components', icon: '🧩' },
     { id: 'content', label: 'Content', icon: '📝' },
     { id: 'projects', label: 'Projects', icon: '💼' },
     { id: 'site-config', label: 'Site Config', icon: '⚙️' },
@@ -45,10 +43,9 @@ const AdminDashboard = () => {
     switch(activeTab) {
       case 'overview':
         return <OverviewComponent user={user} />;
-      case 'components':
-        return <ComponentManager />;
+      
       case 'content':
-        return <ContentManager />;
+          return <ContentManager />;
       case 'projects':
         return <ProjectsManager />;
       case 'site-config':

@@ -39,7 +39,7 @@ export const contentService = {
       } else {
         // Create new
         const response = await databases.createDocument(
-          DATABASE_ID,
+          DATABASE_ID,                  
           CONTENT_COLLECTION_ID,
           'unique()',
           { ...data, section }

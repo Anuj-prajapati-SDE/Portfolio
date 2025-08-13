@@ -42,6 +42,8 @@ export const transformProjectData = (rawProject) => {
 
   return {
     ...rawProject,
+    // Ensure ID is accessible as both id and $id
+    id: rawProject.$id || rawProject.id,
     links: parseLinks(rawProject.links),
     // Handle different image field names
     image: rawProject.image || rawProject.imageUrl || "https://picsum.photos/600/400",
@@ -68,13 +70,15 @@ export const transformProjectData = (rawProject) => {
 export const prepareProjectForStorage = (projectData) => {
   if (!projectData) return null;
 
+  // First, filter out undefined values
+  const filteredData = Object.fromEntries(
+    Object.entries(projectData).filter(([_, value]) => value !== undefined)
+  );
+
+  // Then apply transformations
   return {
-    ...projectData,
-    links: stringifyLinks(projectData.links),
-    // Remove any undefined values
-    ...Object.fromEntries(
-      Object.entries(projectData).filter(([_, value]) => value !== undefined)
-    )
+    ...filteredData,
+    links: stringifyLinks(projectData.links)
   };
 };
 

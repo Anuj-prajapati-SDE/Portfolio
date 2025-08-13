@@ -73,7 +73,10 @@ export const projectService = {
   // Create new project
   async createProject(projectData) {
     try {
+      console.log('Original project data:', projectData);
       const preparedData = prepareProjectForStorage(projectData);
+      console.log('Prepared data for Appwrite:', preparedData);
+      console.log('Links after preparation:', preparedData.links, typeof preparedData.links);
       
       const response = await databases.createDocument(
         DATABASE_ID,
@@ -92,7 +95,15 @@ export const projectService = {
   // Update project
   async updateProject(projectId, projectData) {
     try {
+      console.log('Updating project with ID:', projectId);
+      console.log('Project data to update:', projectData);
+      
+      if (!projectId) {
+        throw new Error('Project ID is required for updating');
+      }
+      
       const preparedData = prepareProjectForStorage(projectData);
+      console.log('Prepared data for update:', preparedData);
       
       const response = await databases.updateDocument(
         DATABASE_ID,
@@ -104,6 +115,7 @@ export const projectService = {
       return transformProjectData(response);
     } catch (error) {
       console.error('Error updating project:', error);
+      console.error('Project ID provided:', projectId);
       throw new Error(`Failed to update project with ID: ${projectId}`);
     }
   },

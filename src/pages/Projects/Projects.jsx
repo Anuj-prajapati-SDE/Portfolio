@@ -9,6 +9,7 @@ import Project_4 from '../../assets/project-img-4.png'
 import Video_1 from '../../assets/Video/project_v1.mp4'
 import Video_3 from '../../assets/Video/project_v3.mp4' 
 import Video_4 from '../../assets/Video/project_v4.mp4'
+
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [activeProject, setActiveProject] = useState(null);
@@ -18,8 +19,9 @@ const Projects = () => {
   const [categories, setCategories] = useState(['All']);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [refreshInterval, setRefreshInterval] = useState(null);
 
-  // Fallback projects data
+  // Fallback projects data (used only when no data from Appwrite)
   const fallbackProjects = [
     {
       id: '1', 
@@ -45,7 +47,8 @@ const Projects = () => {
       ],
       duration: "3 months",
       status: "Completed",
-      progress: 'Completed'
+      progress: 'Completed',
+      isActive: true
     },
     {
       id: '2',
@@ -69,7 +72,8 @@ const Projects = () => {
       ],
       duration: "3 months",
       status: "Completed",
-      progress: 'Completed'
+      progress: 'Completed',
+      isActive: true
     },
     {
       id: "3",
@@ -93,7 +97,8 @@ const Projects = () => {
       ],
       duration: "1 month",
       status: "Completed",
-      progress: 'Completed'
+      progress: 'Completed',
+      isActive: true
     },
     {
       id: '4',
@@ -117,15 +122,35 @@ const Projects = () => {
       ],
       duration: "10 days",
       status: "Completed",
-      progress: 'Completed'
+      progress: 'Completed',
+      isActive: true
     },
   ];
 
   useEffect(() => {
     loadProjects();
+    
+    // Set up auto-refresh every 30 seconds to check for new projects
+    const interval = setInterval(loadProjects, 30000);
+    setRefreshInterval(interval);
+    
+    return () => {
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   }, []);
 
-  const loadProjects = async () => {
+  // Cleanup interval on unmount
+  useEffect(() => {
+    return () => {
+      if (refreshInterval) {
+        clearInterval(refreshInterval);
+      }
+    }; 
+  }, [refreshInterval]);
+
+  const loadProjects = async () => { 
     try {
       setLoading(true);
       
@@ -134,24 +159,32 @@ const Projects = () => {
       const dynamicCategories = await projectService.getCategories();
       
       if (dynamicProjects && dynamicProjects.length > 0) {
-        setProjects(dynamicProjects);
-        setCategories(dynamicCategories);
-      } else {
+        // Filter only active projects for frontend display
+        const activeProjects = dynamicProjects.filter(project => project.isActive);
+        setProjects(activeProjects);
+        setCategories(dynamicCategories); 
+        setError(null);
+      } else {  
         // Use fallback data if no projects in database
         setProjects(fallbackProjects);
         setCategories(['All', 'App Development', 'Web Development']);
+        setError('No projects found in database. Using sample data.');
       }
       
-      setError(null);
     } catch (error) {
       console.error('Error loading projects:', error);
       // Use fallback data on error
       setProjects(fallbackProjects);
       setCategories(['All', 'App Development', 'Web Development']);
-      setError('Using offline data. Projects may not be up to date.');
+      setError('Unable to connect to database. Showing sample projects.');
     } finally {
       setLoading(false);
     }
+  };
+
+  // Manual refresh function for user
+  const handleRefresh = () => {
+    loadProjects();
   };
 
   // Helper functions for video playback
@@ -314,18 +347,14 @@ const Projects = () => {
 
   return (
     <div className="portfolio-min-h-screen portfolio-bg-black portfolio-p-8 ">
+      {/* Header with controls */}
+   
+
       {/* Loading State */}
       {loading && (
         <div className="loading-container">
           <div className="loading-spinner"></div>
           <p>Loading projects...</p>
-        </div>
-      )}
-
-      {/* Error Message */}
-      {error && (
-        <div className="error-message">
-          <p>⚠️ {error}</p>
         </div>
       )}
 
@@ -348,11 +377,34 @@ const Projects = () => {
       
       {/* Projects Grid */}
       {!loading && (
-        <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
-          {currentProjects.map(project => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        <>
+          {filteredProjects.length === 0 ? (
+            <div className="no-projects-found">
+              <div className="no-projects-icon">📝</div>
+              <h3>No projects found</h3>
+              <p>
+                {selectedCategory === 'All' 
+                  ? 'No projects available at the moment.' 
+                  : `No projects found in "${selectedCategory}" category.`
+                }
+              </p>
+              {selectedCategory !== 'All' && (
+                <button 
+                  className="btn-reset-filter"
+                  onClick={() => handleCategoryChange('All')}
+                >
+                  Show All Projects
+                </button>
+              )}
+            </div>
+          ) : (
+            <div className="portfolio-grid portfolio-gap-6 portfolio-sm-grid-cols-2 portfolio-lg-grid-cols-3">
+              {currentProjects.map(project => (
+                <ProjectCard key={project.id} project={project} />
+              ))}
+            </div>
+          )}
+        </>
       )}
  
       {/* Pagination */}
