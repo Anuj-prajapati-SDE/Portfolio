@@ -36,8 +36,8 @@ function Services() {
                     </div>
                     <div className='Services-experience-boxes'>
                         <div className="experience-box background-shadow">
-                            <h2>1+</h2>
-                            <p> Year of <br/>Experience</p>
+                            <h2>5+</h2>
+                            <p> Month of <br/>Experience</p>
                         </div>
                         <div className="experience-box background-shadow">
                         <h2>5+</h2>
@@ -45,7 +45,7 @@ function Services() {
                         </div>
                         <div className="experience-box background-shadow">
                          <h2>100%</h2>
-                        <p>Secure code</p>
+                        <p>Secure Code</p>
                         </div>
                         <div className="experience-box background-shadow">
                         <h2>100%</h2>

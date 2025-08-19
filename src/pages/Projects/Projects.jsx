@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react'
+import React, { useState, useRef, useEffect, useMemo, useCallback, memo } from 'react'
 import './Projects.css' // Assuming you have a CSS file for styling 
 import projectService from '../../services/projectService'
 // Import fallback images
@@ -8,7 +8,7 @@ import Project_3 from '../../assets/project-img-3.png'
 import Project_4 from '../../assets/project-img-4.png'
 import Video_1 from '../../assets/Video/project_v1.mp4'
 import Video_3 from '../../assets/Video/project_v3.mp4' 
-import Video_4 from '../../assets/Video/project_v4.mp4'
+import Video_4 from '../../assets/Video/project_v4.mp4' 
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -19,8 +19,7 @@ const Projects = () => {
   const [categories, setCategories] = useState(['All']);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [refreshInterval, setRefreshInterval] = useState(null);
-
+  
   // Fallback projects data (used only when no data from Appwrite)
   const fallbackProjects = [
     {
@@ -129,26 +128,12 @@ const Projects = () => {
 
   useEffect(() => {
     loadProjects();
-    
-    // Set up auto-refresh every 30 seconds to check for new projects
-    const interval = setInterval(loadProjects, 30000);
-    setRefreshInterval(interval);
-    
-    return () => {
-      if (interval) {
-        clearInterval(interval);
-      }
-    };
   }, []);
 
   // Cleanup interval on unmount
   useEffect(() => {
-    return () => {
-      if (refreshInterval) {
-        clearInterval(refreshInterval);
-      }
-    }; 
-  }, [refreshInterval]);
+    // Component cleanup logic if needed
+  }, []);
 
   const loadProjects = async () => { 
     try {
@@ -187,79 +172,131 @@ const Projects = () => {
     loadProjects();
   };
 
-  // Helper functions for video playback
+  // Helper functions for video playback with performance optimization
   const playVideo = (video) => {
     if (video) {
-      const playPromise = video.play();
-      if (playPromise !== undefined) {
-        playPromise.catch((error) => {
-          console.error('Error playing video:', error);
-        });
-      }
+      // Add loading="lazy" attribute to optimize performance
+      video.loading = "lazy";
+      
+      // Use requestAnimationFrame for smoother performance
+      requestAnimationFrame(() => {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch((error) => {
+            console.error('Error playing video:', error);
+          });
+        }
+      });
     }
   };
 
   const pauseVideo = (video) => {
     if (video) {
       try {
-        video.pause();
-        video.currentTime = 0;
+        // Use requestAnimationFrame for smoother performance
+        requestAnimationFrame(() => {
+          video.pause();
+          video.currentTime = 0;
+        });
       } catch (error) {
         console.error('Error pausing video:', error);
       }
     }
   };
 
-  // Project component with video interactions
+  // Project component with video interactions and optimization
   const ProjectCard = ({ project }) => {
     const videoRef = useRef(null);
+    const [isHovered, setIsHovered] = useState(false);
+    const debounceTimeoutRef = useRef(null);
     
+    // Debounced hover handlers to prevent excessive rendering
     const handleMouseEnter = () => {
-      if (videoRef.current) {
-        videoRef.current.style.opacity = 1;
-        playVideo(videoRef.current);
-      }
+      if (debounceTimeoutRef.current) clearTimeout(debounceTimeoutRef.current);
+      
+      debounceTimeoutRef.current = setTimeout(() => {
+        setIsHovered(true);
+        if (videoRef.current) {
+          videoRef.current.style.opacity = 1;
+          playVideo(videoRef.current);
+        }
+      }, 50); // Small debounce delay for better performance
     };
     
     const handleMouseLeave = () => {
-      if (videoRef.current) {
-        videoRef.current.style.opacity = 0;
-        pauseVideo(videoRef.current);
-      }
+      if (debounceTimeoutRef.current) clearTimeout(debounceTimeoutRef.current);
+      
+      debounceTimeoutRef.current = setTimeout(() => {
+        setIsHovered(false);
+        if (videoRef.current) {
+          videoRef.current.style.opacity = 0;
+          pauseVideo(videoRef.current);
+        }
+      }, 50); // Small debounce delay for better performance
     };
     
-    const handleTouchStart = () => {
+    // Clean up any pending timeouts when component unmounts
+    useEffect(() => {
+      return () => {
+        if (debounceTimeoutRef.current) {
+          clearTimeout(debounceTimeoutRef.current);
+        }
+      };
+    }, []);
+    
+    // Optimized touch handlers with passive option for better performance
+    const handleTouchStart = React.useCallback(() => {
       if (videoRef.current) {
         videoRef.current.style.opacity = 1;
         playVideo(videoRef.current);
       }
-    };
+    }, []);
     
-    const handleTouchEnd = () => {
+    const handleTouchEnd = React.useCallback(() => {
       if (videoRef.current) {
         videoRef.current.style.opacity = 0;
         pauseVideo(videoRef.current);
       }
-    };
+    }, []);
+
+    // Apply event listeners with passive option for better performance
+    useEffect(() => {
+      const videoElement = videoRef.current;
+      if (videoElement) {
+        videoElement.addEventListener('touchstart', handleTouchStart, { passive: true });
+        videoElement.addEventListener('touchend', handleTouchEnd, { passive: true });
+        
+        return () => {
+          videoElement.removeEventListener('touchstart', handleTouchStart);
+          videoElement.removeEventListener('touchend', handleTouchEnd);
+        };
+      }
+    }, [handleTouchStart, handleTouchEnd]);
 
     return (
       <div 
-      className="portfolio-group relative overflow-hidden"
+      className={`portfolio-group relative overflow-hidden ${isHovered ? 'is-hovered' : ''}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      onTouchStart={handleTouchStart}
-      onTouchEnd={handleTouchEnd}
       >
       <div className="portfolio-media-wrapper relative">
-        <img src={project.image} alt={project.title} className="portfolio-image portfolio-aspect-3-2 portfolio-object-cover" />
-        <video 
-        ref={videoRef}
-        src={project.video} 
-        muted 
-        loop 
-        className="portfolio-video portfolio-aspect-3-2 portfolio-object-cover"
-        style={{ opacity: 0 }}
+        <img 
+          src={project.image} 
+          alt={project.title} 
+          className="portfolio-image portfolio-aspect-3-2 portfolio-object-cover"
+          loading="lazy" // Add lazy loading for better performance
         />
+        {project.video && (
+          <video 
+            ref={videoRef}
+            src={project.video} 
+            muted 
+            loop 
+            preload="none" // Only load when needed
+            className="portfolio-video portfolio-aspect-3-2 portfolio-object-cover"
+            style={{ opacity: 0 }}
+          />
+        )} 
         <div className="portfolio-overlay-blur"></div>
       </div>
       <div className="portfolio-overlay portfolio-absolute portfolio-inset-0 portfolio-bg-gradient-to-t"></div>
@@ -292,38 +329,59 @@ const Projects = () => {
   }; 
  
   // Filter projects based on selected category
-  const filteredProjects = projects.filter(project => 
-    selectedCategory === 'All' || selectedCategory === "all" || project.category === selectedCategory
-  );
+  const filteredProjects = useMemo(() => {
+    return projects.filter(project => 
+      selectedCategory === 'All' || selectedCategory === "all" || project.category === selectedCategory
+    );
+  }, [projects, selectedCategory]);
 
   // Pagination logic
   const indexOfLastProject = currentPage * projectsPerPage;
   const indexOfFirstProject = indexOfLastProject - projectsPerPage;
-  const currentProjects = filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
-  const totalPages = Math.ceil(filteredProjects.length / projectsPerPage);
+  const currentProjects = useMemo(() => {
+    return filteredProjects.slice(indexOfFirstProject, indexOfLastProject);
+  }, [filteredProjects, indexOfFirstProject, indexOfLastProject]);
+  
+  const totalPages = useMemo(() => {
+    return Math.ceil(filteredProjects.length / projectsPerPage);
+  }, [filteredProjects.length, projectsPerPage]);
 
   // Reset to first page when category changes
-  const handleCategoryChange = (category) => {
+  const handleCategoryChange = useCallback((category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
-  };
+  }, []);
 
-  // Pagination component
-  const Pagination = () => {
+  // Pagination component - memoized for performance
+  const Pagination = memo(({ totalPages, currentPage, setCurrentPage }) => {
     if (totalPages <= 1) return null;
+
+    // Generate page numbers array once
+    const pageNumbers = useMemo(() => {
+      return Array.from({ length: totalPages }, (_, i) => i + 1);
+    }, [totalPages]);
+    
+    // Create handlers with useCallback to prevent unnecessary rerenders
+    const handlePrevPage = useCallback(() => {
+      setCurrentPage(prev => Math.max(prev - 1, 1));
+    }, [setCurrentPage]);
+    
+    const handleNextPage = useCallback(() => {
+      setCurrentPage(prev => Math.min(prev + 1, totalPages));
+    }, [setCurrentPage, totalPages]);
 
     return (
       <div className="pagination-container">
         <button 
           className="pagination-btn"
-          onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+          onClick={handlePrevPage}
           disabled={currentPage === 1}
         >
           Previous
         </button>
         
         <div className="pagination-numbers">
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map(page => (
+          {pageNumbers.map(page => (
             <button
               key={page}
               className={`pagination-number ${currentPage === page ? 'active' : ''}`}
@@ -336,19 +394,18 @@ const Projects = () => {
         
         <button 
           className="pagination-btn"
-          onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+          onClick={handleNextPage}
           disabled={currentPage === totalPages}
         >
           Next
         </button>
       </div>
     );
-  };
+  });
 
   return (
     <div className="portfolio-min-h-screen portfolio-bg-black portfolio-p-8 ">
       {/* Header with controls */}
-   
 
       {/* Loading State */}
       {loading && (
@@ -407,8 +464,14 @@ const Projects = () => {
         </>
       )}
  
-      {/* Pagination */}
-      {!loading && <Pagination />}
+      {/* Pagination with memoized component */}
+      {!loading && filteredProjects.length > 0 && (
+        <Pagination 
+          totalPages={totalPages} 
+          currentPage={currentPage} 
+          setCurrentPage={setCurrentPage} 
+        />
+      )}
 
       {/* Detailed Project Modal */}
       {activeProject !== null && (
@@ -423,7 +486,7 @@ const Projects = () => {
             
             <div className="modal-content">
               <div className="modal-image">
-                <img src={filteredProjects[activeProject]?.image} alt={filteredProjects[activeProject]?.title} />
+                <img src={filteredProjects[activeProject]?.image} alt={filteredProjects[activeProject]?.title} loading="lazy" />
               </div>
               
               <div className="modal-details">

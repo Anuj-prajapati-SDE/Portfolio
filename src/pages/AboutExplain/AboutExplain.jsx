@@ -1,4 +1,3 @@
-
 import "./AboutExplain.css"
 import AboutExplainAnimation from '../../Animation/AboutExplainAnimation'
 function AboutExplain() {
@@ -12,9 +11,9 @@ function AboutExplain() {
         </div>
         <div className="title-explaination"> 
           <p>
-          Currently I'm  Software Intern – in Morling Global Private Limited (January 2025 – Present) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
+          Completed 4 Month Internship  – At Morling Global Private Limited (February 2025 – July ) Developing scalable web applications using the MERN stack, optimizing performance, and ensuring seamless user experiences.  </p>
           <span>...</span>
-        </div>
+        </div> 
       </div>
       <div className='About-Explain background-shadow'>
         <div className="title-explaination">
@@ -49,4 +48,4 @@ function AboutExplain() {
   )
 }
 
-export default AboutExplain
+export default AboutExplain 

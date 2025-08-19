@@ -126,6 +126,7 @@ object-fit: cover;
 .Services-about-2 .service-code-screenshot{
     position: relative;
     width: 40%; 
+    overflow: hidden;
     border-radius: 10px;
     margin-top: 30px;
     height: 80%;
@@ -138,7 +139,6 @@ object-fit: cover;
 }
 .Services-about-2 .service-code-screenshot img {
 width: 100%;
-height: 80%;
 object-fit: cover;
 }
 .technology-knows-container{
@@ -302,9 +302,10 @@ height: 80%;
         border-radius: 10px;
     }
     .Services-section h1 {
-        font-size: 3.5rem;
-        line-height: 60px;
+        font-size: 2.5rem;
+        line-height: 50px;
     }
+    
     .Services-about {
         position: relative;
         width: 100%;
@@ -326,26 +327,24 @@ height: 80%;
     .Services-about .Services-experience-boxes {
         width: 100%;
         gap: 20px;
-        padding: 15px;
         flex-direction: row;
     }
-    .Services-about .Services-about-text-container {
-        height: 200px;
-        width: 95%;
-    }
+   
     .Services-about-2 .service-responsive-screenshot {
-        border-radius: 10px;
+      
         width: 100%;
-        height: 64%;
+      
     }
     .Services-about-2 .service-responsive-screenshot h2 {
-        font-size: 3.5vw;
+        font-size: 1.1rem;
         position: relative;
-        top: 10px;
+        margin: 15px 20px;
+
     }
     .Services-about-2 .service-responsive-screenshot img {
         height: auto;
-        margin-top: 15px;
+       
+        /* margin-top: 15px; */
     }
     .Services-about .Services-experience-boxes .experience-box p {
         font-size: 3vw;
@@ -359,13 +358,7 @@ height: 80%;
     margin-top: 5px;
     }
     
-    .Services-about-2 {
-        display: block;
-        height: auto;
-        margin-top: 0px;
-    }
-    
-        .technology-knows-container {
+.technology-knows-container {
             width: 100%;
            
             border-radius:10px;
@@ -381,8 +374,8 @@ height: 80%;
         .Services-about-2 .service-code-screenshot {
             width: 100%;
             border-radius: 10px;
-            margin-top: 30px;
-            height: 60%;
+            margin-top: 20px;
+            height: auto;
         }
         .technology-knows-container .tech-heading-icon-container .heading-icon {
             width: 30%;
@@ -392,12 +385,16 @@ height: 80%;
             font-size: 0.7rem;
         }
         .Services-about-2 .service-code-screenshot h2 {
-            margin-top: 0px;
+            margin-top: 10px;
+            margin-left: 15px;
             position: relative;
             top: 5px;
         }
         .Services-section h1:nth-child(1) {
-            margin-left: 20%;
+            margin-left:10%;
+        }
+        .Services-section h1:nth-child(2) { 
+            margin-left: 30%;
         }
         .Services-section h1:nth-child(3) {
             margin-left: 10%;

@@ -158,79 +158,13 @@
     }
 }
 
-/* Tablet Portrait */
-@media (min-width: 481px) and (max-width: 768px) {
-    .hero-section {
-        min-height: 100vh;
-        padding: clamp(20px, 3vw, 30px);
-    }
-
-    .top-heading {
-        margin-bottom: clamp(30px, 5vh, 50px);
-    }
-
-    .top-heading .title-heading {
-        font-size: clamp(8rem, 15vw, 12rem);
-        letter-spacing: clamp(3px, 0.5vw, 6px);
-    }
-
-    .bottom-heading {
-        flex-direction: column;
-        gap: clamp(15px, 3vh, 25px);
-        text-align: center;
-    }
-
-    .bottom-heading h2 {
-        font-size: clamp(5rem, 12vw, 8rem);
-    }
-
-    .bottom-heading h1 {
-        font-size: clamp(6rem, 14vw, 10rem);
-    }
-}
-
-/* Mobile Landscape */
-@media (min-width: 426px) and (max-width: 480px) {
-    .hero-section {
-        min-height: 100vh;
-        padding: clamp(15px, 3vw, 25px);
-    }
-
-    .top-heading {
-        margin-bottom: clamp(20px, 4vh, 30px);
-    }
-
-    .top-heading .title-heading {
-        font-size: clamp(6rem, 18vw, 8rem);
-        letter-spacing: clamp(2px, 0.4vw, 4px);
-    }
-
-    .bottom-heading {
-        flex-direction: column;
-        gap: clamp(10px, 2vh, 20px);
-        text-align: center;
-    }
-
-    .bottom-heading h2 {
-        font-size: clamp(3.5rem, 14vw, 5rem);
-    }
-
-    .bottom-heading h1 {
-        font-size: clamp(4.5rem, 16vw, 6.5rem);
-    }
-}
-
 /* Mobile Portrait */
-@media (max-width: 425px) {
+@media (max-width: 435px) {
     .hero-section {
-        min-height: 100vh;
+        min-height: 80vh;
         padding: clamp(10px, 3vw, 20px);
     }
-
-    .top-heading {
-        margin-bottom: clamp(15px, 3vh, 25px);
-    }
-
+    
     .top-heading .title-heading {
         font-size: clamp(4rem, 20vw, 6rem);
         letter-spacing: clamp(1px, 0.3vw, 3px);
