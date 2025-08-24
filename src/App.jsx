@@ -18,7 +18,7 @@ function App() {
   const windowWidth =window.innerWidth;
   return ( 
     <> 
-      <AuthProvider>
+      <AuthProvider>  
         <SmoothScrolling>
           {windowWidth>550 && <MouseFollower></MouseFollower>}
           <Router>
@@ -37,7 +37,7 @@ function App() {
             </Routes>
           </Router>        
         </SmoothScrolling>
-      </AuthProvider> 
+      </AuthProvider>  
     </>
   )
 } 

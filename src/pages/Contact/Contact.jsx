@@ -25,8 +25,8 @@ function Contact() {
     const userName = form.current.user_name.value;
 
     emailjs.sendForm(
-      'service_58uqyzw',
-      'template_37nds6h',
+      'service_etm53gm',
+      'template_7bot9ob',
       form.current,
       'iGSMj9WgWrnMn2H18'
     ).then(
@@ -51,8 +51,8 @@ function Contact() {
     };
 
     emailjs.send(
-      'service_58uqyzw',
-      'template_user_reply',
+      'service_etm53gm',
+      'template_7bot9ob',
       templateParams,
       'iGSMj9WgWrnMn2H18'
     ).then(
