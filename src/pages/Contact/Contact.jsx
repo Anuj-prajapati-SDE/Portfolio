@@ -54,7 +54,7 @@ function Contact() {
       'service_etm53gm',
       'template_7bot9ob',
       templateParams,
-      'iGSMj9WgWrnMn2H18'
+      'iGSMj9WgWrnMn2H18              '
     ).then(
       (result) => {
         console.log('User Confirmation Email Sent:', result.text);
