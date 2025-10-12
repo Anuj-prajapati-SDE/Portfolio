@@ -5,7 +5,7 @@ import SmoothScrolling from './Animation/SmoothScroll'
 import Protfolio_container from './pages/Protfolio-container/Protfolio-container'
 import MouseFollower from "./Animation/MouseFollower"
 
-import { account, databases, storage } from './config/appwrite';
+// import { account, databases, storage } from './config/appwrite';
 import LoginPage from './pages/Auth/LoginPage'
 import ForgetPasswordPage from './pages/Auth/ForgetPassword'
 import ResetPasswordPage from './pages/Auth/ResetPasswordPage'
