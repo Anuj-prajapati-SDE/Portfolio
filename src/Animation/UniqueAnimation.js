@@ -10,7 +10,7 @@ const ServiceAnimation = ()=>{
             {scrollTrigger: {
             scrub: 3,    
             scroller: "body",
-            trigger: ".Services-section", 
+            trigger: ".Unique-section", 
             start: "20% 90%",
             end: "100% 100%", 
             // markers: true
@@ -20,13 +20,13 @@ const ServiceAnimation = ()=>{
             {scrollTrigger: {
             scrub: 3,
             scroller: "body",
-            trigger: ".Services-content-section",
+            trigger: ".Unique-content-section",
             start: "5% 80%",
             end: "50% 100%",
             // markers: true
           }}
         );
-        tl.from(".Services-section h1", {
+        tl.from(".Unique-section h1", {
          opacity:0,
           y:200,
           duration:2,
@@ -34,7 +34,7 @@ const ServiceAnimation = ()=>{
           stagger:0.5
 
           })
-          tl1.from(".Services-about-text-container", {
+          tl1.from(".Unique-about-text-container", {
            scale:0,
            stagger:0.9,
            duration:2,
@@ -53,7 +53,7 @@ const ServiceAnimation = ()=>{
           {scrollTrigger: {
           scrub: 3,
           scroller: "body",
-          trigger: ".Services-section", 
+          trigger: ".Unique-section", 
           start: "20% 90%",
           end: "100% 100%", 
           // markers: true
@@ -63,14 +63,14 @@ const ServiceAnimation = ()=>{
           {scrollTrigger: {
           scrub: 4,
           scroller: "body",
-          trigger: ".Services-content-section",
+          trigger: ".Unique-content-section",
           start: "1% 80%",
           end: "30% 100%",
           // markers: true
         }}
       );
       
-      tl.from(".Services-section h1", {
+      tl.from(".Unique-section h1", {
        opacity:0,
         y:200,
         duration:2,
@@ -78,7 +78,7 @@ const ServiceAnimation = ()=>{
         stagger:0.5
 
         })
-        tl1.from(".Services-about-text-container", {
+        tl1.from(".Unique-about-text-container", {
          scale:0,
          stagger:0.9,
          duration:2,

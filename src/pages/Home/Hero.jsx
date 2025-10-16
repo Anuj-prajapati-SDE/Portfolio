@@ -1,6 +1,4 @@
-
-import './Home.css'
-
+import './Hero.css'
 function Home() {
   return (  
     <section id='home' className='hero-section'>

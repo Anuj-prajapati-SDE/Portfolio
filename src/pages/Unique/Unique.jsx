@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Services.css" 
+import "./Unique.css" 
 import { AiOutlineHtml5 } from "react-icons/ai";
 import { IoLogoCss3 } from "react-icons/io";
 import { FaNodeJs } from "react-icons/fa6";
@@ -18,23 +18,23 @@ import cppIcon from '../../assets/cpp_icon.webp'
 import { TbBrandRedux } from "react-icons/tb";
 import Res_screenShot from "../../assets/responsive-screenshot-img.webp"
 import code_screenShot from "../../assets/code-screenshot-img.webp"
-import ServiceAnimation from '../../Animation/ServiceAnimation'
-function Services() { 
-    ServiceAnimation()
+import UniqueAnimation from '../../Animation/UniqueAnimation'
+function Unique() { 
+    UniqueAnimation()
     return (
         <>
-             <section id='services' className='Services-section'>
+             <section id='unique' className='Unique-section'>
                 <h1>WHAT</h1> 
                 <h1>MAKES ME</h1>  
                 <h1>DIFFERENT</h1>  
              </section> 
-             <section className='Services-content-section'>
-                <section className='Services-about'>
-                    <div className='Services-about-text-container background-shadow'>
+             <section className='Unique-content-section'>
+                <section className='Unique-about'>
+                    <div className='Unique-about-text-container background-shadow'>
                      <h1>Blending Creativity with Functionality</h1>
                     <p>I am a passionate and dedicated Mern Stack developer, specializing in creating unique and effective design solutions. With extensive experience in web, apps, and branding, as well as effective UX/UI design, I have collaborated with companies of all types, both nationally and internationally, ensuring efficiency and flexibility in every project.</p>
                     </div>
-                    <div className='Services-experience-boxes'>
+                    <div className='Unique-experience-boxes'>
                         <div className="experience-box background-shadow">
                             <h2>5+</h2>
                             <p> Month of <br/>Experience</p>
@@ -49,12 +49,11 @@ function Services() {
                         </div>
                         <div className="experience-box background-shadow">
                         <h2>100%</h2>
-                        <p>Professinal &<br/>Quality Code</p>
-                    
+                        <p>Professional &<br/>Quality Code</p>
                         </div>
                     </div> 
                 </section>
-                <section className='Services-about-2'>
+                <section className='Unique-about-2'>
                        <div className='service-responsive-screenshot background-shadow'>
                            <h2>Responsive Web</h2>
                            <img src={Res_screenShot} alt="" />
@@ -139,4 +138,4 @@ function Services() {
     )
 }
 
-export default Services
+export default Unique

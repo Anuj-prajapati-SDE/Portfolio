@@ -69,7 +69,7 @@ function Navbar() {
         </div>
         <div className="right-navbar">
           <div className='cv-btn'>
-            <a href={DownloadCV} download>Download CV</a>
+            <a href={DownloadCV} download>Resume</a>
           </div>
           <div className='hambargar-icon'>
             {!navClick && <Link to={""} onClick={() => setNavClick(true)}>Menu</Link>}
@@ -82,7 +82,7 @@ function Navbar() {
           <div className="close-btn" onClick={() => setNavClick(false)}>CLOSE<p></p></div>
         </div>
         <div className="nav-links">
-          {["home", "about", "services", "projects", "testimonials", "contact"].map((section, index) => (
+          {["home", "about", "unique", "projects", "testimonials", "contact"].map((section, index) => (
             <ScrollLink
               key={section}
               to={section}
